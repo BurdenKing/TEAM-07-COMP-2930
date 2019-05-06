@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
           oh lalala
         </p>
          Learn React
+         <Link to="../public/loginPage.html">Click me</Link>
       </header>
     </div>
   );
