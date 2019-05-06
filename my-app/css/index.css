@@ -1,0 +1,17 @@
+#background { 
+    background-image: url(../images/main.png);
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.mySignUpBtn {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    letter-spacing: 1px; 
+}
+
+nav {
+    color: white;
+}
