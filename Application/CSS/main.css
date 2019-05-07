@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
 body {
-    background-image: url(../Images/main_background.jpg);
-    background-size: cover;
+    background-color: blue;
 }
 
 /* ------------------- Button -------------*/
@@ -20,8 +19,7 @@ body {
 .myButton:active { 
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
     transform: translateY(7px) translateX(7px);
-    transition-duration: 3s;
-    
+  
 }
 
 
@@ -38,7 +36,8 @@ header nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    font-family: Pacifico;
+    /* Font size and type for navigation bar (centered) */
+    font-size: 20px;
     padding-top: 3em;
     padding-bottom: 2em;
    
@@ -60,6 +59,15 @@ header nav{
     justify-content: space-between;
     align-items: center;
     margin-left: 4.5em;    
+}
+
+.logo {
+    font-size: 63px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: 'Niconne', cursive;
+    font: bold;
+    font-weight: 900;
 }
 
 /* ---------- Center of heading ----------*/
