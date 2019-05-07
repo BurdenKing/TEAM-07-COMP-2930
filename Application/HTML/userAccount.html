@@ -4,10 +4,91 @@
 <head>
     <title>ParkAway Account Info</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/">
+    <link rel="stylesheet" href="../CSS/userAccount.css">
+    <script src="../Javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Javascript/userAccount.js"></script>
 </head>
 
 <body>
+        <header>
+                <div class = "leftNav"><button class="btn btn-primary btn-lg myButton" type="submit">Sign In</button></div>
+                <!-- Adding a navigation bar --> 
+                <nav>
+                  <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>  
+                  </ul>    
+                </nav>
+                <!-- Right side of the header -->
+                <div class = "rightNav"><button class="btn btn-primary btn-lg myButton" type="submit">Sign In</button></div>
+              </header>
+
+        <div id="account-main-body">
+            
+            <!-- user Name-->
+            <div id="account-user-name-div">   
+                <p id ="user-name"></p>
+            </div>
+            
+            <!-- left side -->
+            <div id="account-stats">
+                <div>
+                    <img></img>
+                    <p id="user-reports"></p>
+                </div>
+                <div>
+                    <img></img>
+                    <p id="user-upvotes"></p>
+                </div>
+                <div>
+                    <img></img>
+                    <p id="user-downvotes"></p>
+                </div>
+                <div>
+                    <button type='button' id="btn-change-password">Change password</button>
+                </div>
+                <div class="form-popup" id="changePass">
+                    <form class="form-container" method ="POST" >   
+                        <label for="opsw"><b>Old Password</b></label>
+                        <input type="password" placeholder="Old Password" name="opsw" required>
+                              
+                        <label for="psw"><b>New Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+
+                        <label for="psw2"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Enter Password Again" name="psw2" required>
+                              
+                        <input type="submit" class="btn" value ="Change" id="changebtn">
+                        <button type="button" class="btn cancel" id="closeForm">Close</button>           
+                     </form>
+                </div> 
+            </div>
+            
+
+            <!-- right side-->
+            <div id="account-reward">
+                <div>
+                    <img></img>
+                    <input type="radio" name="radioBtn" id="reward-1" checked>
+                </div>
+                <div>
+                    <img></img>
+                    <input type="radio" name="radioBtn" id="reward-2">
+                </div>
+                <div>
+                    <img></img>
+                    <input type="radio" name="radioBtn" id="reward-3">
+                </div>
+                <div>
+                    <img></img>
+                    <p id="user-points"></p>
+                </div>
+                 <button type='button' id="btn-redeem">Redeem</button>
+            </div>
+
+        </div>
+
 </body>
 
 </html>
