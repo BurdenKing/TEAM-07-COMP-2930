@@ -4,10 +4,27 @@
 <head>
     <title>ParkAway Login</title>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="/">
+    <script src="../Javascript/jquery-3.4.1.min.js"></script>
+    <script src="../Javascript/login.js"></script>
+
 </head>
 
 <body>
+    <div>
+        <form id ="log_in_form" method="post" action ="main.html">
+            <fieldset>  
+                    <label for="user_name">ID:</label>
+                    <input type="text" id="userName" name="user_name" placeholder="user_name" required="required">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" placeholder="password" required="required">
+                    <input id="submit" value="Log in" type="submit"/>
+                    <button type="button" id="sign_up">Sign up</button> 
+                    <p id="error"></p>
+            </fieldset>
+
+        </form>
+    </div>
+
 </body>
 
 </html>
