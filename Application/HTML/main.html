@@ -4,12 +4,6 @@
     <title>ParkAway</title> 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <style>
-    #map {
-      height: 800px;  /* The height is 400 pixels */
-      width: 100%;  /* The width is the width of the web page */
-     }
-    </style>
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -17,34 +11,13 @@
     <link rel="stylesheet" type="text/css" href = "../CSS/main.css"> 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("button").fadeIn(slow);
-});
-</script>
-
-<script>
-  // Initialize and add the map
-  function initMap() {
-    // The location of BCIT
-    var BCIT = {lat: 49.2526785, lng: -123.0027276};
-    // The map, centered at BCIT
-    var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 15, center: BCIT});
-    // The marker, positioned at BCIT
-    var marker = new google.maps.Marker({position: BCIT, map: map});
-  }
-  </script>
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
-      </script>
 
   </head>
   
   <body>
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
-      <div class = "leftNav"><button class="btn btn-primary btn-lg myButton" type="submit">Sign In</button></div>
+      <div class = "leftNav"><a class = "logo">ParkAway</a></div>
       <!-- Adding a navigation bar --> 
       <nav>
         <ul>
@@ -63,11 +36,8 @@ $(document).ready(function(){
       <h3>The Crowdsourcing solution to parking</h3>
     </div>
 
-    <!-- Map -->
-    <div id="map"></div>
-
-
-    <!-- Scroll down button -->
+    <!-- Scroll down buttons -->
 
   </body>
 </html>
+
