@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+
+body {
+    background-image: url(../Images/main_background.jpg);
+    background-size: cover;
+}
+
+/* ------------------- Button -------------*/
+.myButton {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
+}
+
+.myButton:active { 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
+    transform: translateY(7px) translateX(7px);
+    transition-duration: 3s;
+    
+}
+
+
+/* --------------- Heading --------------*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    color: white;
+    background: rgba(0,0,0,0.2)
+}
+  
+header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Pacifico;
+    padding-top: 3em;
+    padding-bottom: 2em;
+   
+}
+
+/* ---------- Right side of heading ----------*/
+
+.rightNav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 4.5em;    
+}
+
+/* ---------- Left side of heading ----------*/
+
+.leftNav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 4.5em;    
+}
+
+/* ---------- Center of heading ----------*/
+
+nav ul li{
+    list-style: none;
+    display: inline;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 40px;
+    letter-spacing: 5px;
+}
+  
+nav li a{
+    /* Padding is for the hover background. */
+    padding: 1.5em;
+    padding-top: 1.7em;
+    padding-bottom: 1.7em;
+    text-decoration: none;
+    color: white;
+}
+  
+nav li a:hover{
+    text-decoration: none;
+    color:whitesmoke;
+    background: rgba(255,255,255,.2);
+}
+
+/* ------------ Main Title ----------------- */
+
+.titleText {
+    position: fixed;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+}
+
+h1 {
+    font-family: 'Niconne', cursive;
+    font: bold;
+    font-weight: 900;
+    font-size: 200px;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+  
