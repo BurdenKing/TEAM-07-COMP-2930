@@ -1,8 +1,12 @@
-const mysql = require('mysql');
+var express = require('express');
+var mysql = require('mysql');
+var app = express();
 
-cont connection = mysql.createConnection({
+var connection = mysql.createPool({
+    connectionLimit : 50, 
     host: 'localhost',
     user: 'root',
     password: 'simple',
-    database: 'parkaway'
+    database: 'parkaway_project'
+
 });

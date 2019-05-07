@@ -2,20 +2,20 @@
 /**This function validates the fields for creating an account. */
 
 let validation = () => {
-    
-    let username = document.forms["accform"]["username"];               
+            
+    let email = document.forms["accform"]["email"];  
     let password = document.forms["accform"]["password"];    
     let confirmpassword = document.forms["accform"]["confirmpassword"];  
     let firstname = document.forms["accform"]["firstname"];  
     let lastname =  document.forms["accform"]["lastname"];  
-    let email = document.forms["accform"]["email"];  
     let type = document.forms["accform"]["type"];  
 
-    if (username.value == "") {
-        window.alert("Please enter your username.");
-        username.focus();
-        return false;
-    }
+    if (email.value == "" || email.value.indexOf("@", 0) < 0)                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
 
     if (password.value == "") { 
         window.alert("Please enter your password."); 
@@ -39,13 +39,6 @@ let validation = () => {
     if (lastname.value == "") { 
         window.alert("Please enter your last name."); 
         lastname.focus(); 
-        return false; 
-    } 
-
-    if (email.value == "" || email.value.indexOf("@", 0) < 0)                                   
-    { 
-        window.alert("Please enter a valid e-mail address."); 
-        email.focus(); 
         return false; 
     } 
 
