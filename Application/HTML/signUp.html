@@ -5,68 +5,21 @@
     <title>ParkAway Sign-up</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="/">
-    <script>
-    validation = () => {
-        
-        let username = document.forms["accform"]["username"];               
-        let password = document.forms["accform"]["password"];    
-        let firstname = document.forms["accform"]["firstname"];  
-        let lastname =  document.forms["accform"]["lastname"];  
-        let email = document.forms["accform"]["email"];  
-        let type = document.forms["accform"]["type"];  
-    
-        if (username.value == "") {
-            window.alert("Please enter your username.");
-            username.focus();
-            return false;
-        }
-
-        if (password.value == "") { 
-            window.alert("Please enter your password."); 
-            password.focus(); 
-            return false; 
-        } 
-
-        if (firstname.value == "") { 
-            window.alert("Please enter your first name."); 
-            firstname.focus(); 
-            return false; 
-        } 
-
-        
-        if (lastname.value == "") { 
-            window.alert("Please enter your last name."); 
-            lastname.focus(); 
-            return false; 
-        } 
-
-        if (email.value == "" || email.value.indexOf("@", 0) < 0)                                   
-        { 
-            window.alert("Please enter a valid e-mail address."); 
-            email.focus(); 
-            return false; 
-        } 
-    
-        if (type.selectedIndex < 1)                  
-        { 
-            alert("Please select a person type."); 
-            type.focus(); 
-            return false; 
-        } 
-    
-        return true;
-        }
-    </script>
+    <script src="../Javascript/validation.js"></script>
+    <script src="../Javascript/createAcc.js"></script>
 </head>
 <body>
 
     <form name="accform" onsubmit="return validation()">
         <h2>Create a ParkAway Account!</h2>
         Username: <br>
-        <input type="text" name="username" placeholder="Mickey">
+        <input type="text" name="username" placeholder="Enter Username">
         <br><br>
         Password: <br>
-        <input type="text" name="password" placeholder="Mickey">
+        <input type="text" name="password" placeholder="Enter Password">
+        <br><br>
+        Confirm Password: <br>
+        <input type="text" name="confirmpassword" placeholder="Re-enter Password">
         <br><br>
         First Name: <br>
         <input type="text" name="firstname" placeholder="Mickey">
