@@ -35,7 +35,6 @@ let validation = () => {
         return false; 
     } 
 
-    
     if (lastname.value == "") { 
         window.alert("Please enter your last name."); 
         lastname.focus(); 
