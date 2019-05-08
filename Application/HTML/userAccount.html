@@ -48,6 +48,8 @@
                 <div>
                     <button type='button' id="btn-change-password">Change password</button>
                 </div>
+              
+                <!-- this form is hidden until user clicks change password button-->
                 <div class="form-popup" id="changePass">
                     <form class="form-container" method ="POST" >   
                         <label for="opsw"><b>Old Password</b></label>
@@ -70,15 +72,15 @@
             <div id="account-reward">
                 <div>
                     <img></img>
-                    <input type="radio" name="radioBtn" id="reward-1" checked>
+                    <input type="radio" name="radioBtn" id="reward-1" value ="reward1" checked>
                 </div>
                 <div>
                     <img></img>
-                    <input type="radio" name="radioBtn" id="reward-2">
+                    <input type="radio" name="radioBtn" id="reward-2" value="reward2">
                 </div>
                 <div>
                     <img></img>
-                    <input type="radio" name="radioBtn" id="reward-3">
+                    <input type="radio" name="radioBtn" id="reward-3" value="reward3">
                 </div>
                 <div>
                     <img></img>
@@ -86,9 +88,7 @@
                 </div>
                  <button type='button' id="btn-redeem">Redeem</button>
             </div>
-
         </div>
 
 </body>
-
 </html>

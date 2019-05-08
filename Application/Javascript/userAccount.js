@@ -14,7 +14,7 @@ $(document).ready(function() {
     let upvotes = "6";
     let downvotes = "2";
     let points = "100";
-
+    ///////////////server and databse ^^^^////////////////////
 
     $("#user-name").replaceWith(name);
     $("#user-reports").replaceWith(reports);
@@ -45,5 +45,24 @@ $(document).ready(function() {
         e.preventDefault();
         console.log('got here');    
     });
-    
+   
+    $("#btn-redeem").click(function(){
+        let radioValue = $("input[name='radioBtn']:checked").val()
+
+        switch(radioValue) {
+            case "reward1":
+              // do something when user redeems reward 1
+              break;
+            case "reward2":
+              // re2
+              break;
+             case "reward3":
+            // re3
+              break;
+            default:
+              // shouldn't arrive here, but if
+              // indicate error
+          } 
+    });
+
 });
