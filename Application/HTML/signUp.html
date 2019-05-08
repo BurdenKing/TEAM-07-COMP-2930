@@ -7,34 +7,41 @@
     <!--<script src="../Javascript/validation.js"></script>-->
 </head>
 <body>
+    <header>
+        <!-- header here-->
+    </header>
+
+
+    <div>
     <!--Form-->
-    <form>
-        <h2>Create a ParkAway Account!</h2>
-        Enter Your Email Address: <br>
-        <input type="text" id="create_acc_email" placeholder="My Email"/>
-        <br><br>
-        Password: <br>
-        <input type="password" id="create_acc_password" placeholder="Enter Password" />
-        <br><br>
-        Confirm Password: <br>
-        <input type="password" id="confirmpassword" placeholder="Re-enter Password">
-        <br><br>
-        First Name: <br>
-        <input type="text" id="create_acc_firstname" placeholder="Mickey">
-        <br><br>
-        Last Name: <br>
-        <input type="text" id="create_acc_lastname" placeholder="Mouse">
-        <br><br>
-        I am a : <select type="text" id="create_acc_type">
-            <option>Student</option>
-            <option>Staff</option>
-            <option>Visitor</option>
-        </select>
-        <br><br>
-        -->
-        <input id="submit" type="submit" value="Submit">
-        <!--<input type="reset" value="Reset">-->
-    </form>
+        <form>
+            <h2>Create a ParkAway Account!</h2>
+            <label for="email">Email:</label>
+            <input type="text" id="create_acc_email" placeholder="My Email" name="email/">
+            
+            <label for="password">Password:</label>: 
+            <input type="password" id="create_acc_password" placeholder="Enter Password" name="password"/>
+            
+            <label for="cpassword">Confirm Password:</label>
+            <input type="password" id="confirmpassword" placeholder="Re-enter Password" name="cpassword">
+            
+            <label for="fName">First Name:</label>
+            <input type="text" id="create_acc_firstname" placeholder="First Name" name = "fName">
+            
+            <label for="lName">Last Name:</label>
+            <input type="text" id="create_acc_lastname" placeholder="Last Name" name="lName">
+            
+            <label for="status">Status: </label>
+            <select type="text" id="create_acc_type" name="status">
+                <option>Student</option>
+                <option>Staff</option>
+                <option>Visitor</option>
+            </select>
+            
+            <input id="submit" type="submit" value="Submit">
+            <!--<input type="reset" value="Reset">-->
+        </form>
+    </div>    
     <div id="msg"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src="../Javascript/client.js"></script>
