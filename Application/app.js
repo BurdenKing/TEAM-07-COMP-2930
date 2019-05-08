@@ -1,9 +1,12 @@
 //REQUIRES
 const express = require('express');
-const mysql = require('mysql');
 const app = express();
 const fs = require("fs");
 const {JSDOM} = require('jsdom');
+const config = require('./Javascript/config.js');
+const mysql = require('mysql');
+let bodyParser = require('body-parser');
+
 
 // STATIC DIRECTORIES
 app.use('/HTML', express.static('HTML'));
@@ -11,13 +14,7 @@ app.use('/CSS', express.static('CSS'));
 app.use('/Javascript', express.static('Javascript'));
 app.use('/Images', express.static('Images'));
 
-
-const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'simple',
-    database: 'parkaway_project'
-});
+let connection = mysql.createConnection(config);
 
 //Attempt to connect to MySQL. Make sure you turn on XAMPP.
 connection.connect((err) => {
@@ -32,7 +29,7 @@ connection.connect((err) => {
 app.get('/', (req, res) => {
     let doc = fs.readFileSync('./index.html', "utf8");
     let dom = new JSDOM(doc);
-    //let $ = require("jquery")(dom.window); Not too sure if this is necessary.
+    //let $ = require("jquery")(dom.window);
     //Will uncomment if jquery render does not show
 
     res.send(dom.serialize());
@@ -73,11 +70,22 @@ app.get('/about-us', (req, res) => {
     res.send(dom.serialize());
 });
 
+//BODYPARSER MIDDLEWARE FOR POST REQUESTS
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//POST REQUESTS
+app.post('/create-acc', function (req, res) {
+    res.setHeader('Content-Type', 'application/json');
+
+    console.log("Stuff sent to server", req.body);
+
+    res.send(["You sent me:", req.body]);
+});
 
 app.use((req, res, next) => {
     res.status(404).send("Nothing there, 404.");
 });
-
 
 //CONNECT TO LOCALHOST:8000
 app.listen(8000, () => {
