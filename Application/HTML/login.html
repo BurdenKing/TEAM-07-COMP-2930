@@ -10,6 +10,8 @@
 </head>
 
 <body>
+   
+    <!-- this form will not show if user already logged in-->
     <div id="form_id">
         <form id ="log_in_form" method="post" action ="main.html">
             <fieldset>  
@@ -19,9 +21,9 @@
                     <input type="password" id="password" placeholder="password" required="required">
                     <input id="submit" value="Log in" type="submit"/>
                     <button type="button" id="sign_up">Sign up</button> 
+                    <!-- if user logs in incorrectly, content of this p tag will change-->
                     <p id="error"></p>
             </fieldset>
-
         </form>
     </div>
 
