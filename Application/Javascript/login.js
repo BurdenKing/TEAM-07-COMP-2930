@@ -26,6 +26,9 @@ $(document).ready(function() {
         $("#error").css("color", "red");
         e.preventDefault(); 
     } else {
+        //check if the email exist in database
+        //if it exists, check if it matches the password
+        //if it matches, log the user in
         window.location.href = "./main.html";
     }
 });
