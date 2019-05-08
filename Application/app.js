@@ -1,3 +1,4 @@
+//REQUIRES
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
@@ -10,23 +11,29 @@ app.use('/CSS', express.static('CSS'));
 app.use('/Javascript', express.static('Javascript'));
 app.use('/Images', express.static('Images'));
 
-/**
-let connection = mysql.createPool({
-    connectionLimit : 50, 
+
+const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: 'simple',
     database: 'parkaway_project'
-
 });
- */
+
+//Attempt to connect to MySQL. Make sure you turn on XAMPP.
+connection.connect((err) => {
+    if (err) {
+        console.log('Error connecting to the database.')
+        return;
+    }
+    console.log('Connected to the database!');
+})
 
 //DEFINING WEBSITE PATHS
-
 app.get('/', (req, res) => {
     let doc = fs.readFileSync('./index.html', "utf8");
     let dom = new JSDOM(doc);
-    //let $ = require("jquery")(dom.window); Not too sure if this is necessary
+    //let $ = require("jquery")(dom.window); Not too sure if this is necessary.
+    //Will uncomment if jquery render does not show
 
     res.send(dom.serialize());
 });
@@ -71,6 +78,8 @@ app.use((req, res, next) => {
     res.status(404).send("Nothing there, 404.");
 });
 
+
+//CONNECT TO LOCALHOST:8000
 app.listen(8000, () => {
     console.log('App listening on port 8000!');
 });

@@ -14,9 +14,7 @@ body {
     text-transform: uppercase;
     border-radius: 0;
     box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
-    width: 100%;
-    position: relative;
-    float: left;
+
 }
 
 .myButton:active { 
@@ -28,14 +26,14 @@ body {
 
 /* --------------- Heading --------------*/
 
-header{
+header {
     display:flex;
     justify-content: space-between;
     color: white;
     background: rgba(0,0,0,0.2)
 }
   
-header nav{
+header nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -49,16 +47,28 @@ header nav{
 /* ---------- Right side of heading ----------*/
 
 .rightNav {
-    display:flex;
+    margin-top: 1.1em;
+    display:block;
     justify-content: space-between;
     align-items: center;
     margin-right: 4.5em;    
 }
 
-.signUp {
-    float: left;
+.rightNav > div {
+    margin: 8px 0 8px 0;
+    width: 100%;
+    float: right;
     position: relative;
+    text-align: center;
 }
+
+.signUp {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
 
 /* ---------- Left side of heading ----------*/
 
