@@ -19,6 +19,17 @@ body {
     /* Center and scale the image nicely */
     background-repeat: no-repeat;
     background-size: cover;
+/* ------------------- Button -------------*/
+.myButton {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    border-radius: 0;
+    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
+
 }
 
 /* --------- Pre Loading Screen -----*/
@@ -38,6 +49,7 @@ body {
     animation: spin 1s infinite linear;
 }
 
+<<<<<<< HEAD:Application/CSS/main.css
 @keyframes spin {
     from{
         transform: rotate(0deg);
@@ -54,21 +66,30 @@ body {
   left:0;
   top:0;
 }
+=======
+>>>>>>> 755ecc437a0bd9dbda1df32c46be46ae6ceee135:Application/CSS/index.css
 /* --------------- Heading --------------*/
 
-header{
+header {
     display:flex;
     justify-content: space-between;
     color: white;
     background: rgba(0,0,0,0.2)
 }
   
-header nav{
+header nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD:Application/CSS/index.css
     /* Font size and type for navigation bar (centered) */
     font-size: 20px;
+=======
+    /* Navigation bar (center) font size and type */
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 20px;
+>>>>>>> Update Main:Application/CSS/main.css
     padding-top: 3em;
     padding-bottom: 2em;   
 }
@@ -76,12 +97,14 @@ header nav{
 /* ---------- Right side of heading ----------*/
 
 .rightNav {
-    display:flex;
+    margin-top: 1.1em;
+    display:block;
     justify-content: space-between;
     align-items: center;
     margin-right: 4.5em;    
 }
 
+<<<<<<< HEAD:Application/CSS/main.css
 .myButton {
     font-size: 23px;
     font-weight: 700;
@@ -104,6 +127,23 @@ header nav{
 .myButton:focus {
     transform: scale(1.05);
 }
+=======
+.rightNav > div {
+    margin: 8px 0 8px 0;
+    width: 100%;
+    float: right;
+    position: relative;
+    text-align: center;
+}
+
+.signUp {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+
+>>>>>>> 755ecc437a0bd9dbda1df32c46be46ae6ceee135:Application/CSS/index.css
 
 /* ---------- Left side of heading ----------*/
 
@@ -111,7 +151,30 @@ header nav{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 4.5em;    
+    margin-left: 2em;    
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Niconne', cursive;
+    font: bold;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .logo {
@@ -131,7 +194,7 @@ nav ul li{
     display: inline;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 40px;
+    font-family: 100px;
     letter-spacing: 5px;
 }
   

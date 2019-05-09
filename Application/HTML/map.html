@@ -3,49 +3,82 @@
   <head>
     <title>ParkAway</title> 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name = "viewport" content="width=device-width, initial-scale=1" />
     <style>
     #map {
-      height: 800px;  /* The height is 400 pixels */
+      height: 800px;  /* The height is 800 pixels */
       width: 100%;  /* The width is the width of the web page */
+
      }
     </style>
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- Adding CSS Stylsheet-->
-    <link rel="stylesheet" type="text/css" href = "../CSS/main.css"> 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  $("button").fadeIn(slow);
-});
-</script>
 
 <script>
-  // Initialize and add the map
-  function initMap() {
-    // The location of BCIT
-    var BCIT = {lat: 49.2526785, lng: -123.0027276};
-    // The map, centered at BCIT
-    var map = new google.maps.Map(
-        document.getElementById('map'), {zoom: 15, center: BCIT});
-    // The marker, positioned at BCIT
-    var marker = new google.maps.Marker({position: BCIT, map: map});
-  }
-  </script>
+// Initialize and add the map
+ 
+function initMap() {
+        var BCIT = {lat: 49.2507195, lng: -122.996561};
+
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16.5,
+          center: BCIT
+        });
+
+        
+
+        var lotA = new google.maps.Marker({
+          position: {lat: 49.2520931, lng:-122.9987794},
+          map: map,
+          title: 'Student Parking Lot A'
+        });
+
+        var lotB = new google.maps.Marker({
+            position: {lat:49.2509521, lng: -122.9985251},
+            map:map,
+            title: 'Student Parking Lot B'
+        });
+
+        var lotD = new google.maps.Marker({
+            position: {lat:49.2480284, lng:-122.9991663},
+            map:map,
+            title: 'Student Parking Lot D'
+        });
+
+        
+        var lotF = new google.maps.Marker({
+            position: {49.2471789, lng:-122.9989153},
+            map:map,
+            title: 'Student Parking Lot F'
+        });
+
+        var lotQ = new google.maps.Marker({
+            position: {lat:49.2541109,lng:-123.0036502},
+            map:map,
+            title: 'Student Parking Lot Q'
+        });
+
+        
+   
+      }
+    </script>
       <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
       </script>
 
   </head>
-  
   <body>
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
-      <div class = "leftNav"><button class="btn btn-primary btn-lg myButton" type="submit">Sign In</button></div>
-      <!-- Adding a navigation bar --> 
+      <!-- Left side of the navigation bar -->
+      <div class = "leftNav"><a href="#" class="logo">ParkAway</a></div>
+      <!-- Adding a navigation bar 
+        -- Center of the navigation bar 
+        --> 
       <nav>
         <ul>
           <li><a href="#">About Us</a></li>
@@ -57,11 +90,7 @@ $(document).ready(function(){
       <div class = "rightNav"><button class="btn btn-primary btn-lg myButton" type="submit">Sign In</button></div>
     </header>
 
-    <!-- Title of homepgae -->
-    <div class = "titleText">
-      <h1>ParkAway</h1>
-      <h3>The Crowdsourcing solution to parking</h3>
-    </div>
+
 
     <!-- Map -->
     <div id="map"></div>
