@@ -19,6 +19,8 @@ body {
     /* Center and scale the image nicely */
     background-repeat: no-repeat;
     background-size: cover;
+}
+
 /* ------------------- Button -------------*/
 .myButton {
     font-size: 23px;
@@ -29,7 +31,6 @@ body {
     text-transform: uppercase;
     border-radius: 0;
     box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
-
 }
 
 /* --------- Pre Loading Screen -----*/
@@ -49,7 +50,6 @@ body {
     animation: spin 1s infinite linear;
 }
 
-<<<<<<< HEAD:Application/CSS/main.css
 @keyframes spin {
     from{
         transform: rotate(0deg);
@@ -66,8 +66,6 @@ body {
   left:0;
   top:0;
 }
-=======
->>>>>>> 755ecc437a0bd9dbda1df32c46be46ae6ceee135:Application/CSS/index.css
 /* --------------- Heading --------------*/
 
 header {
@@ -81,15 +79,12 @@ header nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
-<<<<<<< HEAD:Application/CSS/index.css
     /* Font size and type for navigation bar (centered) */
     font-size: 20px;
-=======
     /* Navigation bar (center) font size and type */
     font-size: 23px;
     font-weight: 900;
     line-height: 20px;
->>>>>>> Update Main:Application/CSS/main.css
     padding-top: 3em;
     padding-bottom: 2em;   
 }
@@ -104,7 +99,6 @@ header nav {
     margin-right: 4.5em;    
 }
 
-<<<<<<< HEAD:Application/CSS/main.css
 .myButton {
     font-size: 23px;
     font-weight: 700;
@@ -127,7 +121,6 @@ header nav {
 .myButton:focus {
     transform: scale(1.05);
 }
-=======
 .rightNav > div {
     margin: 8px 0 8px 0;
     width: 100%;
@@ -143,7 +136,6 @@ header nav {
 }
 
 
->>>>>>> 755ecc437a0bd9dbda1df32c46be46ae6ceee135:Application/CSS/index.css
 
 /* ---------- Left side of heading ----------*/
 
