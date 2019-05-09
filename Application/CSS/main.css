@@ -1,28 +1,59 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
+html {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: blue;
 }
 
-/* ------------------- Button -------------*/
-.myButton {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding-left: 60px;
-    padding-right: 60px;
-    text-transform: uppercase;
-    border-radius: 0;
-    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
-}
-
-.myButton:active { 
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
-    transform: translateY(7px) translateX(7px);
+#background {
+    /* The image used */
+    background-image: url(../Images/main_background.jpg);
+    
+    /* Full height */
+    height: 100%; 
   
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
+/* --------- Pre Loading Screen -----*/
 
+.spinner{
+    width: 80px;
+    height: 80px;  
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
+
+#loading{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 1);
+  position:fixed;
+  left:0;
+  top:0;
+}
 /* --------------- Heading --------------*/
 
 header{
@@ -39,8 +70,7 @@ header nav{
     /* Font size and type for navigation bar (centered) */
     font-size: 20px;
     padding-top: 3em;
-    padding-bottom: 2em;
-   
+    padding-bottom: 2em;   
 }
 
 /* ---------- Right side of heading ----------*/
@@ -50,6 +80,29 @@ header nav{
     justify-content: space-between;
     align-items: center;
     margin-right: 4.5em;    
+}
+
+.myButton {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.myButton:active { 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
+    transform: scale(.9);
+}
+
+.myButton:hover {
+    transform: scale(1.05);
+}
+
+.myButton:focus {
+    transform: scale(1.05);
 }
 
 /* ---------- Left side of heading ----------*/
@@ -68,6 +121,7 @@ header nav{
     font-family: 'Niconne', cursive;
     font: bold;
     font-weight: 900;
+    cursor: pointer;
 }
 
 /* ---------- Center of heading ----------*/
@@ -105,6 +159,7 @@ nav li a:hover{
     transform: translate(-50%, -50%);
     text-align: center;
     color: whitesmoke;
+    text-shadow: 5px 5px black
 }
 
 h1 {
