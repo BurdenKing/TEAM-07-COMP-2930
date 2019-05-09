@@ -23,7 +23,6 @@ body {
   
 }
 
-
 /* --------------- Heading --------------*/
 
 header {
@@ -37,8 +36,15 @@ header nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
+<<<<<<< HEAD:Application/CSS/index.css
     /* Font size and type for navigation bar (centered) */
     font-size: 20px;
+=======
+    /* Navigation bar (center) font size and type */
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 20px;
+>>>>>>> Update Main:Application/CSS/main.css
     padding-top: 3em;
     padding-bottom: 2em;
    
@@ -76,7 +82,30 @@ header nav {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 4.5em;    
+    margin-left: 2em;    
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Niconne', cursive;
+    font: bold;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .logo {
@@ -95,7 +124,7 @@ nav ul li{
     display: inline;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 40px;
+    font-family: 100px;
     letter-spacing: 5px;
 }
   
