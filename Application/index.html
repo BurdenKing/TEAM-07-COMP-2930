@@ -33,7 +33,24 @@
         </div>
         <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
       </div>
+
+      <!-- Easter egg button, invisible and plays music when clicked -->
+      <div class = "Easter">
+        <div>
+
+             <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
+
+         </div>
+        <script>
+          function playMusic() {
+          var audio = new Audio('Javascript/careless.mp3');
+          audio.play();
+         }
+        </script>
+        
     </header>
+
+    
 
     <div>
       
