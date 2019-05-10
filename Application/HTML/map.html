@@ -6,8 +6,9 @@
     <meta name = "viewport" content="width=device-width, initial-scale=1" />
     <style>
     #map {
-      height: 800px;  /* The height is 800 pixels */
-      width: 100%;  /* The width is the width of the web page */
+      height: 700px;  /* The height is 800 pixels */
+      width: 40%;  /* The width is the width of the web page */
+      margin: auto;
 
      }
     </style>
@@ -23,7 +24,7 @@
 
 
 function initMap() {
-        var BCIT = {lat: 49.2500766, lng: -123.0018124};
+        var BCIT = {lat: 49.248, lng: -123.0018124};
 
 
         //customize icon.
@@ -32,7 +33,10 @@ function initMap() {
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15.5,
-          center: BCIT
+          zoomControl: false,
+          center: BCIT,
+          gestureHandling: 'cooperative'
+
         });
 
         
@@ -107,16 +111,35 @@ function initMap() {
             title: 'Student Parking Lot Q'
         });
 
-        var cityCircle = new google.maps.Circle({
+        var lotACircle = new google.maps.Circle({
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
-            strokeWeight: 3,
+            strokeWeight: 1,
             fillColor: '#FF0000',
             fillOpacity: 0.6,
             map: map,
             center: lotA.position,
             radius: 45
           });
+        var lotBCircle = new google.maps.Circle({
+            strokeColor: 'green',
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: 'green',
+            fillOpacity: 0.6,
+            map: map,
+            center: lotB.position,
+            radius: 45
+          });
+        
+
+        lotA.addListener('click',function(){
+          alert('successful');
+        });
+
+        lotACircle.addListener('click',function(){
+          alert('lotA');
+        });
   }
 
 
