@@ -27,7 +27,7 @@ connection.connect((err) => {
 
 //DEFINING WEBSITE PATHS
 app.get('/', (req, res) => {
-    let doc = fs.readFileSync('./index.html', "utf8");
+    let doc = fs.readFileSync('./main.html', "utf8");
     let dom = new JSDOM(doc);
     //let $ = require("jquery")(dom.window);
     //Will uncomment if jquery render does not show
@@ -87,7 +87,14 @@ app.use((req, res, next) => {
     res.status(404).send("Nothing there, 404.");
 });
 
+//azure
+const port = process.env.PORT || 1337;
+server.listen(port);
+
+    
+
+/** 
 //CONNECT TO LOCALHOST:8000
 app.listen(8000, () => {
     console.log('App listening on port 8000!');
-});
+}); */
