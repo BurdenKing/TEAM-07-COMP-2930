@@ -6,7 +6,17 @@ const {JSDOM} = require('jsdom');
 const config = require('./Application/Javascript/config.js');
 const mysql = require('mysql');
 let bodyParser = require('body-parser');
+const http = require('http');
 
+fs.readFile('.Application/main.html', function (err, html) {
+    if (err) {
+        throw err; 
+    }       
+    const server = http.createServer(function(request, response) {  
+        response.writeHeader(200, {"Content-Type": "text/html"});  
+        response.write(html);  
+        response.end();  
+});
 
 // STATIC DIRECTORIES
 app.use('/Application/HTML', express.static('HTML'));
@@ -26,14 +36,14 @@ connection.connect((err) => {
 })
 
 //DEFINING WEBSITE PATHS
-app.get('/', (req, res) => {
-    let doc = fs.readFileSync('./Application/main.html', "utf8");
-    let dom = new JSDOM(doc);
+//app.get('/', (req, res) => {
+  //  let doc = fs.readFileSync('./Application/main.html', "utf8");
+   // let dom = new JSDOM(doc);
     //let $ = require("jquery")(dom.window);
     //Will uncomment if jquery render does not show
 
-    res.send(dom.serialize());
-});
+    //res.send(dom.serialize());
+//});
 
 app.get('/create-acc', (req, res) => {
     let doc = fs.readFileSync('./Application/HTML/signUp.html', "utf8");
