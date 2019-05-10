@@ -3,16 +3,16 @@ const express = require('express');
 const app = express();
 const fs = require("fs");
 const {JSDOM} = require('jsdom');
-const config = require('./Javascript/config.js');
+const config = require('./Application/Javascript/config.js');
 const mysql = require('mysql');
 let bodyParser = require('body-parser');
 
 
 // STATIC DIRECTORIES
-app.use('/HTML', express.static('HTML'));
-app.use('/CSS', express.static('CSS'));
-app.use('/Javascript', express.static('Javascript'));
-app.use('/Images', express.static('Images'));
+app.use('/Application/HTML', express.static('HTML'));
+app.use('/Application/CSS', express.static('CSS'));
+app.use('/Application/Javascript', express.static('Javascript'));
+app.use('/Application/Images', express.static('Images'));
 
 let connection = mysql.createConnection(config);
 
@@ -27,7 +27,7 @@ connection.connect((err) => {
 
 //DEFINING WEBSITE PATHS
 app.get('/', (req, res) => {
-    let doc = fs.readFileSync('./main.html', "utf8");
+    let doc = fs.readFileSync('./Application/main.html', "utf8");
     let dom = new JSDOM(doc);
     //let $ = require("jquery")(dom.window);
     //Will uncomment if jquery render does not show
@@ -36,35 +36,35 @@ app.get('/', (req, res) => {
 });
 
 app.get('/create-acc', (req, res) => {
-    let doc = fs.readFileSync('./HTML/signUp.html', "utf8");
+    let doc = fs.readFileSync('./Application/HTML/signUp.html', "utf8");
     let dom = new JSDOM(doc);
 
     res.send(dom.serialize());
 });
 
 app.get('/login', (req, res) => {
-    let doc = fs.readFileSync('./HTML/login.html', "utf8");
+    let doc = fs.readFileSync('./Application/HTML/login.html', "utf8");
     let dom = new JSDOM(doc);
 
     res.send(dom.serialize());
 });
 
 app.get('/contact', (req, res) => {
-    let doc = fs.readFileSync('./HTML/contact.html', "utf8");
+    let doc = fs.readFileSync('./Application/HTML/contact.html', "utf8");
     let dom = new JSDOM(doc);
 
     res.send(dom.serialize());
 });
 
 app.get('/services', (req, res) => {
-    let doc = fs.readFileSync('./HTML/services.html', "utf8");
+    let doc = fs.readFileSync('./Application/HTML/services.html', "utf8");
     let dom = new JSDOM(doc);
 
     res.send(dom.serialize());
 });
 
 app.get('/about-us', (req, res) => {
-    let doc = fs.readFileSync('./HTML/aboutUS.html', "utf8");
+    let doc = fs.readFileSync('./Application/HTML/aboutUS.html', "utf8");
     let dom = new JSDOM(doc);
 
     res.send(dom.serialize());
