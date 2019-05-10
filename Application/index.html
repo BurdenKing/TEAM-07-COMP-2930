@@ -11,14 +11,13 @@
     <link rel="stylesheet" type="text/css" href = "./CSS/index.css"> 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  
 
   </head>
   
-  <body id="background"> 
+  <body id="background">
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
-      <div class = "leftNav"><a class="logo">ParkAway</a></div>
+      <div class = "leftNav"><a class="logo">ParkAway</span></a></div>
       <!-- Adding a navigation bar --> 
       <nav>
         <ul>
@@ -34,24 +33,39 @@
         </div>
         <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
       </div>
-            <!-- Easter egg button, invisible and plays music when clicked -->
-            <div class = "Easter">
-              <div>
-      
-                   <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
-      
-               </div>
-              <script>
-                let audio = new Audio('Javascript/careless.mp3');
-                function playMusic() {
-                if (audio.paused) {
-                    audio.play();
-                } else {
-                  audio.pause();
-                }
-               }
-              </script>
+
+      <!-- Easter egg button, invisible and plays music when clicked -->
+      <div class = "Easter">
+        <div>
+
+             <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
+
+         </div>
+        <script>
+          let audio = new Audio('Javascript/careless.mp3');
+
+          function playMusic() {
+          if (audio.paused) {
+              audio.play();
+          } else {
+            audio.pause();
+          }
+         }
+        </script>
+        
     </header>
+
+    <div>
+
+      
+    </div>
+    
+
+    <div>
+      
+
+    </div>
+    
 
     <!-- Title of homepgae -->
     <div class = "titleText">
@@ -60,7 +74,16 @@
     </div>
 
     <!-- Scroll down buttons -->
-    
   </body>
+ 
   <script src="./Javascript/index.js"></script>
+  <script src="./Javascript/anime.min.js"></script>
+  <script src="./Javascript/particles.js"></script>
+  <script>
+      // Initialize a new instance of Particles to disintegrate/integrate the button
+      // var particles = new Particles('body');
+      // particles.disintegrate();
+      
+  </script>
 </html>
+
