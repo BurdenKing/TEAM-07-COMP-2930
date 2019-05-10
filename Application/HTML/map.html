@@ -33,7 +33,10 @@ function initMap() {
 
         var map = new google.maps.Map(document.getElementById('map'), {
           zoom: 15.5,
-          center: BCIT
+          zoomControl: false,
+          center: BCIT,
+          gestureHandling: 'cooperative'
+
         });
 
         
@@ -111,13 +114,32 @@ function initMap() {
         var lotACircle = new google.maps.Circle({
             strokeColor: '#FF0000',
             strokeOpacity: 0.8,
-            strokeWeight: 3,
+            strokeWeight: 1,
             fillColor: '#FF0000',
             fillOpacity: 0.6,
             map: map,
             center: lotA.position,
             radius: 45
           });
+        var lotBCircle = new google.maps.Circle({
+            strokeColor: 'green',
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: 'green',
+            fillOpacity: 0.6,
+            map: map,
+            center: lotB.position,
+            radius: 45
+          });
+        
+
+        lotA.addListener('click',function(){
+          alert('successful');
+        });
+
+        lotACircle.addListener('click',function(){
+          alert('lotA');
+        });
   }
 
 
