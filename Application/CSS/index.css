@@ -1,10 +1,23 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
+html {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: blue;
 }
 
+#background {
+    background-image: url(../Images/main_background.jpg);
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 /* ------------------- Button -------------*/
+
 .myButton {
     font-size: 23px;
     font-weight: 700;
@@ -13,17 +26,41 @@ body {
     padding-right: 60px;
     text-transform: uppercase;
     border-radius: 0;
-    box-shadow: 12px 12px 5px rgba(0, 0, 0, 0.4); 
-
 }
 
-.myButton:active { 
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
-    transform: translateY(7px) translateX(7px);
-  
+/* --------- Pre Loading Screen -----*/
+
+.spinner{
+    width: 80px;
+    height: 80px;  
+    border: 2px solid #f3f3f3;
+    border-top:3px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
 }
 
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }to{
+        transform: rotate(360deg);
+    }
+}
 
+#loading{
+  height:100%;
+  width:100%;
+  background:rgba(0, 0, 0, 1);
+  position:fixed;
+  left:0;
+  top:0;
+}
 /* --------------- Heading --------------*/
 
 header {
@@ -39,9 +76,12 @@ header nav {
     align-items: center;
     /* Font size and type for navigation bar (centered) */
     font-size: 20px;
+    /* Navigation bar (center) font size and type */
+    font-size: 23px;
+    font-weight: 900;
+    line-height: 20px;
     padding-top: 3em;
-    padding-bottom: 2em;
-   
+    padding-bottom: 2em;   
 }
 
 /* ---------- Right side of heading ----------*/
@@ -52,6 +92,36 @@ header nav {
     justify-content: space-between;
     align-items: center;
     margin-right: 4.5em;    
+}
+
+.myButton {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+.myButton:active { 
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
+    transform: scale(.9);
+}
+
+.myButton:hover {
+    transform: scale(1.05);
+}
+
+.myButton:focus {
+    transform: scale(1.05);
+}
+
+.myButton .btn-ripple {
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    transform: scale(0);
+    animation: ripple 1s;
 }
 
 .rightNav > div {
@@ -68,15 +138,36 @@ header nav {
     text-decoration: none;
 }
 
-
-
 /* ---------- Left side of heading ----------*/
 
 .leftNav {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: 4.5em;    
+    margin-left: 2em;    
+}
+
+.logo {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding-left: 60px;
+    padding-right: 60px;
+    background-color: transparent;
+    color: whitesmoke;
+    border: none;
+    font-family: 'Niconne', cursive;
+    font: bold;
+    font-weight: 900;
+    font-size: 50px;
+    text-decoration: none;
+    list-style: none;
+    display: inline;
+}
+
+.logo:hover {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .logo {
@@ -86,6 +177,7 @@ header nav {
     font-family: 'Niconne', cursive;
     font: bold;
     font-weight: 900;
+    cursor: pointer;
 }
 
 /* ---------- Center of heading ----------*/
@@ -95,11 +187,11 @@ nav ul li{
     display: inline;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: 40px;
+    font-family: 100px;
     letter-spacing: 5px;
 }
   
-nav li a{
+nav li > a{
     /* Padding is for the hover background. */
     padding: 1.5em;
     padding-top: 1.7em;
@@ -107,7 +199,7 @@ nav li a{
     text-decoration: none;
     color: white;
 }
-  
+
 nav li a:hover{
     text-decoration: none;
     color:whitesmoke;
@@ -130,9 +222,103 @@ h1 {
     font: bold;
     font-weight: 900;
     font-size: 200px;
+    text-shadow: 5px 5px black
 }
 
 h3 {
     text-transform: uppercase;
+    font-size: 40px;
+}
+
+/* Page Load Fade In */
+header {
+-webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
+      -moz-animation: fadein 1.2s; /* Firefox < 16 */
+       -ms-animation: fadein 1.2s; /* Internet Explorer */
+        -o-animation: fadein 1.2s; /* Opera < 12.1 */
+           animation: fadein 1.2s;
+}
+
+
+@keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+   from { opacity: 0; }
+   to   { opacity: 1; }
 }
   
+.titleText {
+    -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
+          -moz-animation: fadein 5s; /* Firefox < 16 */
+           -ms-animation: fadein 5s; /* Internet Explorer */
+            -o-animation: fadein 5s; /* Opera < 12.1 */
+               animation: fadein 5s;
+    }
+    
+    @keyframes fadein {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+    }
+    
+    /* Firefox < 16 */
+    @-moz-keyframes fadein {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+    }
+    
+    /* Safari, Chrome and Opera > 12.1 */
+    @-webkit-keyframes fadein {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+    }
+    
+    /* Internet Explorer */
+    @-ms-keyframes fadein {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+    }
+    
+    /* Opera < 12.1 */
+    @-o-keyframes fadein {
+       from { opacity: 0; }
+       to   { opacity: 1; }
+    }
+
+
+    /* Type Write Effect */
+    .txt-type > .txt {
+        border-right: 3px solid white;
+    }
+
+
+.EasterButton {
+    background: transparent;
+    color: transparent;
+    border: none;
+    border: none !important;
+
+}
+  
+
