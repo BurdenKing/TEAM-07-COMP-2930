@@ -1,7 +1,7 @@
 {
   "name": "application",
   "version": "1.0.0",
-  "description": "",
+  "description": "A crowd source parking app",
   "main": "index.js",
   "scripts": {
     "start": "node app.js",
