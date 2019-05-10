@@ -8,15 +8,15 @@ const mysql = require('mysql');
 let bodyParser = require('body-parser');
 const http = require('http');
 
-fs.readFile('.Application/main.html', function (err, html) {
-    if (err) {
-        throw err; 
-    }       
-    const server = http.createServer(function(request, response) {  
+
+fs.readFile('.Application/main.html', (err, html) => {}); 
+
+const server =  http.createServer(function(request, response) {  
         response.writeHeader(200, {"Content-Type": "text/html"});  
         response.write(html);  
         response.end();  
 });
+
 
 // STATIC DIRECTORIES
 app.use('/Application/HTML', express.static('HTML'));
@@ -27,23 +27,23 @@ app.use('/Application/Images', express.static('Images'));
 let connection = mysql.createConnection(config);
 
 //Attempt to connect to MySQL. Make sure you turn on XAMPP.
-connection.connect((err) => {
-    if (err) {
-        console.log('Error connecting to the database.')
-        return;
-    }
-    console.log('Connected to the database!');
-})
+//connection.connect((err) => {
+//    if (err) {
+//        console.log('Error connecting to the database.')
+//        return;
+//    }
+//    console.log('Connected to the database!');
+//})
 
 //DEFINING WEBSITE PATHS
-//app.get('/', (req, res) => {
-  //  let doc = fs.readFileSync('./Application/main.html', "utf8");
-   // let dom = new JSDOM(doc);
-    //let $ = require("jquery")(dom.window);
-    //Will uncomment if jquery render does not show
+app.get('/', (req, res) => {
+    let doc = fs.readFileSync('./Application/main.html', "utf8");
+    let dom = new JSDOM(doc);
+    let $ = require("jquery")(dom.window);
+ //   Will uncomment if jquery render does not show
 
     //res.send(dom.serialize());
-//});
+});
 
 app.get('/create-acc', (req, res) => {
     let doc = fs.readFileSync('./Application/HTML/signUp.html', "utf8");
@@ -100,11 +100,3 @@ app.use((req, res, next) => {
 //azure
 const port = process.env.PORT || 1337;
 server.listen(port);
-
-    
-
-/** 
-//CONNECT TO LOCALHOST:8000
-app.listen(8000, () => {
-    console.log('App listening on port 8000!');
-}); */
