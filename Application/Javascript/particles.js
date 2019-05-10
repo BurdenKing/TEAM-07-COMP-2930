@@ -174,7 +174,7 @@
                 var _ = this;
                 this.animate(function(anim) {
                     var value = anim.animatables[0].target.value;
-                    _.addTransforms(value);
+        
                     if (_.o.duration) {
                         _.addParticles(_.rect, value / 100, true);
                     }
