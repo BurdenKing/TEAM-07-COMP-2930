@@ -4,40 +4,41 @@
 <head>
     <title>ParkAway Sign-up</title>
     <meta charset="utf-8">
+    <!--<link rel="stylesheet" type="text/css" href = "../CSS/form.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="../Javascript/client.js"></script>
     <!--<script src="../Javascript/validation.js"></script>-->
 </head>
 <body>
     <!--Form-->
-    <form>
+    <form id="create_acc_form" name="create_acc_form">
         <h2>Create a ParkAway Account!</h2>
-        Enter Your Email Address: <br>
-        <input type="text" id="create_acc_email" placeholder="My Email"/>
-        <br><br>
-        Password: <br>
-        <input type="password" id="create_acc_password" placeholder="Enter Password" />
-        <br><br>
-        Confirm Password: <br>
-        <input type="password" id="confirmpassword" placeholder="Re-enter Password">
-        <br><br>
-        First Name: <br>
-        <input type="text" id="create_acc_firstname" placeholder="Mickey">
-        <br><br>
-        Last Name: <br>
-        <input type="text" id="create_acc_lastname" placeholder="Mouse">
-        <br><br>
-        I am a : <select type="text" id="create_acc_type">
+        <label>Enter Your Email Address:<br></label>
+        <input type="text" name="create_acc_email" id="create_acc_email" placeholder="My Email" required="required"/>
+        <div class="error" id="error1"></div>
+        <label>Password: <br></label>
+        <input type="password" name="create_acc_password" id="create_acc_password" placeholder="Enter Password" required="required" />
+        <div class="error" id="error2"></div>
+
+        <label>Confirm Password:<br></label>
+        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Re-enter Password" required="required">
+        <br>
+        <label>First Name: <br></label>
+        <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="Mickey" required="required">
+        <div class="error" id="error3"></div>
+        <label>Last Name: <br></label>
+        <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Mouse" required="required">
+        <div class="error" id="error4"></div>
+        <label>I am a : <br></label>
+        <select type="text" id="create_acc_type">
             <option>Student</option>
             <option>Staff</option>
             <option>Visitor</option>
         </select>
-        <br><br>
-        -->
-        <input id="submit" type="submit" value="Submit">
+        <input id="submit" type="submit" value="Create Account"/>
         <!--<input type="reset" value="Reset">-->
     </form>
-    <div id="msg"></div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="../Javascript/client.js"></script>
+
 </body>
 
 </html>

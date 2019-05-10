@@ -5,22 +5,22 @@
     <title>ParkAway Login</title>
     <meta charset="utf-8">
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
-    <script src="../Javascript/login.js"></script>
+    <script src="../Javascript/client.js"></script>
 
 </head>
 
 <body>
-   
+
     <!-- this form will not show if user already logged in-->
     <div id="form_id">
         <form id ="log_in_form" method="post" action ="main.html">
-            <fieldset>  
+            <fieldset>
                     <label for="user_name">ID:</label>
-                    <input type="text" id="userName" name="user_name" placeholder="user_name" required="required">
+                    <input type="text" id="usernamelogin" name="user_name" placeholder="user_name" required="required">
                     <label for="password">Password:</label>
-                    <input type="password" id="password" placeholder="password" required="required">
-                    <input id="submit" value="Log in" type="submit"/>
-                    <button type="button" id="sign_up">Sign up</button> 
+                    <input type="password" id="passwordlogin" placeholder="password" required="required">
+                    <input id="submitlogin" value="Log in" type="submit"/>
+                    <button type="button" id="sign_up">Sign up</button>
                     <!-- if user logs in incorrectly, content of this p tag will change-->
                     <p id="error"></p>
             </fieldset>
