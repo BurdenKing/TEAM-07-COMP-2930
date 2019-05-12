@@ -20,7 +20,7 @@
     <div id="form-div">
     <!--Form-->
     <form id="create_acc_form" name="create_acc_form">
-        <h2>Create a ParkAway Account!</h2>
+        <h1>Create a ParkAway Account!</h1>
         <label>Enter Your Email Address:<br></label>
         <input type="text" name="create_acc_email" id="create_acc_email" placeholder="My Email" required="required"/>
         <div class="error" id="error1"></div>
@@ -46,6 +46,27 @@
         <input id="submit" type="submit" value="Create Account"/>
         <!--<input type="reset" value="Reset">-->
     </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#config-web-app -->
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
+        authDomain: "parkaway-comp2930.firebaseapp.com",
+        databaseURL: "https://parkaway-comp2930.firebaseio.com",
+        projectId: "parkaway-comp2930",
+        storageBucket: "parkaway-comp2930.appspot.com",
+        messagingSenderId: "817259487218",
+        appId: "1:817259487218:web:c64c81d3cf0c5465"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
 
 </body>
 
