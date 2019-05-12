@@ -1,3 +1,7 @@
+document.addEventListener("signUp", event => {
+    const app = firebase.app();
+});
+
 (function() {
   var firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
