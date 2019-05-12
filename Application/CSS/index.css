@@ -230,7 +230,48 @@ h3 {
     font-size: 40px;
 }
 
-/* Page Load Fade In */
+/* Scroll Down Button */
+
+.scrollButton {
+    margin-top: 44em
+}
+
+.ovalShape {
+    width: 25px;
+    margin: 0 auto;
+    height:45px;
+    border: 2px solid white;
+    border-radius: 40px;
+    -webkit-animation: bounceAnimation .7s infinite  alternate;
+    animation: bounceAnimation .7s infinite  alternate;
+    cursor: pointer;
+}
+
+@-webkit-keyframes BounceAnimation {
+    0% { transform: translateY(.5px); }
+    100% { transform: translateY(-13px); }
+}
+@keyframes bounceAnimation {
+    0% { transform: translateY(.5px); }
+    100% { transform: translateY(-13px); }
+}
+
+
+.downArrow {
+  position: relative;
+  content: "";
+  display: inline-block;
+  width: 12px;
+  margin: 0 auto;
+  height: 12px;
+  border-right: 0.1em solid white;
+  border-top: 0.1em solid white;
+  transform: rotate(135deg);
+  margin-left: 4.950px;
+  
+}
+
+/*--------------- Page Load Fade In Effects ---------------------- */
 header {
 -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
       -moz-animation: fadein 1.2s; /* Firefox < 16 */
