@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>ParkAway</title> 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Social Media Icons Sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -73,16 +76,24 @@
     </div>    
 
     <div id = "section2">
-        <p id="section2Title">Our Group</p>
-
-        <div class = "groupMember">
-          <div class="members">
-            <p>Lawrence Zheng</p>
+        <p id="section2Title">Our Team</p>
+    
+        <!-- Code for a member-->
+        <div class="member">
+          <div class="hiddenText">
+            <h4 class = "memberName"> Lawrence Zheng</h4>
+            <img class = "upArrow" src="../Images/upwards_arrow.svg">
+            
+            <p class = "memberText">This is a quick demo of slide-up effect 
+              using CSS animation when hover the box. No JS required!</p>
+            <div class="memberMedia">
+              <a href="https://github.com/BurdenKing" class="fa fa-github"></a>
+              <a href="https://github.com/BurdenKing" class="fa fa-linkedin"></a>  
+            </div>
           </div>
-
-
-
         </div>
+
+        <a href="https://github.com/BurdenKing" class="fa fa-github"></a>
 
     </div>
   </body>
@@ -97,3 +108,19 @@
       
   </script>
 </html>
+
+<!--
+
+
+<div id = "section2">
+    <p id="section2Title">Our Team</p>
+
+    <div class="member">
+      <div class="hiddenText">
+        <p class = "memberName">Lawrence Zheng</h1>
+        <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
+      </div>
+    </div>
+  </div>
+
+-->
