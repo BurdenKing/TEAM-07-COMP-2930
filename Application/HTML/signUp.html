@@ -6,16 +6,12 @@
     <meta charset="utf-8">
     <!--<link rel="stylesheet" type="text/css" href = "../CSS/form.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="../Javascript/client.js"></script>
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
-    <script src="../Javascript/createAccount.js"></script>
-    <!--<script src="../Javascript/validation.js"></script>-->
 </head>
 <body>
     <header>
         <!-- header here-->
     </header>
-
 
     <div id="form-div">
     <!--Form-->
@@ -27,7 +23,6 @@
         <label>Password: <br></label>
         <input type="password" name="create_acc_password" id="create_acc_password" placeholder="Enter Password" required="required" />
         <div class="error" id="error2"></div>
-
         <label>Confirm Password:<br></label>
         <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Re-enter Password" required="required">
         <br>
@@ -49,25 +44,12 @@
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
-
-    <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-        apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
-        authDomain: "parkaway-comp2930.firebaseapp.com",
-        databaseURL: "https://parkaway-comp2930.firebaseio.com",
-        projectId: "parkaway-comp2930",
-        storageBucket: "parkaway-comp2930.appspot.com",
-        messagingSenderId: "817259487218",
-        appId: "1:817259487218:web:c64c81d3cf0c5465"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    </script>
-
+    <!--<script src="../Javascript/signup.js"></script>-->
+    <script src="../Javascript/registeracc.js"></script>
 </body>
 
 </html>

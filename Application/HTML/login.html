@@ -8,19 +8,30 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head>
     <body>
+        <h1>Sign-in to Your Account</h1>
 
-        <h1>ParkAway</h1>
+        <form id="sign_in" name="sign_in">
+            <h1>Create a ParkAway Account!</h1>
+            <label>Email Address:<br></label>
+            <input type="text" name="sign_in_email" id="sign_in_email" required="required"/><br>
+            <label>Password: <br></label>
+            <input type="password" name="sign_in_password" id="sign_in_password" required="required" /><br>
+            <input id="submit" type="submit" value="Sign in"/>
+            <!--<input type="reset" value="Reset">-->
+        </form>
+
+        <!--
         <div id="firebaseui-auth-container"></div>
         <div id="loader">Loading...</div>
-
-
-
+        -->
+        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+        <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-        <script src="../Javascript/auth.js"></script>
-        <script src="../Javascript/signup.js"></script>
-
-     
+        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <!--<script src="../Javascript/auth.js"></script>-->
+        <script src="../Javascript/login.js"></script>
     </body>
 
 </html>
