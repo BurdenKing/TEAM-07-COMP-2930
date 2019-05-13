@@ -47,19 +47,20 @@ class TypeWriter {
     const wait = txtElement.getAttribute('data-wait');
     // Init TypeWriter
     new TypeWriter(txtElement, words, wait);
-   }
 
-   //Easter Egg Snap
+     //Easter Egg Snap
 
    var imageDataArray = [];
-   var canvasCount = 35;
+   var canvasCount = 100;
    $("#EB").click(function(){
      
      html2canvas($(".snap")[0]).then(canvas => {
        //capture all div data as image
-       ctx = canvas.getContext("2d")
+       ctx = canvas.getContext("2d");
+       
 
        var imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+
 
        var pixelArr = imageData.data;
        createBlankImageData(imageData);
@@ -80,10 +81,10 @@ class TypeWriter {
          $("body").append(c);
        }
        //clear all children except the canvas
-       $(".snap").children().not(".dust").fadeOut(3500);
+       $(".snap").children().not(".dust").fadeOut(5500);
        //apply animation
        $(".dust").each( function(index){
-         animateBlur($(this),0.8,800);
+         animateBlur($(this),0.8,1900);
          setTimeout(() => {
            animateTransform($(this),100,-100,chance.integer({ min: -15, max: 15 }),800+(110*index));
          }, 70*index); 
@@ -149,3 +150,6 @@ class TypeWriter {
          
      return canvas;
    }
+   }
+
+  

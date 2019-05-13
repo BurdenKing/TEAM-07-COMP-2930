@@ -9,7 +9,7 @@ body {
     background-color: blue;
 }
 
-#background {
+.snap {
     background-image: url(../Images/main_background.jpg);
     height: 100%; 
     background-repeat: no-repeat;
