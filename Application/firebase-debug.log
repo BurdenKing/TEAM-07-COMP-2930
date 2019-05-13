@@ -1,0 +1,105 @@
+[debug] [2019-05-13T00:49:04.754Z] ----------------------------------------------------------------------
+[debug] [2019-05-13T00:49:04.756Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-13T00:49:04.756Z] CLI Version:   6.0.1
+[debug] [2019-05-13T00:49:04.756Z] Platform:      win32
+[debug] [2019-05-13T00:49:04.756Z] Node Version:  v8.12.0
+[debug] [2019-05-13T00:49:04.757Z] Time:          Sun May 12 2019 17:49:04 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-13T00:49:04.757Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-13T00:49:04.768Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-13T00:49:04.768Z] > authorizing via signed-in user
+[debug] [2019-05-13T00:49:04.768Z] [iam] checking project parkaway-comp2930 for permissions ["firebase.projects.get"]
+[debug] [2019-05-13T00:49:04.770Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930:testIamPermissions  
+
+[debug] [2019-05-13T00:49:04.986Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-13T00:49:04.987Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930  
+ 
+[debug] [2019-05-13T00:49:05.562Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Pat\Documents\BCIT Projects 2\ParkAway\TEAM-07-COMP-2930'...
+[info] 
+[debug] [2019-05-13T00:49:05.567Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/817259487218/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-13T00:49:05.794Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Application
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-13T00:53:46.198Z] Error: write after end
+    at write_ (_http_outgoing.js:622:15)
+    at ServerResponse.write (_http_outgoing.js:617:10)
+    at ReadStream.ondata (_stream_readable.js:639:20)
+    at emitOne (events.js:116:13)
+    at ReadStream.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at ReadStream.Readable.push (_stream_readable.js:208:10)
+    at fs.read (fs.js:2059:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:658:17)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2019-05-13T01:04:47.461Z] ----------------------------------------------------------------------
+[debug] [2019-05-13T01:04:47.463Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-13T01:04:47.463Z] CLI Version:   6.0.1
+[debug] [2019-05-13T01:04:47.464Z] Platform:      win32
+[debug] [2019-05-13T01:04:47.464Z] Node Version:  v8.12.0
+[debug] [2019-05-13T01:04:47.464Z] Time:          Sun May 12 2019 18:04:47 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-13T01:04:47.464Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-13T01:04:47.473Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-13T01:04:47.473Z] > authorizing via signed-in user
+[debug] [2019-05-13T01:04:47.474Z] [iam] checking project parkaway-comp2930 for permissions ["firebase.projects.get"]
+[debug] [2019-05-13T01:04:47.475Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930:testIamPermissions  
+
+[debug] [2019-05-13T01:04:47.694Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-13T01:04:47.695Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930  
+ 
+[debug] [2019-05-13T01:04:47.903Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Pat\Documents\BCIT Projects 2\ParkAway\TEAM-07-COMP-2930'...
+[info] 
+[debug] [2019-05-13T01:04:47.913Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/817259487218/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-13T01:04:48.163Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Application
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-13T01:12:37.152Z] ----------------------------------------------------------------------
+[debug] [2019-05-13T01:12:37.154Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-13T01:12:37.154Z] CLI Version:   6.0.1
+[debug] [2019-05-13T01:12:37.154Z] Platform:      win32
+[debug] [2019-05-13T01:12:37.154Z] Node Version:  v8.12.0
+[debug] [2019-05-13T01:12:37.155Z] Time:          Sun May 12 2019 18:12:37 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-13T01:12:37.155Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-13T01:12:37.164Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-13T01:12:37.164Z] > authorizing via signed-in user
+[debug] [2019-05-13T01:12:37.165Z] [iam] checking project parkaway-comp2930 for permissions ["firebase.projects.get"]
+[debug] [2019-05-13T01:12:37.166Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-13T01:12:37.166Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-13T01:12:37.367Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-13T01:12:37.374Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930:testIamPermissions  
+
+[debug] [2019-05-13T01:12:37.592Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-13T01:12:37.596Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930  
+ 
+[debug] [2019-05-13T01:12:37.819Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Pat\Documents\BCIT Projects 2\ParkAway\TEAM-07-COMP-2930'...
+[info] 
+[debug] [2019-05-13T01:12:37.821Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/817259487218/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-13T01:12:38.096Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Application
+[info] +  hosting: Local server: http://localhost:5000
+[debug] [2019-05-13T16:42:31.565Z] Error: write after end
+    at write_ (_http_outgoing.js:622:15)
+    at ServerResponse.write (_http_outgoing.js:617:10)
+    at ReadStream.ondata (_stream_readable.js:639:20)
+    at emitOne (events.js:116:13)
+    at ReadStream.emit (events.js:211:7)
+    at addChunk (_stream_readable.js:263:12)
+    at readableAddChunk (_stream_readable.js:250:11)
+    at ReadStream.Readable.push (_stream_readable.js:208:10)
+    at fs.read (fs.js:2059:12)
+    at FSReqWrap.wrapper [as oncomplete] (fs.js:658:17)
+[error] 
+[error] Error: An unexpected error has occurred.
