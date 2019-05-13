@@ -5,11 +5,10 @@
     <title>ParkAway Sign-up</title>
     <meta charset="utf-8">
     <!--<link rel="stylesheet" type="text/css" href = "../CSS/form.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-    <script src="../Javascript/client.js"></script>
+   
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
-    <script src="../Javascript/createAccount.js"></script>
-    <!--<script src="../Javascript/validation.js"></script>-->
+    <script src="../Javascript/login.js"></script>
+    
 </head>
 <body>
     <header>
@@ -20,29 +19,20 @@
     <div id="form-div">
     <!--Form-->
     <form id="create_acc_form" name="create_acc_form">
-        <h2>Create a ParkAway Account!</h2>
-        <label>Enter Your Email Address:<br></label>
-        <input type="text" name="create_acc_email" id="create_acc_email" placeholder="My Email" required="required"/>
-        <div class="error" id="error1"></div>
-        <label>Password: <br></label>
-        <input type="password" name="create_acc_password" id="create_acc_password" placeholder="Enter Password" required="required" />
+        <h2>Create your Profile!</h2>
         <div class="error" id="error2"></div>
-
-        <label>Confirm Password:<br></label>
-        <input type="password" name="confirmpassword" id="confirmpassword" placeholder="Re-enter Password" required="required">
-        <br>
-        <label>First Name: <br></label>
-        <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="Mickey" required="required">
+        <label for="create_acc_firstname">First Name: </label>
+        <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="First Name" required="required">
         <div class="error" id="error3"></div>
-        <label>Last Name: <br></label>
-        <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Mouse" required="required">
+        <label for="create_acc_lastname">Last Name: </label>
+        <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Last Name" required="required">
         <div class="error" id="error4"></div>
-        <label>I am a : <br></label>
-        <select type="text" id="create_acc_type">
+        <label for="create_acc_type">I am a : </label>
+        <!-- <select type="text" id="create_acc_type" name="create_acc_type">
             <option>Student</option>
             <option>Staff</option>
             <option>Visitor</option>
-        </select>
+        </select> -->
         <input id="submit" type="submit" value="Create Account"/>
         <!--<input type="reset" value="Reset">-->
     </form>
