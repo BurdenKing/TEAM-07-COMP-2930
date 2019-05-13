@@ -1,0 +1,7 @@
+#backgroundContact {
+    background-image: url(../Images/contact.gif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    
+}

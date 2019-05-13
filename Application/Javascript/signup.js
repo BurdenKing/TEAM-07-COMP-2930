@@ -1,4 +1,3 @@
-
 //Initialize Firebase
 const firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
@@ -41,6 +40,4 @@ let uiConfig = {
     ]
 };
 
-// The start method will wait until the DOM is loaded.
-ui.start('#firebaseui-auth-container', uiConfig);
     

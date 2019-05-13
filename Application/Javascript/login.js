@@ -1,23 +1,27 @@
-//Initialize Firebase
-const firebaseConfig = {
-    apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
-    authDomain: "parkaway-comp2930.firebaseapp.com",
-    databaseURL: "https://parkaway-comp2930.firebaseio.com",
-    projectId: "parkaway-comp2930",
-    storageBucket: "parkaway-comp2930.appspot.com",
-    messagingSenderId: "817259487218",
-    appId: "1:817259487218:web:c64c81d3cf0c5465"
-};
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
+$(document).ready(function() {
 
-//Get elements
-const txtEmail = document.getElementById('sign_in_email');
-const txtPassword = document.getElementById('sign_in_password');
-const btnSignin = document.getElementById('submit');
+    //Gonna have to check server for this
+    let profile = true;
+    
+    //if user already has profile, redirect to index
+    if(logged) {
+        window.location.href = "../index.html";
+    }
 
-btnSignin.addEventListener('click', e => {
+    //when submit clicked
+    $("#submit").submit(function(e) {
     e.preventDefault();
+    console.log('got here');
+    let updates = 0;
+    let upvotes = 0;
+    let downvotes = 0;
+    
+   // let var_user = document.getElementById('userName').value;
+   // let var_pass = document.getElementById('password').value;
+    
+    
+
+});
 
     const email = txtEmail.value;
     const pass = txtPassword.value;

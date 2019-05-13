@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <title>ParkAway</title> 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Social Media Icons Sheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -22,7 +25,7 @@
       <!-- Adding a navigation bar --> 
       <nav>
         <ul>
-          <li><a href="#">About Us</a></li>
+          <li><a href="../HTML/aboutUS.html">About Us</a></li>
           <li><a href="../HTML/services.html">Services</a></li>
           <li><a href="../HTML/contact.html">Contact</a></li>  
         </ul>    
@@ -73,8 +76,24 @@
     </div>    
 
     <div id = "section2">
-        <p id="section2Title">Our Group</p>
+        <p id="section2Title">Our Team</p>
+    
+        <!-- Code for a member-->
+        <div class="member">
+          <div class="hiddenText">
+            <h4 class = "memberName"> Lawrence Zheng</h4>
+            <img class = "upArrow" src="../Images/upwards_arrow.svg">
+            
+            <p class = "memberText">This is a quick demo of slide-up effect 
+              using CSS animation when hover the box. No JS required!</p>
+            <div class="memberMedia">
+              <a href="https://github.com/BurdenKing" class="fa fa-github"></a>
+              <a href="https://github.com/BurdenKing" class="fa fa-linkedin"></a>  
+            </div>
+          </div>
+        </div>
 
+        <a href="https://github.com/BurdenKing" class="fa fa-github"></a>
 
     </div>
   </body>
@@ -90,47 +109,18 @@
   </script>
 </html>
 
-
 <!--
 
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <title>ParkAway About</title>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/">
-</head>
+<div id = "section2">
+    <p id="section2Title">Our Team</p>
 
-<body>
-<h1>
- About Us   
-</h1>
-    <p> 
-        We are a group of students studying CST at BCIT. We are developing the ParkAway app for our Projects course. 
-        We were inspired to create this app because parking at BCIT is an issue that we faced in our own group. The
-        app will use crowdsourcing and community input to show users the states of parking lots. Users can also add their
-        own input about the states of parking lots.
-    </p>
-    <h1>
-    Group Members
-    </h1>
-    <ul>
-        <li>Patrick Wong</li>
-        <li>Jovan Sekhon</li>
-        <li>Madid Abumirar</li>
-        <li>Wei-Han Chou</li>
-        <li>Lawrence Zheng</li>
-    </ul>
+    <div class="member">
+      <div class="hiddenText">
+        <p class = "memberName">Lawrence Zheng</h1>
+        <p>This is a quick demo of slide-up effect using CSS animation when hover the box. No JS required!</p>
+      </div>
+    </div>
+  </div>
 
-    <h1>
-        Our Vision
-    </h1>
-    <p>
-        We are striving to create a better experience for the students and staff at BCIT with our ParkAway Web Application.
-        ParkAway will give users a faster and easier way of finding a place to park.
-    </p>
-</body>
-
-</html>
 -->
