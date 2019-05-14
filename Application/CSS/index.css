@@ -1,56 +1,56 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
 html {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    background-color: blue;
+  background-color: blue;
 }
 
 .snap {
-    background-image: url(../Images/main_background.jpg);
-    height: 100%; 
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image: url(../Images/main_background.jpg);
+  height: 100%; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* ------------------- Button -------------*/
 
 .myButton {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding-left: 60px;
-    padding-right: 60px;
-    text-transform: uppercase;
-    border-radius: 0;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  padding-left: 60px;
+  padding-right: 60px;
+  text-transform: uppercase;
+  border-radius: 0;
 }
 
 /* --------- Pre Loading Screen -----*/
 
 .spinner{
-    width: 80px;
-    height: 80px;  
-    border: 2px solid #f3f3f3;
-    border-top:3px solid #f25a41;
-    border-radius: 100%;
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    animation: spin 1s infinite linear;
+  width: 80px;
+  height: 80px;  
+  border: 2px solid #f3f3f3;
+  border-top:3px solid #f25a41;
+  border-radius: 100%;
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right: 0;
+  margin: auto;
+  animation: spin 1s infinite linear;
 }
 
 @keyframes spin {
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(360deg);
+  }
 }
 
 #loading{
@@ -64,10 +64,10 @@ body {
 /* --------------- Heading --------------*/
 
 header {
-    display:flex;
-    justify-content: space-between;
-    color: white;
-    background: rgba(0,0,0,0.2)
+  display:flex;
+  justify-content: space-between;
+  color: white;
+  background: rgba(0,0,0,0.2)
 }
   
 header nav {
@@ -353,7 +353,7 @@ header {
         border-right: 3px solid white;
     }
 
-
+/* Easter Egg *////////
 .EasterButton {
     background: transparent;
     color: transparent;

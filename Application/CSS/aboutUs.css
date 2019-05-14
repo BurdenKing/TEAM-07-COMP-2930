@@ -8,15 +8,14 @@ html {
 }
 
 body {
-    background-color: blue;
-    background: rgba(0,0,0,0.2)
 }
 
 #background {
     background-image: url(../Images/about_background.gif);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+
+    background: rgba(39,62,84,0.82);
     
 }
 
@@ -296,9 +295,17 @@ header {
 
 #section2 {
     padding-top: 4em;
-    padding-bottom: 4em;
     background-color: white;
     margin: 0 auto;
+
+    /*
+
+    TEMPORARY
+
+    DELETE LATER AFTER FOOTER IS MADE
+
+    */
+    padding-bottom: 5em;
 }
 
 #section2Title {
@@ -307,71 +314,49 @@ header {
     text-transform: uppercase;
     font-size: 60px;
     color: black;
+    margin-bottom: 4em;
 }
 
-.member {
-    background-image: url(../Images/temporary_image.jpg);
-    background-size: cover;
-    height: 350px;
-    width: 300px;
+ .bottom_info {
+    background: whitesmoke;
+    width: 350px;
     margin: 0 auto;
-    overflow: hidden;
-    border: black solid 1px;
-}
-
-.memberName {
-    text-align: center;
-    padding-top: 20px;
-    font-family: 'Oswald', sans-serif;
-    text-transform: uppercase;
-   
-}
-  
-.hiddenText {
-    border-top: black solid 1px;
-    top: 80%;
+    box-shadow: 0 0 10px #cccccc;
+    padding: 40px 20px 20px;
     position: relative;
-    transition: all .3s ease-out;
-    background: lightgray;
-    height: 100%;
-}
-  
-.member:hover > .hiddenText {
-    top: 0;
-    cursor: pointer;
-    margin-top: 20%;
-    
-}
-  
-.upArrow {
-    width: 14%;
-    height: 8%;
-    transition: .7s ease-in-out;
-    transform: rotate(90deg);
-}
-
-.member:hover img {
-    width: 14%;
-    height: 8%;
-    transform: rotate(270deg)
-}
-
-
-.memberText {
-    margin-top: 30px;
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+    z-index: 9;
+    transition: all .2s ease-in-out;
 
-.member:active {  
-    transform: scale(0);
-}
 
-.member:focus {
-    transform: scale(0);
-}
-
-.fa { 
+    
+  }
+  
+ .up_arrow {
+    background-color: whitesmoke;
     border-radius: 50%;
+    box-shadow: 0 0 30px #cccccc;
+    height: 50px;
+    line-height: 40px;
+    margin-left: -25px;
+    margin-top: -25px;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    width: 50px;
+  }
+
+
+
+  .bottom_info:hover {
+    transform: translateY(-30px);
+    box-shadow:2px 2px 10px #999 , -2px -2px 10px #999 ;
+    cursor: pointer;
+    
+  }
+
+  .memberName {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
 }
+  

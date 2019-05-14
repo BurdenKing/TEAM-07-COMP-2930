@@ -2,6 +2,6 @@
     background-image: url(../Images/contact.gif);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    background: rgba(39,62,84,0.82);
     
 }
