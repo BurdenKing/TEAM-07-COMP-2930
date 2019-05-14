@@ -1,0 +1,6 @@
+#backgroundServices {
+    background-image: url(../Images/services.gif);
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}

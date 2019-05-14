@@ -17,6 +17,7 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    
 }
 
 /* ------------------- Button -------------*/
@@ -292,11 +293,12 @@ header {
 
 
 /* ---------- Section 2 ---------*/
+
 #section2 {
     padding-top: 4em;
     padding-bottom: 4em;
     background-color: white;
-    color: black;
+    margin: 0 auto;
 }
 
 #section2Title {
@@ -304,9 +306,72 @@ header {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     font-size: 60px;
+    color: black;
+}
+
+.member {
+    background-image: url(../Images/temporary_image.jpg);
+    background-size: cover;
+    height: 350px;
+    width: 300px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: black solid 1px;
+}
+
+.memberName {
+    text-align: center;
+    padding-top: 20px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+   
+}
+  
+.hiddenText {
+    border-top: black solid 1px;
+    top: 80%;
+    position: relative;
+    transition: all .3s ease-out;
+    background: lightgray;
+    height: 100%;
+}
+  
+.member:hover > .hiddenText {
+    top: 0;
+    cursor: pointer;
+    margin-top: 20%;
+    
+}
+  
+.upArrow {
+    width: 14%;
+    height: 8%;
+    transition: .7s ease-in-out;
+    transform: rotate(90deg);
+}
+
+.member:hover img {
+    width: 14%;
+    height: 8%;
+    transform: rotate(270deg)
 }
 
 
+.memberText {
+    margin-top: 30px;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
-  
+.member:active {  
+    transform: scale(0);
+}
 
+.member:focus {
+    transform: scale(0);
+}
+
+.fa { 
+    border-radius: 50%;
+}

@@ -8,7 +8,7 @@ $(document).ready(function(){
     if(!logged) {
         $("#form-div").replaceWith(replaceIfLogged);
     }
-
+z
 
  //button takes to main page
  $("#return_main").click(function() {
