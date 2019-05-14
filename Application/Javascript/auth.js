@@ -1,6 +1,10 @@
+
+/*
 document.addEventListener("signUp", event => {
     const app = firebase.app();
 });
+
+*/
 
 (function() {
   var firebaseConfig = {

@@ -8,8 +8,6 @@ $(document).ready(function() {
         window.location.href = "../index.html";
     }
 
-
-   
     //when submit clicked
     $("#submit").submit(function(e) {
     e.preventDefault();
@@ -25,11 +23,17 @@ $(document).ready(function() {
 
 });
 
+    const email = txtEmail.value;
+    const pass = txtPassword.value;
+    const auth = firebase.auth();
 
-
-
-
-
-
+    //Sign in
+    const promise = auth.signInWithEmailAndPassword(email,pass);
+    promise.then(e => {
+        alert("Success!");
+        setTimeout(window.location.href = "../index.html");
+    }).catch(e => {
+        console.log(e.message);
+    });
 
 });
