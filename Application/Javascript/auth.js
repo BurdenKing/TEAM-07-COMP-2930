@@ -6,6 +6,9 @@ document.addEventListener("signUp", event => {
 
 */
 
+//WILL DELETE AUTH.JS ONCE FUNCTION IS WORKING
+//loginchecker.js is the successor to this
+
 (function() {
   var firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
