@@ -19,15 +19,15 @@
 
 
 function initMap() {
-        var BCIT = {lat: 49.248, lng: -123.0018124};
-
-
+        var BCIT = {lat: 49.3071101, lng: -122.7276144};
+        // 
         //customize icon.
         var parkingIcon =
             'https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png'
 
+        // Zoom Out
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 15.5,
+          zoom: 11,
           zoomControl: false,
           center: BCIT,
           gestureHandling: 'cooperative'
@@ -35,29 +35,22 @@ function initMap() {
         });
 
         
-
+        // Coordinates of BCIT
         var lotA = new google.maps.Marker({
-          position: {lat: 49.250978, lng:-122.002011},
+          position: {lat: 49.250154, lng: -123.001022},
           map: map,
           title: 'British Columbia Institute Of Technology',
-          icon: parkingIcon
         });
+      }
 
-      
-  }
-
-
-   
 
     </script>
-  
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
     </script>
   </head>
-  
-  <body>
-            
+
+  <body>          
     <!-- Map -->
     <div id="map"></div>
     <div id = "backgroundContact">
@@ -102,8 +95,8 @@ function initMap() {
         </header>
         
         <div id = "section1">
-            <p id = "heading">Contact</p>
-    
+            <p id = "heading">BURNABY, BC</p>
+    <hr>
             <p class = "ptop"> ParkAway is a CrowdSourcing solution to the issue of parking. ParkAway revolves around taking user input from
                 the community to show available parking lots and comments about their status..</p>
     
