@@ -21,6 +21,14 @@
 		}
 		return a;
 	}
+	// Equation of a line.
+	function lineEq(y2, y1, x2, x1, currentVal) {
+		// y = mx + b
+		var m = (y2 - y1) / (x2 - x1),
+			b = y1 - m * x1;
+
+		return m * currentVal + b;
+	}
 	// From http://www.quirksmode.org/js/events_properties.html#position
 	function getMousePos(e) {
 		var posx = 0;
@@ -91,15 +99,10 @@
 			type = ev.type.toLowerCase() === 'mouseenter' ? 1 : -1,
 			animationSettings = {
 				targets: this.cube,
-				duration: 500,
-				easing: 'easeOutExpo'
+				duration: 1000,
+				easing: 'easeOutElastic',
+				translateZ: type === 1 ? 100 : 0
 			};
-
-		animationSettings.translateZ = {
-			value: type === 1 ? 100 : 0,
-			duration: 900,
-			easing: 'easeOutExpo'
-		};
 
 		switch(dir) {
 			case 0 : // from/to top
@@ -134,15 +137,31 @@
 		this.titlefxSettings = {
 			in: {
 				duration: 800,
-				delay: function(el, index) { return 650 + index*10; },
+				delay: 650,
 				easing: 'easeOutExpo',
 				opacity: {
 					duration: 200,
 					value: [0,1],
 					easing:'linear'
 				},
-				translateY: [100,0],
-				rotateZ: function(el, index) { return [anime.random(-20,20), 0]; }
+				translateY: function(el, index) {
+					var p = el.parentNode,
+						lastElOffW = p.lastElementChild.offsetWidth,
+						firstElOffL = p.firstElementChild.offsetLeft,
+						w = p.offsetWidth - lastElOffW - firstElOffL - (p.offsetWidth - lastElOffW - p.lastElementChild.offsetLeft),
+						tyVal = lineEq(0, 200, firstElOffL + w/2, firstElOffL, el.offsetLeft);
+
+					return [Math.abs(tyVal)+50,0];
+				},
+				rotateZ: function(el, index) {
+					var p = el.parentNode,
+						lastElOffW = p.lastElementChild.offsetWidth,
+						firstElOffL = p.firstElementChild.offsetLeft,
+						w = p.offsetWidth - lastElOffW - p.firstElementChild.offsetLeft - (p.offsetWidth - lastElOffW - p.lastElementChild.offsetLeft),
+						rz = lineEq(90, -90,firstElOffL + w, firstElOffL, el.offsetLeft);
+
+					return [rz,0];
+				}
 			},
 			out: {
 				duration: 800,
@@ -224,7 +243,7 @@
 					self._rotateCalendar(mousepos);
 				});
 			};
-			
+
 			this.handleOrientation = function() {
 				if( self.isOpen ) {
 					return false;
@@ -261,7 +280,7 @@
 			// Show the main container
 			anime({
 				targets: self.el,
-				duration: 1200,
+				duration: 1400,
 				easing: 'easeInOutExpo',
 				opacity: 1,
 				complete: function() {
@@ -270,6 +289,7 @@
 				}
 			});
 
+			var win = {w:window.innerWidth, h:window.innerHeight};
 			for(var i = 0, totalDays = self.days.length; i < totalDays; ++i) {
 				var day = self.days[i];
 				if( self.currentDayIdx === i ) {
@@ -278,7 +298,7 @@
 						duration: 1200,
 						delay: 1000,
 						easing: 'easeOutExpo',
-						scale: 1,
+						scale: [0,1],
 						translateY: 0,
 						translateZ: [-1500,0],
 						rotateX: 0,
@@ -289,14 +309,14 @@
 				else {
 					anime({
 						targets: day.cube,
-						duration: 1200,
-						delay: 1000,
+						duration: 700,
+						delay: function(el, index) {
+							return 1000 + anime.random(0,100);
+						},
 						easing: 'easeOutExpo',
-						scale: 1,
-						translateX: 0,
-						translateY: 0,
-						translateZ: [3000,0],
-						rotateY: 0
+						translateX: [day.currentTransform.translateX < 0 ? -win.w : win.w,0],
+						translateY: [day.currentTransform.translateY < 0 ? -win.h : win.h,0],
+						rotateY: [day.currentTransform.rotateY,0]
 					});
 				}
 			}
@@ -330,7 +350,6 @@
 				clearTimeout(colortimeout);
 				if( instance.isRotated ) {
 					colortimeout = setTimeout(function() { self._resetBGColor(); }, 35);
-					self._resetBGColor();
 					instance._rotate(ev);
 					self._hidePreviewTitle();
 					instance.isRotated = false;
@@ -350,7 +369,7 @@
 			// Hide the main container
 			anime({
 				targets: self.el,
-				duration: 1200,
+				duration: 1400,
 				easing: 'easeInOutExpo',
 				opacity: 0,
 				complete: function() {
@@ -358,40 +377,42 @@
 				}
 			});
 
+			var win = {w:window.innerWidth, h:window.innerHeight};
 			for(var i = 0, totalDays = self.days.length; i < totalDays; ++i) {
 				var day = self.days[i];
 
 				if( self.currentDayIdx === i ) {
 					anime({
 						targets: day.cube,
-						duration: 600,
-						delay: 200,
-						easing: 'easeInExpo',
-						scale: 1.1,
-						translateY: -window.innerHeight*2,
-						translateZ: day.currentTransform.translateZ,
+						duration: 1000,
+						easing: 'easeInOutExpo',
+						scale: 0,
+						translateZ: -1500,
 						rotateX: day.currentTransform.rotateX,
 						rotateY: day.currentTransform.rotateY
 					});
-
 					self._showContent(instance);
 				}
 				else {
-					var bcr = day.cube.getBoundingClientRect();
+					var bcr = day.cube.getBoundingClientRect(),
+						l = bcr.left + window.pageXOffset,
+						t = bcr.top + window.pageYOffset;
+
 					anime({
 						targets: day.cube,
 						duration: 1200,
 						easing: 'easeInOutExpo',
-						scale: 0.1,
 						translateX: function(el, index) {
-							return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-800,0) : anime.random(0,800);
+							day.currentTransform.translateX = l <= win.w/2 && t <= win.h/2 || l <= win.w/2 && t > win.h/2 ? anime.random(-800,-400) : anime.random(800,400);
+							return day.currentTransform.translateX;
 						},
 						translateY: function(el, index) {
-							return bcr.top + window.pageYOffset <= window.innerHeight/2 ? anime.random(-1400,-200) : anime.random(-200,600);
+							day.currentTransform.translateY = l <= win.w/2 && t <= win.h/2 || l > win.w/2 && t <= win.h/2 ? anime.random(-800,400) : anime.random(800,400);
+							return day.currentTransform.translateY;
 						},
-						translateZ: -1500,
 						rotateY: function(el, index) {
-							return bcr.left + window.pageXOffset <= window.innerWidth/2 ? anime.random(-40,0) : anime.random(0,40);
+							day.currentTransform.rotateY = l <= win.w/2 && t <= win.h/2 || l <= win.w/2 && t > win.h/2 ? anime.random(90,40) : anime.random(-90,-40);
+							return day.currentTransform.rotateY;
 						}
 					});
 				}
@@ -424,12 +445,13 @@
 		this.txtfx.show({
 			in: {
 				duration: 800,
-				delay: function(el, index) { return index*20; },
+				delay: function(el, index, total) { return index*40; },
 				easing: 'easeOutElastic',
 				opacity: 1,
 				translateY: function(el, index) {
 					return index%2 === 0 ? [-25, 0] : [25, 0];
-				}
+				},
+				rotateZ: [45,0]
 			}
 		});
 	};
@@ -479,7 +501,8 @@
 			delay: 800,
 			easing: 'easeOutExpo',
 			opacity: [0,1],
-			translateX: [100,0]
+			translateX: ['-50%','-50%'],
+			translateY: ['-100%','-50%']
 		});
 	};
 
@@ -498,7 +521,8 @@
 			duration: 500,
 			easing: 'easeInExpo',
 			opacity: 0,
-			translateX: 100
+			translateX: ['-50%','-50%'],
+			translateY: ['-50%','100%']
 		});
 
 		// The back button animation.
