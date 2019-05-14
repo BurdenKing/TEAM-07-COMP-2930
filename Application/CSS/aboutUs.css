@@ -15,13 +15,13 @@ body {
     background-size: cover;
     background-position: center;
     overflow: hidden;
-
     
 }
 
+
 #overlay {
 
-    background: rgba(39,62,84,0.91);
+    background: rgba(39,62,84,0.89);
     overflow: hidden;
     z-index: 2;
 }
@@ -91,7 +91,7 @@ header nav {
     font-weight: 900;
     line-height: 20px;
     padding-top: 3em;
-    padding-bottom: 2em;   
+    padding-bottom: 2em;  
 }
 
 /* ---------- Right side of heading ----------*/
@@ -268,16 +268,16 @@ header {
     margin: auto 0;
     text-align: center;
     color: white;
-    margin-top: 4em;
+    margin-top: 3.5em;
     margin-left: 26em;
     margin-right: 26em;
-    padding-bottom: 9em;
+    padding-bottom: 5em;
 }
 
 #heading {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
-    font-size: 60px;
+    font-size: 48px;
     letter-spacing: 0px;
 }
 
@@ -287,6 +287,7 @@ header {
     font-weight: 550;
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
+    ma
 }
 
 .pspacing {
@@ -382,6 +383,12 @@ header {
     margin: 2em;
 }
 
+
+hr {
+    background-color: whitesmoke;
+}
+  
+=======
 .memberSocialMedia{
     position: absolute;
     left: 50%;
@@ -395,3 +402,4 @@ header {
     display: inline-block;
     text-decoration: none;
 }
+

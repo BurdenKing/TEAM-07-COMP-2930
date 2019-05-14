@@ -17,6 +17,14 @@ html {
     z-index: 0;
 }
 
+#overlay {
+
+    background: rgba(39,62,84,0.89);
+    overflow: hidden;
+    z-index: 2;
+}
+
+
 /* ------------------- Button -------------*/
 
 .myButton {
