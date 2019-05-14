@@ -356,19 +356,50 @@ header {
 
 
 
-  .bottom_info:hover {
-    transform: translateY(-30px);
-    box-shadow:2px 2px 10px #999 , -2px -2px 10px #999 ;
-    cursor: pointer;
-    
-  }
+  
 
   .memberName {
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
 }
 
+.memberImages{
+    
+    box-shadow: 0 0 10px #cccccc;
+    transition: all .2s ease-in-out;
+}
+
+
+.memberOverall:hover {
+    transform: translateY(-30px);
+    box-shadow:2px 2px 10px #999 , -2px -2px 10px #999 ;
+    cursor: pointer;
+    width: 350px;
+    
+  }
+
+  .memberOverall {
+    display: inline-block;
+    margin: 2em;
+}
+
+
 hr {
     background-color: whitesmoke;
 }
   
+=======
+.memberSocialMedia{
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);    
+}
+
+.fa{
+    font-size: 30px;
+    padding: 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
