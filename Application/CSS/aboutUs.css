@@ -14,9 +14,16 @@ body {
     background-image: url(../Images/about_background.gif);
     background-size: cover;
     background-position: center;
+    overflow: hidden;
 
-    background: rgba(39,62,84,0.82);
     
+}
+
+#overlay {
+
+    background: rgba(39,62,84,0.91);
+    overflow: hidden;
+    z-index: 2;
 }
 
 /* ------------------- Button -------------*/
@@ -327,7 +334,7 @@ header {
     text-align: center;
     z-index: 9;
     transition: all .2s ease-in-out;
-
+    display: inline-block;
 
     
   }

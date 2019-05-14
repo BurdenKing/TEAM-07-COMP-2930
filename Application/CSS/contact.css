@@ -1,7 +1,17 @@
-#backgroundContact {
-    background-image: url(../Images/contact.gif);
-    background-size: cover;
-    background-position: center;
-    background: rgba(39,62,84,0.82);
-    
+
+#map {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
+
+#backgroundContact {
+
+    position: absolute;
+    background: rgba(39,62,84,0.82); 
+    z-index: 99;  
+}
+
