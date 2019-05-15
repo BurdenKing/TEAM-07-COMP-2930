@@ -74,15 +74,15 @@
 
     <div id = "section2">
       <p id ="section2Title">Our Team</p>
-        
+        <div class = "membersAll">
       <!-- Member #1 - Jovan -->
       <div class="memberOverall">
-          <div>
-              <img class="memberImages" src = '../Images/about_background.jpg' width="350px">
+          <div class="upper_info">
+             
               <div class="memberSocialMedia"> 
-                  <a href="#" class="fa fa-linkedin"></a>
-                  <a href="#" class="fa fa-github"></a>
-                  <a href="#" class="fa fa-envelope"></a>
+                  <a href="https://www.linkedin.com/in/jovan-sekhon-38933616a/" class="fa fa-linkedin rotate"></a>
+                  <a href="https://github.com/Jovan-23" class="fa fa-github rotate"></a>
+                  <a href="#" class="fa fa-envelope rotate"></a>
 
               </div>
             </div>
@@ -99,8 +99,13 @@
 
         <!-- Member #2 - Lawrence -->
         <div class="memberOverall">
-            <div>
-                <img class="memberImages" src = '../Images/about_background.jpg' width="350px">
+            <div class="upper_info">
+               
+                <div class="memberSocialMedia"> 
+                    
+                    
+  
+                </div>
               </div>
               <div class="bottom_info">
                 <span class="up_arrow">
@@ -111,10 +116,11 @@
               </div>
               </div>
               
+              
         <!-- Member #3 - Patrick -->
         <div class="memberOverall">
             <div>
-                <img class="memberImages" src = '../Images/about_background.jpg' width="350px">
+                <img class="memberImages" src = '../Images/about_background.jpg' width="350px" height="300px">
               </div>
               <div class="bottom_info">
                 <span class="up_arrow">
@@ -126,9 +132,10 @@
               </div>
 
         <!-- Member #4 - Madid -->
-        <div class="memberOverall">
+        <br>
+        <div class="memberOverall memberBottom2">
             <div>
-                <img class="memberImages" src = '../Images/about_background.jpg' width="350px">
+                <img class="memberImages" src = '../Images/about_background.jpg' width="350px" height="300px">
               </div>
               <div class="bottom_info">
                 <span class="up_arrow">
@@ -142,7 +149,7 @@
         <!-- Member #4 - Wei-Han -->
         <div class="memberOverall">
             <div>
-                <img class="memberImages" src = '../Images/about_background.jpg' width="350px">
+                <img class="memberImages" src = '../Images/about_background.jpg' width="350px" height="300px">
               </div>
               <div class="bottom_info">
                 <span class="up_arrow">
@@ -152,10 +159,28 @@
                 <span>Software Developer</span>
               </div>
               </div>
+
+              </div>
   
   
 
     </div>
+    <script>
+    
+    // Delays a link (social media clicks) clicks
+$('a').click(function (e) {
+    e.preventDefault();                   // prevent default anchor behavior
+    var goTo = this.getAttribute("href"); // store anchor href
+
+    // do something while timeOut ticks ... 
+
+    setTimeout(function(){
+         window.location = goTo;
+    }, 1000);                             // time in ms
+}); 
+
+
+    </script>
   </body>
  
   <script src="./Javascript/index.js"></script>

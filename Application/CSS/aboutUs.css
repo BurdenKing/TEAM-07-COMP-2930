@@ -40,36 +40,13 @@ body {
 
 /* --------- Pre Loading Screen -----*/
 
-.spinner{
-    width: 80px;
-    height: 80px;  
-    border: 2px solid #f3f3f3;
-    border-top:3px solid #f25a41;
-    border-radius: 100%;
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right: 0;
-    margin: auto;
-    animation: spin 1s infinite linear;
-}
 
-@keyframes spin {
-    from{
-        transform: rotate(0deg);
-    }to{
-        transform: rotate(360deg);
-    }
-}
-
-#loading{
-  height:100%;
-  width:100%;
-  background:rgba(0, 0, 0, 1);
-  position:fixed;
-  left:0;
-  top:0;
+#load{
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:9999;
+    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)
 }
 /* --------------- Heading --------------*/
 
@@ -287,7 +264,7 @@ header {
     font-weight: 550;
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
-    ma
+ 
 }
 
 .pspacing {
@@ -306,14 +283,7 @@ header {
     background-color: white;
     margin: 0 auto;
 
-    /*
 
-    TEMPORARY
-
-    DELETE LATER AFTER FOOTER IS MADE
-
-    */
-    padding-bottom: 5em;
 }
 
 #section2Title {
@@ -322,7 +292,7 @@ header {
     text-transform: uppercase;
     font-size: 60px;
     color: black;
-    margin-bottom: 4em;
+    margin-bottom: 0.5em;
 }
 
  .bottom_info {
@@ -334,7 +304,7 @@ header {
     position: relative;
     text-align: center;
     z-index: 9;
-    transition: all .2s ease-in-out;
+    
     display: inline-block;
 
     
@@ -364,42 +334,124 @@ header {
 }
 
 .memberImages{
-    
+ 
     box-shadow: 0 0 10px #cccccc;
-    transition: all .2s ease-in-out;
+    
+  
 }
 
+.memberOverall {
+    transition: all .3s ease-in-out;
+    box-shadow: 0 0 30px #cccccc;
+
+    
+  }
 
 .memberOverall:hover {
     transform: translateY(-30px);
     box-shadow:2px 2px 10px #999 , -2px -2px 10px #999 ;
     cursor: pointer;
-    width: 350px;
+
     
   }
 
   .memberOverall {
     display: inline-block;
     margin: 2em;
+    margin-left: 2.5em;
+    margin-right: 2.5em;
 }
 
 
-hr {
-    background-color: whitesmoke;
+
+.membersAll {
+    width: 100%;
+  text-align: center;
 }
-  
-=======
-.memberSocialMedia{
-    position: absolute;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);    
+
+.memberBottom2 {
+    margin-top: 3em;
 }
 
 .fa{
+    color: #999;
     font-size: 30px;
-    padding: 20px;
     display: inline-block;
     text-decoration: none;
+    /* Space between the soical media links */
+    margin-left: 14px;
+    margin-right: 14px;
+    /* Padding/space between white border */
+    padding: 10px;
+
+    -webkit-transition-duration: 1s;
+    -moz-transition-duration: 1s;
+    -o-transition-duration: 1s;
+    transition-duration: 1s;
+    -webkit-transition-property: -webkit-transform;
+    -moz-transition-property: -moz-transform;
+    -o-transition-property: -o-transform;
+    transition-property: transform;
+
 }
+
+.fa:hover{
+    text-decoration: none;
+    font-size: 30px;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  perspective: 1000px;
+}
+    
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate3d(-.5px, 0, 0);
+    }
+    20%, 80% {
+      transform: translate3d(1px, 0, 0);
+    }
+    30%, 50%, 70% {
+      transform: translate3d(-2px, 0, 0);
+    }
+    40%, 60% {
+      transform: translate3d(2px, 0, 0);
+    }
+}
+
+
+.fa-github {
+    font-size: 33px;
+}
+
+.fa-github:hover {
+    font-size: 33px;
+    color: rgb(33, 31, 31);
+}
+
+.fa-linkedin :hover {
+    color: #4875B4;
+}
+
+.fa-envelope :hover {
+    color: blue;
+}
+
+.upper_info {
+    background-image: url(../Images/about_background.jpg);
+    background-size: contain;
+    background-size: cover;
+    width: 350px;
+    height: 300px;
+}
+
+.memberSocialMedia{
+   
+    position: absolute;
+    margin-top: 110px;
+    background-color: whitesmoke;
+    border-radius: 35px;
+
+}
+
 
