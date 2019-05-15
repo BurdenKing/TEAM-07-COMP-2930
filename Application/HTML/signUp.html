@@ -7,7 +7,7 @@
     <!--<link rel="stylesheet" type="text/css" href = "../CSS/form.css">-->
    
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
-    <script src="../Javascript/login.js"></script>
+    <!--Redundant. Using signup.js instead <script src="../Javascript/login.js"></script>-->
 </head>
 <body>
     <header>
@@ -18,20 +18,38 @@
     <!--Form-->
     <form id="create_acc_form" name="create_acc_form">
         <h2>Create your Profile!</h2>
-        <div class="error" id="error2"></div>
+        <label for="create_acc_username"> Username: </label>
+        <div>
+            <input type="text" name="create_acc_username" id="create_acc_username" pattern="^[a-zA-Z0-9]{6,}$" placeholder="username" required="required">
+        </div>
+        <label for="create_acc_email">Email: </label>
+        <div>
+            <input type="email" name="create_acc_email" id="create_acc_email" placeholder="email" required="required">
+        </div>
+        <label for="create_acc_password">Password: </label>
+        <div>
+            <input type="password" name="create_acc_password" id="create_acc_password" required="required">
+        </div> 
+        <label for="confirmpassword">Confirm Password: </label>
+        <div>
+            <input type="password" name="confirmpassword" id="confirmpassword" required="required">
+        </div>
         <label for="create_acc_firstname">First Name: </label>
-        <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="First Name" required="required">
-        <div class="error" id="error3"></div>
+        <div>
+            <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="First Name" required="required">
+        </div>
         <label for="create_acc_lastname">Last Name: </label>
-        <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Last Name" required="required">
-        <div class="error" id="error4"></div>
+        <div>
+            <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Last Name" required="required">
+        </div>
+        <!--
         <label for="create_acc_type">I am a : </label>
-        <!-- <select type="text" id="create_acc_type" name="create_acc_type">
+        <select type="text" id="create_acc_type" name="create_acc_type">
             <option>Student</option>
             <option>Staff</option>
             <option>Visitor</option>
         </select> -->
-        <input id="submit" type="submit" value="Create Account"/>
+        <input id="create_acc_submit" type="submit" value="Create Account"/>
         <!--<input type="reset" value="Reset">-->
     </form>
 
@@ -42,7 +60,8 @@
     <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#config-web-app -->
     <!--<script src="../Javascript/signup.js"></script>-->
-    <script src="../Javascript/signUp.js"></script>
+    <!--registeracc.js is the script that registers the sign in process-->
+    <script src="../Javascript/registeracc.js"></script>
 </body>
 
 </html>

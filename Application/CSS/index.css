@@ -178,11 +178,14 @@ header nav {
 /* ---------- Right side of heading ----------*/
 
 .rightNav {
-    margin-top: 1.1em;
+    margin-top: auto;
+    margin-bottom: auto;
     display:block;
     justify-content: space-between;
-    align-items: center;
-    margin-right: 4.5em;    
+    align-items: center; 
+    margin-right: 2em;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 .myButton {
@@ -224,10 +227,28 @@ header nav {
 }
 
 .signUp {
-    font-size: 20px;
+    font-size: 24px;
     color: white;
     text-decoration: none;
 }
+
+#sign_in_button {
+    display: block;
+    margin: auto;
+    font-size: 32px;
+}
+
+#sign_out_button {
+    background-color: red;
+    border: red;
+}
+
+#acc_name {
+    margin: 10px 0;
+    font-size: 28px;
+}
+
+
 
 /* ---------- Left side of heading ----------*/
 
@@ -319,6 +340,12 @@ h1 {
 h3 {
     text-transform: uppercase;
     font-size: 40px;
+    margin: 0px;
+    line-height: 0.5em;
+}
+
+p {
+    margin: 0px;
 }
 
 /* Scroll Down Button */
@@ -438,23 +465,34 @@ header {
        to   { opacity: 1; }
     }
 
-
     /* Type Write Effect */
     .txt-type > .txt {
         border-right: 3px solid white;
     }
 
-/* Easter Egg *////////
+/* Easter Egg */
 .EasterButton {
-    background: transparent;
+    background: green;
     color: transparent;
     border: none;
     border: none !important;
+    float: right;
+}
 
+header > .Easter {
+    display: block;
+    z-index: -1;
+    position: relative;  
+    float: right;
+    margin-left: 0;
+}
+
+.Easter {
+    position: relative;
 }
 
 .dust {
     position: absolute;
-  }
+}
   
 

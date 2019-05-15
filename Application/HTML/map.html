@@ -18,13 +18,77 @@
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>               
 <script>
+//connects to firebase
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
+  authDomain: "parkaway-comp2930.firebaseapp.com",
+  databaseURL: "https://parkaway-comp2930.firebaseio.com",
+  projectId: "parkaway-comp2930",
+  storageBucket: "parkaway-comp2930.appspot.com",
+  messagingSenderId: "817259487218",
+  appId: "1:817259487218:web:c64c81d3cf0c5465"
+};
+  firebase.initializeApp(firebaseConfig);
+
 // Initialize and add the map
 
 
+var lotAColor;
+
+        
+        //Function to read data from firebase
+
+
+        //Read parking lot status from Firebase.
+
+
+        var database = firebase.database();
+        
+        //root ref to firebase.
+        var ref = database.ref().child('parkinglot');
+        ref.on('value',getData);
+        
+        
+        function getData(data){
+
+        //Rgb color to hex conversion.
+            function rgbtoHex(rgb) { 
+           var hex = Number(rgb).toString(16);
+            if (hex.length < 2) {
+                hex = "0" + hex;
+            }
+            return hex;
+          };
+
+          var lots = data.val();
+          console.log(lots);
+          var lotArray = Object.keys(lots);
+          console.log(lotArray);
+          console.log(lotArray[0]);
+
+        function lotColor(lotName){
+          for (var i = 0; i < lotArray.length; i++){
+            var k = lotArray[i];
+            if(lotName == lotArray[i]){
+              var coloNum = lots[k].full;
+            }
+          }
+          var myColor = "#" + rgbtoHex(255 - (255 * colorNum / 100)) + rgbtoHex(255 * (colorNum / 100)) + rgbtoHex(0);
+          return myColor;
+        }
+      
+
+      lotAColor = lotColor("lotA");
+        }
+
 function initMap() {
         var BCIT = {lat: 49.248, lng: -123.0018124};
+
+
 
 
         //customize icon.
@@ -111,21 +175,27 @@ function initMap() {
             title: 'Student Parking Lot Q'
         });
 
+
+
+
+
+
         var lotACircle = new google.maps.Circle({
-            strokeColor: '#FF0000',
+            strokeColor: (255, 20, 180),
             strokeOpacity: 0.8,
             strokeWeight: 1,
-            fillColor: '#FF0000',
+            fillColor: lotAColor,
             fillOpacity: 0.6,
             map: map,
             center: lotA.position,
             radius: 45
           });
+
         var lotBCircle = new google.maps.Circle({
-            strokeColor: 'green',
+            strokeColor: lotBColor,
             strokeOpacity: 0.8,
             strokeWeight: 1,
-            fillColor: 'green',
+            fillColor: lotBColor,
             fillOpacity: 0.6,
             map: map,
             center: lotB.position,

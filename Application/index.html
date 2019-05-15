@@ -38,20 +38,12 @@
         </ul>    
       </nav>
       <!-- Right side of the header -->
-      <div class = "rightNav">
-        <div>
-            <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = './HTML/login.html';">Sign In</button>
-        </div>
-        <div><a class="signUp" href='./HTML/signUp.html'>Or Sign Up</a></div>
-      </div>
-
+      <div class = "rightNav"></div>
       <!-- Easter egg button, invisible and plays music when clicked -->
       <div class = "Easter">
         <div>
-
-             <button class="EasterButton" id = 'EB' type="submit" onclick="playMusic()">Easter Egg</button>
-
-         </div>
+          <button class="EasterButton" id = 'EB' type="submit" onclick="playMusic()">Easter Egg</button>
+        </div>
         <script>
           let audio = new Audio('Javascript/careless.mp3');
 
@@ -65,7 +57,6 @@
 
          
         </script>
-        
     </header>
 
 
@@ -74,6 +65,7 @@
       <h1>ParkAway</h1>
       <h3>The Crowdsourcing <span class="txt-type" data-wait="3000" data-words='["solution to parking"]'></span></h3>
     </div>
+    <div id="readtest"></div>
 
     <!-- Scroll down buttons -->
     <div class = "scrollButton">
@@ -90,7 +82,12 @@
   </body>
  
   <script src="./Javascript/index.js"></script>
-  <script src="./Javascript/auth.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <!--Event listener if user is logged in-->
+  <script src="./Javascript/loginchecker.js"></script>
   <script src="./Javascript/anime.min.js"></script>
 </html>
 

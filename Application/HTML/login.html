@@ -8,15 +8,13 @@
         <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
     </head>
     <body>
-        <h1>Sign-in to Your Account</h1>
-
         <form id="sign_in" name="sign_in">
-            <h1>Create a ParkAway Account!</h1>
-            <label>Email Address:<br></label>
-            <input type="text" name="sign_in_email" id="sign_in_email" required="required"/><br>
+            <h1>Sign-in to Your Account</h1>
+            <label>Username:<br></label>
+            <input type="text" name="sign_in_username" id="sign_in_username" required="required"/><br>
             <label>Password: <br></label>
             <input type="password" name="sign_in_password" id="sign_in_password" required="required" /><br>
-            <input id="submit" type="submit" value="Sign in"/>
+            <input id="loginsubmit" type="submit" value="Sign in"/>
             <!--<input type="reset" value="Reset">-->
         </form>
 
@@ -30,8 +28,9 @@
         <!-- Add Firebase products that you want to use -->
         <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
         <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
         <!--<script src="../Javascript/auth.js"></script>-->
-        <script src="../Javascript/registeracc.js"></script>
+        <script src="../Javascript/login.js"></script>
     </body>
 
 </html>
