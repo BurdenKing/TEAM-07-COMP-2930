@@ -55,7 +55,6 @@ document.getElementById("create_acc_submit").addEventListener('click', e => {
                 auth.createUserWithEmailAndPassword(email, password).then(() => {
 
                     alert("Success! You will be directed to the home page.");
-                    console.log(auth.currentUser.uid);
                     saveAccInfo(username, email, password, firstname, lastname);
                     setTimeout(window.location.href = "../index.html");
 
@@ -63,8 +62,6 @@ document.getElementById("create_acc_submit").addEventListener('click', e => {
                 
                     var errorCode = error.code;
                     var errorMessage = error.message;
-
-                    console.log(error.Code);
 
                     if (errorCode == 'auth/weak-password') {
                         alert("Please enter a longer password.");

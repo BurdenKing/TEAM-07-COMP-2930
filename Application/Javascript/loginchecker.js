@@ -18,21 +18,19 @@ $(document).ready(function() {
     
         //If firebaseuser info exists, then show personalized message and log out button.
         if(firebaseUser != null) {
-    
-            console.log("Signed in!");
+    ;
             let useremail = firebase.auth().currentUser.email;
 
             $(".rightNav").empty();
             let loggedinwidget = "<div id='logged-in-widget'>"
             + "<div id='acc_name'></div>"
-            + "<div><span id='acc_username'></span>"
             + "<div><button id='sign_out_button' class='btn btn-primary btn-lg myButton' type='submit'>"
             + "Sign Out</button>"
             + "</div></div>";
                         
             function toSignOut() {     
                 firebase.auth().signOut().then(() => {
-                    console.log("Success!");
+                    alert("You are now signed out from ParkAway.");
                     // Sign-out successful.
                 }, function(error) {
                     console.log(error);
@@ -57,10 +55,6 @@ $(document).ready(function() {
                         $("#acc_name").empty();
                         //Greet full name of the user.
                         $("#acc_name").append("Welcome " + data[k].firstname + " " + data[k].lastname);
-
-                        $("#acc_username").empty();
-                        //Add username to personalize user experience.
-                        $("#acc_username").append(data[k].username);
                     }
                 }
             
@@ -68,13 +62,12 @@ $(document).ready(function() {
 
 
         //If firebaseuser info doesn't exist, then show sign in and sign up button. 
-        } else  {
-
-            console.log("Logged out!");
+        } else {
+            
             $(".rightNav").empty();
             let loggedoutwidget = "<button id='sign_in_button' class='btn btn-primary btn-lg myButton'"
             + "type='submit'>Sign In</button>"
-            + "<div><a class='signUp' href='./HTML/signUp.html'>Or Sign Up</a></div>";
+            + "<div id='signUpBox'><h3><a class='signUp' href='./HTML/signUp.html'>Or Sign Up</a></h3></div>";
 
             function toSignIn() {
                 window.location.href = './HTML/login.html';

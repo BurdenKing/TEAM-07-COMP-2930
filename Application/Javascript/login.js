@@ -43,7 +43,6 @@ document.getElementById('loginsubmit').addEventListener('click', e => {
 
             //Sign in
             const promise = auth.signInWithEmailAndPassword(data[counter].email, pass);
-            console.log(data[counter].email);
 
             promise.then(() => {
                 alert("Success!");
