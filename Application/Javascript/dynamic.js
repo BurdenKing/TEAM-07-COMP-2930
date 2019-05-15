@@ -46,8 +46,6 @@ $(document).ready(function(){
         downvotebtn2 = downvotebtn + i;
         $("#" + upid + i).replaceWith('<div><p>' + name + '</p> <p>' + status + '</p></div><div><p>' + comment + '</p></div><div><p>' + score +' </p> <button id="' + upvotebtn2 + '">upvote</button> <button id"' + downvotebtn2 + '">downvote</button></div></div>');
     }
-    
-    
 
 
     function getName(i) {
