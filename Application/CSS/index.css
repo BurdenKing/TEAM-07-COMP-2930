@@ -6,10 +6,9 @@ html {
 }
 
 #background {
-    background-image: url(../Images/main_background.jpg);
+    background-image: url(../Images/index_background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
     width: 100%;
     position: absolute;
     top: 0;
@@ -22,19 +21,6 @@ html {
     background: rgba(39,62,84,0.89);
     overflow: hidden;
     z-index: 2;
-}
-
-
-/* ------------------- Button -------------*/
-
-.myButton {
-  font-size: 23px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  padding-left: 60px;
-  padding-right: 60px;
-  text-transform: uppercase;
-  border-radius: 0;
 }
 
 /* --------- Pre Loading Screen -----*/
@@ -69,28 +55,6 @@ html {
   position:fixed;
   left:0;
   top:0;
-}
-/* --------------- Heading --------------*/
-
-header {
-  display:flex;
-  justify-content: space-between;
-  color: white;
-  background: rgba(0,0,0,0.2)
-}
-  
-header nav {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Font size and type for navigation bar (centered) */
-    font-size: 20px;
-    /* Navigation bar (center) font size and type */
-    font-size: 23px;
-    font-weight: 900;
-    line-height: 20px;
-    padding-top: 3em;
-    padding-bottom: 2em;   
 }
 
 /* ---------- Right side of heading ----------*/
@@ -166,83 +130,14 @@ header nav {
     font-size: 28px;
 }
 
-
-
-/* ---------- Left side of heading ----------*/
-
-.leftNav {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 2em;    
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: transparent;
-    color: whitesmoke;
-    border: none;
-    font-family: 'Niconne', cursive;
-    font: bold;
-    font-weight: 900;
-    font-size: 50px;
-    text-decoration: none;
-    list-style: none;
-    display: inline;
-}
-
-.logo:hover {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.logo {
-    font-size: 63px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-family: 'Niconne', cursive;
-    font: bold;
-    font-weight: 900;
-    cursor: pointer;
-}
-
-/* ---------- Center of heading ----------*/
-
-nav ul li{
-    list-style: none;
-    display: inline;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 100px;
-    letter-spacing: 5px;
-}
-  
-nav li > a{
-    /* Padding is for the hover background. */
-    padding: 1.5em;
-    padding-top: 1.7em;
-    padding-bottom: 1.7em;
-    text-decoration: none;
-    color: white;
-}
-
-nav li a:hover{
-    text-decoration: none;
-    color:whitesmoke;
-    background: rgba(255,255,255,.2);
-}
-
 /* ------------ Main Title ----------------- */
 
 .titleText {
-    position: fixed;
-    top: 46%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: relative;
+    top: 200px;
+    display: block;
+    margin: 0 auto;
+    margin: 0 auto 0 auto;
     text-align: center;
     color: whitesmoke;
 }
@@ -291,7 +186,6 @@ p {
     0% { transform: translateY(.5px); }
     100% { transform: translateY(-13px); }
 }
-
 
 .downArrow {
   position: relative;
