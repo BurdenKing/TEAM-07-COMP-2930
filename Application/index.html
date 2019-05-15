@@ -9,22 +9,20 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="Anonymous">
     <!-- Adding CSS Stylsheet-->
     <link rel="stylesheet" type="text/css" href = "./CSS/index.css"> 
+    <link rel="stylesheet" type="text/css" href = "./CSS/header.css">
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src ="./Javascript/chance.min.js"></script>
     <script src = "./Javascript/html2canvas.min.js"></script>
-    <script src= "./Javascript/jquery-ui.js"></script>
-  
-        
+    <script src= "./Javascript/jquery-ui.js"></script>   
   </head>
-  
   <body>
       <div id="loading-wrapper">
           <div id="loading-text">PARKAWAY</div>
           <div id="loading-content"></div>
         </div>
    
-    <!-- Dont delete | for pre laoder --><div id="contents">
+    <!-- Dont delete | for pre loader --><div id="contents">
     <div id="background">
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
@@ -40,6 +38,7 @@
       <!-- Right side of the header -->
       <div class = "rightNav"></div>
       <!-- Easter egg button, invisible and plays music when clicked -->
+      <!-- Will uncomment once we can put this top right without affecting navigation bar
       <div class = "Easter">
         <div>
           <button class="EasterButton" id = 'EB' type="submit" onclick="playMusic()">Easter Egg</button>
@@ -54,11 +53,9 @@
             audio.pause();
           }
          }
-
-         
         </script>
+        -->
     </header>
-
 
     <!-- Title of homepgae -->
     <div class = "titleText">
@@ -75,10 +72,6 @@
   </div>
   </div>
   </div>
-
-     
- 
-  
   </body>
  
   <script src="./Javascript/index.js"></script>
