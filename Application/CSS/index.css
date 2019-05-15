@@ -147,10 +147,6 @@ header nav {
     text-decoration: none;
 }
 
-#logged-out-widget {
-    display: hidden;
-}
-
 /* ---------- Left side of heading ----------*/
 
 .leftNav {
