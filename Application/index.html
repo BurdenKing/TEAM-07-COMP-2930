@@ -13,12 +13,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <script src ="./Javascript/chance.min.js"></script>
     <script src = "./Javascript/html2canvas.min.js"></script>
-    <script src= "./Javascript/jquery-ui.js"></script>
-  
-        
+    <script src= "./Javascript/jquery-ui.js"></script>   
   </head>
-  
-  <body class = "snap">
+  <body>
+      <div id="loading-wrapper">
+          <div id="loading-text">PARKAWAY</div>
+          <div id="loading-content"></div>
+        </div>
+   
+    <!-- Dont delete | for pre loader --><div id="contents">
     <div id="background">
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
@@ -67,12 +70,7 @@
       </div>
   </div>
   </div>
-  
-
-     <!-- Map -->
-     <div id="map"></div>
-
-  
+  </div>
   </body>
  
   <script src="./Javascript/index.js"></script>
