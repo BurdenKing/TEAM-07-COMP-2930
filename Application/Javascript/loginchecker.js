@@ -18,7 +18,7 @@ $(document).ready(function() {
     
         //If firebaseuser info exists, then show personalized message and log out button.
         if(firebaseUser != null) {
-    ;
+    
             let useremail = firebase.auth().currentUser.email;
 
             $(".rightNav").empty();
@@ -54,7 +54,7 @@ $(document).ready(function() {
                     if (useremail == dataemail) {
                         $("#acc_name").empty();
                         //Greet full name of the user.
-                        $("#acc_name").append("Welcome " + data[k].firstname + " " + data[k].lastname);
+                        $("#acc_name").append("Welcome <b>" + data[k].firstname + " " + data[k].lastname + "</b>");
                     }
                 }
             
