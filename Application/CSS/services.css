@@ -2,5 +2,5 @@
     background-image: url(../Images/services.gif);
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    background: rgba(39,62,84,0.82);
 }

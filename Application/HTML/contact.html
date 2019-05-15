@@ -8,67 +8,102 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
-    <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css">
     <link rel="stylesheet" type="text/css" href = "../CSS/contact.css">
+    <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css">
 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <!-- Adding Google Maps -->
+    <script>
+// Initialize and add the map
 
-  </head>
-  
-  <body>
-  <div id = "backgroundContact">
-    <!-- Adding a heading (with a navigation bar) -->  
-    <header>
-      <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
-      <!-- Adding a navigation bar --> 
-      <nav>
-        <ul>
-          <li><a href="../HTML/aboutUS.html">About Us</a></li>
-          <li><a href="../HTML/services.html">Services</a></li>
-          <li><a href="../HTML/contact.html">Contact</a></li>  
-        </ul>    
-      </nav>
-      <!-- Right side of the header -->
-      <div class = "rightNav">
-        <div>
-            <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = '/login';">Sign In</button>
-        </div>
-        <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
-      </div>
 
-      <!-- Easter egg button, invisible and plays music when clicked -->
-      <div class = "Easter">
-        <div>
+function initMap() {
+        var BCIT = {lat: 49.3071101, lng: -122.7276144};
+        // 
+        //customize icon.
+        var parkingIcon =
+            'https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png'
 
-             <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
+        // Zoom Out
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 11,
+          zoomControl: false,
+          center: BCIT,
+          gestureHandling: 'cooperative'
 
-         </div>
-        <script>
-          let audio = new Audio('Javascript/careless.mp3');
+        });
 
-          function playMusic() {
-          if (audio.paused) {
-              audio.play();
-          } else {
-            audio.pause();
-          }
-         }
-        </script>
         
-    </header>
+        // Coordinates of BCIT
+        var lotA = new google.maps.Marker({
+          position: {lat: 49.250154, lng: -123.001022},
+          map: map,
+          title: 'British Columbia Institute Of Technology',
+        });
+      }
+
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
+    </script>
+  </head>
+
+  <body>          
+    <!-- Map -->
+    <div id="map"></div>
+    <div id = "backgroundContact">
+        <!-- Adding a heading (with a navigation bar) -->  
+        <header>
+          <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+          <!-- Adding a navigation bar --> 
+          <nav>
+            <ul>
+              <li><a href="../HTML/aboutUS.html">About Us</a></li>
+              <li><a href="../HTML/services.html">Services</a></li>
+              <li><a href="../HTML/contact.html">Contact</a></li>  
+            </ul>    
+          </nav>
+          <!-- Right side of the header -->
+          <div class = "rightNav">
+            <div>
+                <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = '/login';">Sign In</button>
+            </div>
+            <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
+          </div>
     
-    <div id = "section1">
-        <p id = "heading">Contact</p>
+          <!-- Easter egg button, invisible and plays music when clicked -->
+          <div class = "Easter">
+            <div>
+    
+                 <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
+    
+             </div>
+            <script>
+              let audio = new Audio('Javascript/careless.mp3');
+    
+              function playMusic() {
+              if (audio.paused) {
+                  audio.play();
+              } else {
+                audio.pause();
+              }
+             }
+            </script>
+            
+        </header>
+        
+        <div id = "section1">
+            <p id = "heading">BURNABY, BC</p>
+    <hr>
+            <p class = "ptop"> ParkAway is a CrowdSourcing solution to the issue of parking. ParkAway revolves around taking user input from
+                the community to show available parking lots and comments about their status..</p>
+    
+        </div>
+        </div>    
 
-        <p class = "ptop">     You can find us located at 3700 Willingdon Avenue Burnaby, BC V5G 3H2  </p>
-
-                <p class="pspacing"> We can be contacted by email at ParkAway@gmail.com or by cellphone at 778-123-4567</p>
-
-                <p class="pspacing"> Please feel free to contact us with suggestions and advice, we highly encourage
-                    community feedback!
-                </p>
- 
+    
   <script src="./Javascript/index.js"></script>
   <script src="./Javascript/anime.min.js"></script>
   <script src="./Javascript/particles.js"></script>
