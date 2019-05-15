@@ -8,6 +8,9 @@ $(document).ready(function(){
     }
 
 
+    let stat = getStatus(0);
+    $("#status-div").replaceWith('<p> Status: <b>' + stat + '</b></p>');
+
     // lot should be the ID of the button clicked on map, refer to my test example i uploaded on slack
     // which parking lot is picked
     let lot = window.location.hash.substring(1);
