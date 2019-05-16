@@ -17,13 +17,8 @@
     <script src= "./Javascript/jquery-ui.js"></script>   
   </head>
   <body>
-    <div id="loading-wrapper">
-      <div id="loading-text">PARKAWAY</div>
-      <div id="loading-content"></div>
-    </div>
-   
-    <!-- Dont delete | for pre loader --><div id="contents">
     <div id="background">
+    
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
       <div class = "leftNav"><a class="logo">ParkAway</span></a></div>
@@ -37,24 +32,6 @@
       </nav>
       <!-- Right side of the header -->
       <div class = "rightNav "></div>
-      <!-- Easter egg button, invisible and plays music when clicked -->
-      <!-- Will uncomment once we can put this top right without affecting navigation bar
-      <div class = "Easter">
-        <div>
-          <button class="EasterButton" id = 'EB' type="submit" onclick="playMusic()">Easter Egg</button>
-        </div>
-        <script>
-          let audio = new Audio('Javascript/careless.mp3');
-
-          function playMusic() {
-          if (audio.paused) {
-              audio.play();
-          } else {
-            audio.pause();
-          }
-         }
-        </script>
-        -->
     </header>
 
     <!-- Title of homepgae -->
@@ -69,10 +46,11 @@
       <div class = "ovalShape">
           <div class="downArrow"></div>
       </div>
-     </div>
-  </div>
-  </div>
+    </div>
+
+    </div>
   </body>
+
   <script src="./Javascript/index.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
