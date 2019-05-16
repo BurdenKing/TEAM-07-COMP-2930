@@ -1,0 +1,29 @@
+[debug] [2019-05-15T20:47:33.014Z] ----------------------------------------------------------------------
+[debug] [2019-05-15T20:47:33.021Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-15T20:47:33.021Z] CLI Version:   6.0.1
+[debug] [2019-05-15T20:47:33.021Z] Platform:      win32
+[debug] [2019-05-15T20:47:33.021Z] Node Version:  v8.12.0
+[debug] [2019-05-15T20:47:33.023Z] Time:          Wed May 15 2019 13:47:33 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-15T20:47:33.023Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-15T20:47:33.041Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-15T20:47:33.046Z] > authorizing via signed-in user
+[debug] [2019-05-15T20:47:33.046Z] [iam] checking project parkaway-comp2930 for permissions ["firebase.projects.get"]
+[debug] [2019-05-15T20:47:33.050Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2019-05-15T20:47:33.050Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2019-05-15T20:47:33.214Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-15T20:47:33.228Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930:testIamPermissions  
+
+[debug] [2019-05-15T20:47:33.808Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-15T20:47:33.809Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930  
+ 
+[debug] [2019-05-15T20:47:34.029Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Pat\Documents\BCIT Projects 2\ParkAway\TEAM-07-COMP-2930'...
+[info] 
+[debug] [2019-05-15T20:47:34.053Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/817259487218/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-15T20:47:34.272Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Application
+[info] +  hosting: Local server: http://localhost:5000
