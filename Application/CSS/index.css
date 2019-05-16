@@ -1,19 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
-html {
-  padding: 0;
-  margin: 0;
+body, html {
+  height: 100%;
 }
 
 #background {
     background-image: url(../Images/index_background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
+    /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #overlay {
@@ -171,7 +170,7 @@ p {
 /* Scroll Down Button */
 
 .scrollButton {
-    margin-top: 44em
+    margin-top: 20em
 }
 
 .ovalShape {
