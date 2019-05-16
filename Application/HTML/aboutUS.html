@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
-    <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css">  
+    <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css"> 
+    <link rel="stylesheet" type="text/css" href = "../CSS/header.css"> 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
@@ -32,13 +33,7 @@
           </ul>    
         </nav>
         <!-- Right side of the header -->
-        <div class = "rightNav">
-          <div>
-            <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = '/login';">Sign In</button>
-          </div>
-          <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
-        </div>
-     
+        <div class = "rightNav"></div>
       </header>
     
       <div id = "section1">
@@ -164,7 +159,11 @@ $('a').click(function (e) {
 
     </script>
   </body>
- 
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <script src="../Javascript/loginchecker-pages.js"></script>
   <script src="./Javascript/index.js"></script>
   <script src="./Javascript/anime.min.js"></script>
   <script src="./Javascript/particles.js"></script>

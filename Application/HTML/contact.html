@@ -10,15 +10,14 @@
     <!-- Adding CSS Stylsheet-->
     <link rel="stylesheet" type="text/css" href = "../CSS/contact.css">
     <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css">
+    <link rel="stylesheet" type="text/css" href = "../CSS/header.css">
 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     <!-- Adding Google Maps -->
     <script>
-// Initialize and add the map
-
-
-function initMap() {
+      // Initialize and add the map
+      function initMap() {
         var BCIT = {lat: 49.3071101, lng: -122.7276144};
         // 
         //customize icon.
@@ -42,71 +41,42 @@ function initMap() {
           title: 'British Columbia Institute Of Technology',
         });
       }
-
-
     </script>
     <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
     </script>
-  </head>
-
-  <body>          
-    <!-- Map -->
-    <div id="map"></div>
-    <div id = "backgroundContact">
-        <!-- Adding a heading (with a navigation bar) -->  
-        <header>
-          <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
-          <!-- Adding a navigation bar --> 
-          <nav>
-            <ul>
-              <li><a href="../HTML/aboutUS.html">About Us</a></li>
-              <li><a href="../HTML/services.html">Services</a></li>
-              <li><a href="../HTML/contact.html">Contact</a></li>  
-            </ul>    
-          </nav>
-          <!-- Right side of the header -->
-          <div class = "rightNav">
-            <div>
-                <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = '/login';">Sign In</button>
-            </div>
-            <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
-          </div>
-    
-          <!-- Easter egg button, invisible and plays music when clicked -->
-          <div class = "Easter">
-            <div>
-    
-                 <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
-    
-             </div>
-            <script>
-              let audio = new Audio('Javascript/careless.mp3');
-    
-              function playMusic() {
-              if (audio.paused) {
-                  audio.play();
-              } else {
-                audio.pause();
-              }
-             }
-            </script>
-            
-        </header>
-        
+  <body>
+    <div class = "backgroundContact" id="header1">    
+      <header id="header2">
+        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+        <!-- Adding a navigation bar --> 
+        <nav>
+          <ul>
+            <li><a href="../HTML/aboutUS.html">About Us</a></li>
+            <li><a href="../HTML/services.html">Services</a></li>
+            <li><a href="../HTML/contact.html">Contact</a></li>  
+          </ul>    
+        </nav>
+        <!-- Right side of the header -->
+        <div class = "rightNav"></div>
+      </header>   
+    </div>
+    <div id="map">
+    </div>
+    <div class = "backgroundContact" id="header2">    
         <div id = "section1">
-            <p id = "heading">BURNABY, BC</p>
-    <hr>
+            <p id = "heading">BURNABY, BC</p><hr>
             <p class = "ptop"> ParkAway is a CrowdSourcing solution to the issue of parking. ParkAway revolves around taking user input from
                 the community to show available parking lots and comments about their status..</p>
-    
-        </div>
-        </div>    
+    </div>
+  
 
-    
-  <script src="./Javascript/index.js"></script>
-  <script src="./Javascript/anime.min.js"></script>
-  <script src="./Javascript/particles.js"></script>
-  <script>
-  </script>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+  <!--Event listener if user is logged in-->
+  <script src="../Javascript/loginchecker-pages.js"></script>
+  </body>  
 </html>
