@@ -1,4 +1,4 @@
-//Checks if user is logged in. JQuery is required.
+//Checks if user is logged in. JQuery is required. This script is only for index.html
 $(document).ready(function() {
 
     const firebaseConfig = {
@@ -13,11 +13,12 @@ $(document).ready(function() {
     firebase.initializeApp(firebaseConfig);
     
     let root = firebase.database();
-    
+
     firebase.auth().onAuthStateChanged(firebaseUser => {
-    
+        //console.log(firebaseUser);
+        //console.log(firebaseUser.uid);
         //If firebaseuser info exists, then show personalized message and log out button.
-        if(firebaseUser != null) {
+        if (firebaseUser != null) {
     
             let useremail = firebase.auth().currentUser.email;
 
@@ -67,10 +68,10 @@ $(document).ready(function() {
             $(".rightNav").empty();
             let loggedoutwidget = "<button id='sign_in_button' class='btn btn-primary btn-lg myButton'"
             + "type='submit'>Sign In</button>"
-            + "<div id='signUpBox'><h3><a class='signUp' href='./HTML/signUp.html'>Or Sign Up</a></h3></div>";
+            + "<div id='signUpBox'><h3><a class='signUp' href='./signUp.html'>Or Sign Up</a></h3></div>";
 
             function toSignIn() {
-                window.location.href = './HTML/login.html';
+                window.location.href = './login.html';
             }
 
             $(".rightNav").append(loggedoutwidget);

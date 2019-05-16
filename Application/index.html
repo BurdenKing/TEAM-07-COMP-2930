@@ -30,7 +30,7 @@
       <!-- Adding a navigation bar --> 
       <nav>
         <ul>
-          <li><a href="./HTML/aboutUS.html">About Us</a></li>
+          <li><a href='./HTML/aboutUS.html'>About Us</a></li>
           <li><a href="./HTML/services.html">Services</a></li>
           <li><a href="./HTML/contact.html">Contact</a></li>  
         </ul>    
@@ -56,30 +56,32 @@
         </script>
         -->
     </header>
-
-    <!-- Title of homepgae -->
-    <div class = "titleText">
-      <h1>ParkAway</h1>
-      <h3>The Crowdsourcing <span class="txt-type" data-wait="3000" data-words='["solution to parking"]'></span></h3>
-    </div>
-    <div id="readtest"></div>
-
-    <!-- Scroll down buttons -->
-    <div class = "scrollButton">
-      <div class = "ovalShape">
-          <div class="downArrow"></div>
+    <div id='content'>
+      <!-- Title of homepage -->
+      <div class = "titleText">
+        <h1>ParkAway</h1>
+        <h3>The Crowdsourcing <span class="txt-type" data-wait="3000" data-words='["solution to parking"]'></span></h3>
       </div>
-  </div>
+      <div id="readtest"></div>
+
+      <!-- Scroll down buttons -->
+      <div class = "scrollButton">
+        <div class = "ovalShape">
+            <div class="downArrow"></div>
+        </div>
+      </div>
+    </section>
   </div>
   </div>
   </body>
   <script src="./Javascript/index.js"></script>
+  <script src="./Javascript/routing.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
   <!--Event listener if user is logged in-->
-  <script src="./Javascript/loginchecker.js"></script>
+  <script src="./Javascript/loginchecker-index.js"></script>
   <script src="./Javascript/anime.min.js"></script>
 </html>
 
