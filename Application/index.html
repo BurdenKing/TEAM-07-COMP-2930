@@ -3,7 +3,7 @@
   <head>
     <title>ParkAway</title> 
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="Anonymous">
@@ -17,13 +17,8 @@
     <script src= "./Javascript/jquery-ui.js"></script>   
   </head>
   <body>
-    <div id="loading-wrapper">
-      <div id="loading-text">PARKAWAY</div>
-      <div id="loading-content"></div>
-    </div>
-   
-    <!-- Dont delete | for pre loader --><div id="contents">
     <div id="background">
+    
     <!-- Adding a heading (with a navigation bar) -->  
     <header>
       <div class = "leftNav"><a class="logo">ParkAway</span></a></div>
@@ -36,25 +31,7 @@
         </ul>    
       </nav>
       <!-- Right side of the header -->
-      <div class = "rightNav"></div>
-      <!-- Easter egg button, invisible and plays music when clicked -->
-      <!-- Will uncomment once we can put this top right without affecting navigation bar
-      <div class = "Easter">
-        <div>
-          <button class="EasterButton" id = 'EB' type="submit" onclick="playMusic()">Easter Egg</button>
-        </div>
-        <script>
-          let audio = new Audio('Javascript/careless.mp3');
-
-          function playMusic() {
-          if (audio.paused) {
-              audio.play();
-          } else {
-            audio.pause();
-          }
-         }
-        </script>
-        -->
+      <div class = "rightNav "></div>
     </header>
     <div id='content'>
       <!-- Title of homepage -->
@@ -70,10 +47,10 @@
             <div class="downArrow"></div>
         </div>
       </div>
-    </section>
-  </div>
-  </div>
+    </div>
+    </div>
   </body>
+
   <script src="./Javascript/index.js"></script>
   <script src="./Javascript/routing.js"></script>
   <!-- The core Firebase JS SDK is always required and must be listed first -->
