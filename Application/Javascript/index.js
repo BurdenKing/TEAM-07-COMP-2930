@@ -167,3 +167,4 @@ class TypeWriter {
         },1000);
     }
   }
+  
