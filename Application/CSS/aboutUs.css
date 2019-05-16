@@ -242,12 +242,11 @@ header {
 /* ---------- Section 1 ---------*/
 
 #section1 {
-    margin: auto 0;
+    width: 57%;
+    margin: 0 auto;
     text-align: center;
     color: white;
     margin-top: 3.5em;
-    margin-left: 26em;
-    margin-right: 26em;
     padding-bottom: 5em;
 }
 
@@ -451,5 +450,51 @@ header {
     margin-top: 110px;
     background-color: whitesmoke;
     border-radius: 35px;
-
 }
+
+
+@media screen and (max-width: 860px) {     
+    .ptop {
+        margin-top: 2em;
+    }
+    
+    /* Text turns into block needs more spacing in between each paragraph */
+    .pspacing {
+        margin-top: 2.5em;
+    }
+    
+}
+
+/* Keep the About Us readable throughput resposiveness */
+
+@media screen and (max-width: 1900px) {     
+    #section1 {
+        width: 59%;
+    }
+}
+
+@media screen and (max-width: 1800px) {     
+    #section1 {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 1600px) {     
+    #section1 {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1400px) {     
+    #section1 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 1200px) {     
+    #section1 {
+        width: 80%;
+    }
+}
+
+
