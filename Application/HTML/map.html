@@ -18,7 +18,8 @@
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 
-    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>               
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>       
+
 <script>
 //connects to firebase
 
@@ -37,7 +38,6 @@ const firebaseConfig = {
 // Initialize and add the map
 
 
-var lotAColor;
 
         
         //Function to read data from firebase
@@ -49,48 +49,63 @@ var lotAColor;
         var database = firebase.database();
         
         //root ref to firebase.
-        var ref = database.ref().child('parkinglot');
+
+function initMap() {
+var lotAColor = 0;
+  var ref = database.ref().child('parkinglot');
         ref.on('value',getData);
-        
+
+
+        function componentToHex(c) {
+          var hex = c.toString(16);
+          return hex.length == 1 ? "0" + hex : hex;
+        }
+
+        function rgbToHex(r, g, b) {
+          return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+        }
         
         function getData(data){
 
+
         //Rgb color to hex conversion.
-            function rgbtoHex(rgb) { 
-           var hex = Number(rgb).toString(16);
-            if (hex.length < 2) {
-                hex = "0" + hex;
-            }
-            return hex;
-          };
+
 
           var lots = data.val();
-          console.log(lots);
           var lotArray = Object.keys(lots);
-          console.log(lotArray);
-          console.log(lotArray[0]);
 
         function lotColor(lotName){
           for (var i = 0; i < lotArray.length; i++){
             var k = lotArray[i];
-            if(lotName == lotArray[i]){
-              var coloNum = lots[k].full;
-            }
-          }
-          var myColor = "#" + rgbtoHex(255 - (255 * colorNum / 100)) + rgbtoHex(255 * (colorNum / 100)) + rgbtoHex(0);
+            if(lotName.toString() == lotArray[i]){
+              var colorNum = lots[k].full;
+            
+          var a = colorNum >= 50 ? 255 : Math.round(colorNum /50 * 255);
+          console.log(a);
+          var b = colorNum >= 50 ? Math.round(255 - ((colorNum -50)/50 * 255)) : 255;
+          console.log(b);
+          var myColor = rgbToHex(a,b,0);
           return myColor;
+          }
+          }
         }
-      
+                  
+        lotAColor = lotColor("lotA");
+        console.log(lotAColor);
+        lotBColor = lotColor("lotB");
+        lotDColor = lotColor("lotD");
+        lotFColor = lotColor("lotF");
+        lotGColor = lotColor("lotG");
+        lotJColor = lotColor("lotJ");
+        lotKColor = lotColor("lotK");
+        lotLColor = lotColor("lotL");
+        lotNColor = lotColor("lotN");
+        lotOColor = lotColor("lotO");
+        lotQColor = lotColor("lotQ");
 
-      lotAColor = lotColor("lotA");
-        }
 
-function initMap() {
+        
         var BCIT = {lat: 49.248, lng: -123.0018124};
-
-
-
-
         //customize icon.
         var parkingIcon =
             'https://developers.google.com/maps/documentation/javascript/examples/full/images/parking_lot_maps.png'
@@ -181,14 +196,14 @@ function initMap() {
 
 
         var lotACircle = new google.maps.Circle({
-            strokeColor: (255, 20, 180),
+            strokeColor: lotAColor,
             strokeOpacity: 0.8,
             strokeWeight: 1,
             fillColor: lotAColor,
             fillOpacity: 0.6,
             map: map,
             center: lotA.position,
-            radius: 45
+            radius: 50
           });
 
         var lotBCircle = new google.maps.Circle({
@@ -199,7 +214,107 @@ function initMap() {
             fillOpacity: 0.6,
             map: map,
             center: lotB.position,
-            radius: 45
+            radius: 50
+          });
+
+          var lotDCircle = new google.maps.Circle({
+            strokeColor: lotDColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotDColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotD.position,
+            radius: 50
+          });
+          
+          var lotFCircle = new google.maps.Circle({
+            strokeColor: lotFColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotFColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotF.position,
+            radius: 50
+          });
+          
+          var lotGCircle = new google.maps.Circle({
+            strokeColor: lotGColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotGColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotG.position,
+            radius: 50
+          });
+
+
+          var lotJCircle = new google.maps.Circle({
+            strokeColor: lotJColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotJColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotJ.position,
+            radius: 50
+          });
+
+        var lotKCircle = new google.maps.Circle({
+            strokeColor: lotKColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotKColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotK.position,
+            radius: 50
+          });
+
+          var lotLCircle = new google.maps.Circle({
+            strokeColor: lotLColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotLColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotL.position,
+            radius: 50
+          });
+          
+          var lotNCircle = new google.maps.Circle({
+            strokeColor: lotNColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotNColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotN.position,
+            radius: 50
+          });
+          
+          var lotOCircle = new google.maps.Circle({
+            strokeColor: lotOColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotOColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotO.position,
+            radius: 50
+          });
+
+          var lotQCircle = new google.maps.Circle({
+            strokeColor: lotQColor,
+            strokeOpacity: 0.8,
+            strokeWeight: 1,
+            fillColor: lotQColor,
+            fillOpacity: 0.6,
+            map: map,
+            center: lotQ.position,
+            radius: 50
           });
         
 
@@ -210,13 +325,14 @@ function initMap() {
         lotACircle.addListener('click',function(){
           alert('lotA');
         });
-  }
-
+} 
+}
 
 
    
 
     </script>
+
       <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
       </script>
