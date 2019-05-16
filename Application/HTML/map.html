@@ -81,9 +81,7 @@ var lotAColor = 0;
               var colorNum = lots[k].full;
             
           var a = colorNum >= 50 ? 255 : Math.round(colorNum /50 * 255);
-          console.log(a);
           var b = colorNum >= 50 ? Math.round(255 - ((colorNum -50)/50 * 255)) : 255;
-          console.log(b);
           var myColor = rgbToHex(a,b,0);
           return myColor;
           }
@@ -91,7 +89,6 @@ var lotAColor = 0;
         }
                   
         lotAColor = lotColor("lotA");
-        console.log(lotAColor);
         lotBColor = lotColor("lotB");
         lotDColor = lotColor("lotD");
         lotFColor = lotColor("lotF");
@@ -317,15 +314,106 @@ var lotAColor = 0;
             radius: 50
           });
         
-
+        //lotA event handler.
         lotA.addListener('click',function(){
-          alert('successful');
+          window.location.href = "./dynamicPage.html?#lotA";
         });
 
         lotACircle.addListener('click',function(){
-          alert('lotA');
+          window.location.href = "./dynamicPage.html?#lotA";
         });
-} 
+
+        //lotB event handler.
+        lotB.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotB";
+        });
+
+        lotBCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotB";
+        });
+
+        //lotD event handler.
+        lotD.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotD";
+        });
+
+        lotDCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotD";
+        });
+
+        //lotF event handler.
+        lotF.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotF";
+        });
+
+        lotFCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotF";
+        });
+
+        //lotG event handler.
+        lotG.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotG";
+        });
+
+        lotGCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotG";
+        });
+
+        //lotJ event handler.
+        lotJ.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotJ";
+        });
+
+        lotJCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotJ";
+        });
+
+        //lotK event handler.
+        lotK.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotK";
+        });
+
+        lotKCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotK";
+        });
+
+        //lotL event handler.
+        lotL.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotL";
+        });
+
+        lotLCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotL";
+        });
+
+        //lotN event handler.
+        lotN.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotN";
+        });
+
+        lotNCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotN";
+        });
+
+        //lotO event handler.
+        lotO.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotO";
+        });
+
+        lotOCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotO";
+        });
+
+        //lotQ event handler.
+        lotQ.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotQ";
+        });
+
+        lotQCircle.addListener('click',function(){
+          window.location.href = "./dynamicPage.html?#lotQ";
+        });
+
+  } 
 }
 
 
