@@ -1,17 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
+
 #map {
+    position: absolute;
     height: 100%;
     width: 100%;
-    position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
 }
 
-.backgroundContact {
+#overlay {
     position: absolute;
-    background: rgba(39,62,84,0.89);  
+    background: rgba(39,62,84,0.89);
+    overflow: hidden;
+    z-index: 99;
 }
 
+
+/* ---------- Section 1 ---------*/
+
+#section1 {
+    width: 57%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 3.5em;
+    padding-bottom: 5em;
+}
+
+#heading {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0px;
+}
+
+.ptop {
+    margin-top: 1.7em;
+    font-size: 21px;
+    font-weight: 550;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Courgette', cursive;
+ 
+}
+
+.pspacing {
+    margin-top: 1.7em;
+    font-size: 21px;
+    font-weight: 550;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Courgette', cursive;
+}
+
+/* Removes all the buttons on the google map */
+.gmnoprint { 
+    display: none; 
+}
+
+/*
 #header1 {
     z-index: 99;
     width: 100%;
@@ -21,3 +69,5 @@
     top: 250px;
     z-index: 50;
 }
+*/
+

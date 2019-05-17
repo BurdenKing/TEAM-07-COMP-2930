@@ -1,6 +1,52 @@
-#backgroundServices {
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+@import url('https://fonts.googleapis.com/css?family=Oswald:500');
+@import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
+
+#background {
     background-image: url(../Images/services.gif);
     background-size: cover;
     background-position: center;
-    background: rgba(39,62,84,0.82);
+    overflow: hidden;
+}
+
+
+#overlay {
+    background: rgba(39,62,84,0.89);
+    overflow: hidden;
+    z-index: 2;
+}
+
+/* ---------- Section 1 ---------*/
+
+#section1 {
+    width: 57%;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    margin-top: 3.5em;
+    padding-bottom: 5em;
+}
+
+#heading {
+    text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    letter-spacing: 0px;
+}
+
+.ptop {
+    margin-top: 1.7em;
+    font-size: 21px;
+    font-weight: 550;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Courgette', cursive;
+ 
+}
+
+.pspacing {
+    margin-top: 1.7em;
+    font-size: 21px;
+    font-weight: 550;
+    font-family: 'Oswald', sans-serif;
+    font-family: 'Courgette', cursive;
 }

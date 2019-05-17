@@ -32,8 +32,8 @@ header nav {
     justify-content: space-between;
     align-items: center; 
     margin-right: 2em;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 .myButton {
@@ -83,7 +83,7 @@ header nav {
 #sign_in_button {
     display: block;
     margin: auto;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 #sign_out_button {
@@ -184,103 +184,6 @@ h3 {
 }
 
 /* ---------------- Responsiveness ----------------*/
-
-@media screen and (max-width: 1510px) {     
-    
-  nav li > a{
-      /* Padding is for the hover background. */
-      padding: 1.3em;
-      padding-top: 1.5em;
-      padding-bottom: 1.5em;
-     
-  }
-  
-}
-
-@media screen and (max-width: 1480px) {     
-        
-  nav li > a{
-    /* Padding is for the hover background. */
-    padding: .7em;
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-   
-    }
-
-  }
-
-  @media screen and (max-width: 1460px) {     
-    .rightNav {
-        margin-right: 0em;
-        padding-right: 50px;
-    }
-
-    /* Left Side */
-    .leftNav {
-        margin-left: 0em;
-        
-    }
-
-    .logo {
-        padding-left: 50px;
-    }
-
-}
-
-  @media screen and (max-width: 1440px) {     
-    .rightNav {
-        margin-right: 0em;
-        padding-right: 40px;
-    }
-
-    /* Left Side */
-    .leftNav {
-        margin-left: 0em;
-        
-    }
-
-    .logo {
-        padding-left: 40px;
-    }
-
-}
-
-@media screen and (max-width: 1297px) {     
-    .rightNav {
-        margin-right: 0em;
-        padding-right: 20px;
-        padding-left: 24px;
-    }
-
-    /* Left Side */
-    .leftNav {
-        margin-left: 0em;
-        
-    }
-
-    .logo {
-        padding-left: 20px;
-    }
-
-    #sign_in_button {
-        font-size: 22px;
-    }
-
-}
-
-@media screen and (max-width: 1203px) {     
-    .rightNav {
-        display: none;
-    }
-
-    nav ul li{
-        display: none;
-    }
-
-    .leftNav {
-        padding-left: 40px;
-    }
-}
 
 
 

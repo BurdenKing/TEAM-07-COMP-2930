@@ -1,3 +1,20 @@
+
+
+/* Switches bteween login and sign up*/
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
+
+
+
 const firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
     authDomain: "parkaway-comp2930.firebaseapp.com",
@@ -56,13 +73,6 @@ document.getElementById('loginsubmit').addEventListener('click', e => {
         console.log(err);
     });
 
-   
-
-
-   
-
-
 });
-
 
 
