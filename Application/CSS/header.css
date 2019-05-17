@@ -195,7 +195,7 @@ h3 {
     margin-top: 12px;
 }
 
-@media only screen and (max-width: 1400px) {
+@media only screen and (max-width: 1550px) {
     nav ul li {
         display: none;
     }
