@@ -9,6 +9,7 @@ html {
 
 body {
     background-image: ('../Images');
+    
 }
 
 #background {
@@ -37,7 +38,6 @@ body {
     padding-right: 60px;
     text-transform: uppercase;
     border-radius: 0;
-    background-color: #4875B4;
 }
 
 /* --------- Pre Loading Screen -----*/
@@ -80,7 +80,6 @@ header nav {
     display:block;
     justify-content: space-between;
     align-items: center;
-    margin-right: 4.5em;    
 }
 
 .myButton {
@@ -456,13 +455,10 @@ header {
 
 }
 
-.overall.parkingLotImage{
-    margin-right: 300px;
-}
-
 .overall{
-    width: 250px;
-    padding-left: 50px;
+    background-color: white;
+    width: 50px;
+    padding-left: 20px;
     margin-left: 800px;
     margin-top: 75px;
     margin-bottom: 20px;
@@ -470,9 +466,60 @@ header {
 }
 
 .float-my-children > * {
-    width: 800px;
-    margin-left: 75px;
+    width: 650px;
+    height: 500px;
+    margin-left: 0px;
     margin-top: 150px;
     float:left;
-    margin-right:5px;
+}
+.lotNo{
+    border-style: solid;
+    text-align: center;
+    margin-bottom: 5px;
+    border-width: 2px;
+    height: 121px;
+    width: 450px;
+    border-color: black;
+}
+.status-div{
+    border-style: solid;
+    text-align: center;
+    margin-bottom: 5px;
+    border-width: 2px;  
+    height: 121px;
+    width: 450px;
+    border-color: black;
+}
+
+.updates{
+    border-style: solid;
+    text-align: center;
+    margin-bottom: 5px;
+    border-width: 2px;
+    height: 121px;
+    width: 450px;
+    border-color: black;
+}
+
+.add-update{
+    border-style: solid;
+    text-align: right;
+    border-width: 2px;
+    height: 121px;
+    width: 450px;
+    border-color: black;
+}
+
+.views-div{
+    margin-top: 10px;
+}
+
+.update-btn {
+    
+}
+
+.actualOverall {
+    width: 1310px;
+    height: 400px;
+    margin-left: 330px;
 }

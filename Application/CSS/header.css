@@ -183,9 +183,30 @@ h3 {
     line-height: 0.5em;
 }
 
-/* ---------------- Responsiveness ----------------*/
+/* -----Responsiveness -----*/
+
+.mediaIcon {
+    display: none;
+
+}
+
+#mediaIcon {
+    align-items: center;
+    margin-top: 12px;
+}
+
+@media only screen and (max-width: 1550px) {
+    nav ul li {
+        display: none;
+    }
+
+    header > .rightNav {
+        display: none;
+    }
+
+    .mediaIcon {
+        display: block;
+    }
+}
 
 
-
-
- 

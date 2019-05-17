@@ -15,7 +15,9 @@ $(document).ready(function(){
     firebase.auth().onAuthStateChanged(firebaseUser => {
 
     if(firebaseUser != null) {
-        
+      $(".rightNav").replaceWith("<div id ='signout'><button class='btn btn-primary btn-lg myButton' type='submit' onclick=' firebase.auth().signOut().then(function() { location.reload(); });'> Sign Out </button></div>");
+      $("#signout").css("margin-top", "45px");
+      $("#signout").css("margin-right", "30px");
     } else {
        $("#add-update").replaceWith('<button id="log-in-btn"> Log in </button>');
     }
@@ -230,4 +232,5 @@ $(document).ready(function(){
     }  
 
     });
+
 });
