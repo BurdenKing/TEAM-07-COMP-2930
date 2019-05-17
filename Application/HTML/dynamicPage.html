@@ -1,90 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>ParkAway</title> 
+
+<head>
+    <title>ParkAway</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Adding Bootstrap CSS Stylesheet -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
-    <link rel="stylesheet" type="text/css" href = "../CSS/index.css"> 
-    <link rel="stylesheet" type="text/css" href = "../CSS/aboutUs.css">
-    <link rel="stylesheet" type="text/css" href = "../CSS/services.css">  
-    <link rel="stylesheet" type="text/css" href = "../CSS/dynamicPage.css">  
+    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/aboutUs.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/services.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
     <script src="../Javascript/dynamic.js"></script>
-    <link rel="stylesheet" type="text/css" href = "../CSS/dynamicPage.css"> 
-    <!-- Adding jQuery -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
 
-  </head>
-  
-  <body>
-  <div id = "backgroundServices">
-    <!-- Adding a heading (with a navigation bar) -->  
-    <header>
-      <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
-      <!-- Adding a navigation bar --> 
-      <nav>
-        <ul>
-          <li><a href="../HTML/aboutUS.html">About Us</a></li>
-          <li><a href="../HTML/services.html">Services</a></li>
-          <li><a href="../HTML/contact.html">Contact</a></li>  
-        </ul>    
-      </nav>
-      <!-- Right side of the header -->
-      <div class = "rightNav">
-        <div>
-            <button class="btn btn-primary btn-lg myButton" type="submit" onclick="window.location.href = '/login';">Sign In</button>
-        </div>
-        <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
-      </div>
+</head>
 
-      <!-- Easter egg button, invisible and plays music when clicked -->
-      <div class = "Easter">
-        <div>
+<body>
+    <div id="backgroundServices">
+        <!-- Adding a heading (with a navigation bar) -->
+        <header>
+            <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
+            <!-- Adding a navigation bar -->
+            <nav>
+                <ul>
+                    <li><a href="../HTML/aboutUS.html">About Us</a></li>
+                    <li><a href="../HTML/services.html">Services</a></li>
+                    <li><a href="../HTML/contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Right side of the header -->
+            <div class="rightNav">
+                <div>
+                    <button class="btn btn-primary btn-lg myButton" type="submit"
+                        onclick="window.location.href = '/login';">Sign In</button>
+                </div>
+                <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
+            </div>
 
-             <button class="EasterButton" type="submit" onclick="playMusic()">Easter Egg</button>
 
-         </div>
-        <script>
-          let audio = new Audio('Javascript/careless.mp3');
+        </header>
+        </div>
+        <div class="actualOverall">
+            <div class="clearfix float-my-children">
+                <img src="../Images/main_background.jpg" alt="image background">
 
-          function playMusic() {
-          if (audio.paused) {
-              audio.play();
-          } else {
-            audio.pause();
-          }
-         }
-        </script>
-        
-    </header>
-    <div class="actualOverall">
-    <div class="clearfix float-my-children">
-            <img src="../Images/main_background.jpg">
-<!--right side status-->
-<div class="overall">
-        <div class ="lotNo">
-            <h2> Lot A: SE 2</h2>
+
+                <!--right side status-->
+                <div class="overall">
+                    <div id="lotNo">
+                        <h2>Lot</h2>
+                    </div>
+                    <div id="status-div">
+                        <p>Status <b></b></p>
+                    </div>
+                    <div>
+                        <p> recent updates</p>
+                    </div>
+                    <!-- div for updates-->
+                    <div id="updates"></div>
+
+                    <!-- button for new updates or login-->
+                    <div id="add-update">
+                        <button id="update-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                            data-target="#myModal">update status</button>
+                    </div>
+
+                    <div class="modal fade" id="myModal" role="dialog">
+                        <div class="modal-dialog">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    <h4 class="modal-title">Modal Header</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div id="lot-title"></div>
+                                        <div id="status-bar">
+                                            <p>Status </p>
+                                            <div>
+                                                <input id="slider1" type="range" min="0" max="4">
+                                            </div>
+                                            <span id="color">HALF</span> <!-- default value -->
+                                            <input type="text" id="txt-area" placeholder="Enter Comment..">
+                                            <button id="updt-btn" type="button" data-dismiss="modal">Confirm</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>    
         </div>
-        <div class="status-div">
-            <p>Status <b>MOSTLY FULL</b></p>
-        </div>
-        <div class="updates">
-            <p> recent updates</p>
-        </div>
-        <!-- button for new updates or login-->
-        <div class="add-update">
-            <button id="update-btn"> + </button>
-        </div>
-        <div class="views-div">
-             <p>Number of Views</p>
-        </div>
-    </div>         
-    </div>
-  </body>
+    
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+</body>
+
 </html>
 
 
