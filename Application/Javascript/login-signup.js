@@ -100,12 +100,17 @@ function saveAccInfo(username, email, password, firstname, lastname) {
     let root = firebase.database();
     let uid = firebase.auth().currentUser.uid;
 
+    let fmtfirstname = firstname.substring(0,1).toUpperCase() 
+        + firstname.substring(1).toLowerCase();
+    let fmtlastname = lastname.substring(0,1).toUpperCase() 
+        + lastname.substring(1).toLowerCase();
+
     root.ref('useraccount').push({
-        username: username,
-        email: email,
+        username: username.toLowerCase(),
+        email: email.toLowerCase(),
         password: password,
-        firstname: firstname,
-        lastname: lastname,
+        firstname: fmtfirstname,
+        lastname: fmtlastname,
         uid: uid,
         updates: 0,
         points: 0
