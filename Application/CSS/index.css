@@ -15,6 +15,7 @@
     overflow: hidden;
     z-index: 2;
     height: 100%;
+    position: relative;
 }
 
 /* --------- Pre Loading Screen -----*/
