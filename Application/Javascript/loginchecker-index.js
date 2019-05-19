@@ -67,10 +67,10 @@ $(document).ready(function() {
             $(".rightNav").empty();
             let loggedoutwidget = "<button id='sign_in_button' class='btn btn-primary btn-lg myButton'"
             + "type='submit'>Sign In</button>"
-            + "<div id='signUpBox'><h3><a class='signUp' href='./HTML/signUp.html'>Or Sign Up</a></h3></div>";
+            + "<div id='signUpBox'><h3><a class='signUp' href='./HTML/login-signup.html'>Or Sign Up</a></h3></div>";
 
             function toSignIn() {
-                window.location.href = './HTML/login.html';
+                window.location.href = './HTML/login-signup.html';
             }
 
             $(".rightNav").append(loggedoutwidget);
