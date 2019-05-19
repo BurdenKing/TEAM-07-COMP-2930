@@ -1,6 +1,6 @@
 
 
-/* Switches bteween login and sign up*/
+/* Switches between login and sign up*/
 const signUpButton = document.getElementById('signUp');
 const signInButton = document.getElementById('signIn');
 const container = document.getElementById('container');
