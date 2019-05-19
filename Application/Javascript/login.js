@@ -1,4 +1,4 @@
-
+/*DELETE ONCE login-signup.js IS DONE */
 
 /* Switches bteween login and sign up*/
 const signUpButton = document.getElementById('signUp');
@@ -12,8 +12,6 @@ signUpButton.addEventListener('click', () => {
 signInButton.addEventListener('click', () => {
     container.classList.remove('right-panel-active');
 });
-
-
 
 const firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
