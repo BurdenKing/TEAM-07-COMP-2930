@@ -212,7 +212,17 @@ h3 {
 
 /* -----Responsiveness -----*/
 
-@media only screen and (max-width: 1549px) {
+@media only screen and (max-width: 1759px) {
+
+    /* -----Slider Changes----- */
+
+    .logo {
+        padding : 0;
+    }
+}
+
+
+@media only screen and (max-width: 1632px) {
 
     /*-----Header Bar Changes ----- */
 
