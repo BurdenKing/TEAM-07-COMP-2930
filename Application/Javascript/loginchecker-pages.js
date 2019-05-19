@@ -68,16 +68,45 @@ $(document).ready(function() {
             $(".rightNav").empty();
             let loggedoutwidget = "<button id='sign_in_button' class='btn btn-primary btn-lg myButton'"
             + "type='submit'>Sign In</button>"
-            + "<div id='signUpBox'><h3><a class='signUp' href='./signUp.html'>Or Sign Up</a></h3></div>";
+            + "<div id='signUpBox'><h3><a class='signUp' href='./login-signup.html'>Or Sign Up</a></h3></div>";
 
             function toSignIn() {
-                window.location.href = './login.html';
+                window.location.href = './login-signup.html';
             }
 
             $(".rightNav").append(loggedoutwidget);
             document.getElementById('sign_in_button').addEventListener('click', toSignIn);
 
         }
+
+        //Slider Media Query Changes
+
+        let tab = true;
+
+        $(".mediaIcon").on("click", () => {
+            if (tab) {
+                $(".slider").animate({width:'toggle', paddingLeft: 'toggle', paddingRight: 'toggle'}, 500);
+                $(".slider").css({
+                    "display" : "block"
+                });
+                $(".mediaIcon").attr("src", "../Images/cancel.png");
+                tab = false;
+            } else {
+                $(".slider").css({
+                    "display" : "none"
+                });
+                $(".mediaIcon").attr("src", "../Images/menu_icon.png");
+                tab = true;
+            }
+        });
+
+        $(window).resize(function(){
+            if ($(window).width() >= 1550){	
+                $(".slider").css({
+                    "display" : "none"
+                });
+            }	
+        });
     
     });
 });
