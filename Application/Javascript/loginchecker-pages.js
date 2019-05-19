@@ -78,6 +78,35 @@ $(document).ready(function() {
             document.getElementById('sign_in_button').addEventListener('click', toSignIn);
 
         }
+
+        //Slider Media Query Changes
+
+        let tab = true;
+
+        $(".mediaIcon").on("click", () => {
+            if (tab) {
+                $(".slider").animate({width:'toggle', paddingLeft: 'toggle', paddingRight: 'toggle'}, 500);
+                $(".slider").css({
+                    "display" : "block"
+                });
+                $(".mediaIcon").attr("src", "../Images/cancel.png");
+                tab = false;
+            } else {
+                $(".slider").css({
+                    "display" : "none"
+                });
+                $(".mediaIcon").attr("src", "../Images/menu_icon.png");
+                tab = true;
+            }
+        });
+
+        $(window).resize(function(){
+            if ($(window).width() >= 1550){	
+                $(".slider").css({
+                    "display" : "none"
+                });
+            }	
+        });
     
     });
 });

@@ -53,44 +53,47 @@
   
   <body>
     <div id = "map"> </div>
-          <div id="overlay">
-          <!-- Adding a heading (with a navigation bar) -->  
-          <header>
+      <div id="overlay">
+        <!-- Adding a heading (with a navigation bar) -->  
+        <header>
             <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
             <!-- Adding a navigation bar --> 
             <nav>
               <ul>
-                <li><a href="../HTML/aboutUS.html">About Us</a></li>
-                <li><a href="../HTML/services.html">Services</a></li>
-                <li><a href="../HTML/contact.html">Contact</a></li>  
+                <li><a href='./HTML/aboutUS.html'>About Us</a></li>
+                <li><a href="./HTML/services.html">Services</a></li>
+                <li><a href="./HTML/contact.html">Contact</a></li>  
               </ul>    
             </nav>
             <!-- Right side of the header -->
-            <div class = "rightNav"></div>
+            <div class = "rightNav "></div>
+            <div class = "mediaIconDiv">
+              <img class = "mediaIcon" src="../Images/menu_icon.png" width="120px" height="120px">
+            </div>
           </header>
-        
-          <!-- Section 1-->
-          <div id = "section1">
-            <p id = "heading">Contact</p>
-            <p class = "ptop"> 
-              We are a group of students studying CST at BCIT. We are developing the 
-              ParkAway app for our Projects course. We were inspired to create this 
-              app because parking at BCIT is an issue that we faced in our own group.
-            </p>
-            
-          
+          <div class='slider'>
+            <ul>
+              <li><a href='./aboutUS.html'>About Us</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
           </div>
-
+          <!-- Section 1-->
+      <div id = "section1">
+        <p id = "heading">Contact</p>
+        <p class = "ptop"> 
+          We are a group of students studying CST at BCIT. We are developing the 
+          ParkAway app for our Projects course. We were inspired to create this 
+          app because parking at BCIT is an issue that we faced in our own group.
+        </p>
       </div>
-
-
-      
-  <!-- The core Firebase JS SDK is always required and must be listed first -->
-  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
-  <!--Event listener if user is logged in-->
-  <script src="../Javascript/loginchecker-pages.js"></script>
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <!--Event listener if user is logged in-->
+    <script src="../Javascript/loginchecker-pages.js"></script>
   </body>  
 </html>
 
