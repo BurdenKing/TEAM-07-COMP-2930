@@ -2,7 +2,7 @@
 
 
 #background {
-    position: absolute;
+     position: absolute;
       width: 100%;
       height: 100%;
       background-image: url(../Images/main_background.png);
@@ -42,11 +42,10 @@ h1 {
     text-shadow: 5px 5px black
 }
 
-h3 {
+.middleText {
     text-transform: uppercase;
     font-size: 40px;
-    margin: 0px;
-    line-height: 0.5em;
+    margin-top: 0.5em;
 }
 
 p {
@@ -199,3 +198,99 @@ header > .Easter {
     position: absolute;
 }
 
+
+/***********************************\
+         MOBILE REPSOVINESS
+/***********************************\ 
+
+/* -------- MAX-WIDTH 420 PIXELS -----------*/
+@media only screen and (max-width: 420px) {
+    .titleText {
+        top: 120px;
+    }
+
+    h1 {
+        font-size: 80px;
+    }
+
+    /* Hiding the h3 tag and adding appropriate tag */
+    
+    .middleText {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin-top: .3em;
+        /* This is like a break line */
+        line-height: 1.3em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .scrollButton {
+        margin-top: 18em;
+    }
+
+    .ovalShape {
+        width: 20px;
+        height:36px;
+        cursor: pointer;
+    }
+    
+    .downArrow {
+      position: relative;
+      content: "";
+      display: inline-block;
+      width: 9.4px;
+      height: 9px;
+      margin-left: 3.999px;
+      margin-bottom: 3px;
+    }      
+}
+
+/* -------- ONLY HEIGHT: 1024 PIXELS -----------*/
+@media only screen and (height: 1024px) {
+    .titleText {
+        top: 210px;
+    }
+
+    h1 {
+        font-size: 160px;
+    }
+
+    /* Hiding the h3 tag and adding appropriate tag */
+    
+    .middleText {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-top: .3em;
+        /* This is like a break line */
+        line-height: 1.3em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+  
+
+
+
+@media only screen and (width: 375px) {
+    .titleText {
+        top: 210px;
+    }
+
+    h1 {
+        font-size: 160px;
+    }
+
+    /* Hiding the h3 tag and adding appropriate tag */
+    
+    .middleText {
+        text-transform: uppercase;
+        font-size: 30px;
+        margin-top: .3em;
+        /* This is like a break line */
+        line-height: 1.3em;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+  
