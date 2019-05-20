@@ -123,10 +123,35 @@ $(document).ready(function(){
         for (let i = 0; i < keys.length; i++) {            
             let k = keys[i];
             let ud = data[k].uid;    
+            
                    
             if (ud == userId) {
                 fName = data[k].firstname;
-                lName = data[k].lastname;       
+                lName = data[k].lastname;     
+                
+                //get current update count, and increases it by one
+                var ref = firebase.database().ref("useraccount/" + keys[i]);
+                ref.once("value")
+                .then(function(snapshot) {
+                  
+                  let updateAmt = snapshot.child("updates").val();  
+                  let newAmt = updateAmt + 1;
+                  let updatePt = snapshot.child("points").val();  
+                  let newPt = updatePt + 1;
+                  
+                  firebase.database().ref('useraccount/' + keys[i] + '/updates').set(
+                      newAmt
+                    );
+
+                  firebase.database().ref('useraccount/' + keys[i] + '/points').set(
+                      newPt
+                  );
+                });
+                
+
+                
+
+                //updates message to comment0 after moving comment0 to comment1, and comment1 to comment2
                 updateRest(fName + ' ' + lName, com, sta, time, 2);
             }
         }
@@ -136,6 +161,9 @@ $(document).ready(function(){
       
 
     });
+
+
+
 
     //takes commento, and puts it into commento+1
     function updateRest(a, b, c, d, o) {

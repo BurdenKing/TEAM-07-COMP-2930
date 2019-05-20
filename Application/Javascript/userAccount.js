@@ -1,27 +1,57 @@
 $(document).ready(function() {
 
-    //incase user gets here without logging in
-    let logged = false;
     
-    //if user alreayd logged in, replace html with this
-    if(logged) {
+    const firebaseConfig = {
+        apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
+        authDomain: "parkaway-comp2930.firebaseapp.com",
+        databaseURL: "https://parkaway-comp2930.firebaseio.com",
+        projectId: "parkaway-comp2930",
+        storageBucket: "parkaway-comp2930.appspot.com",
+        messagingSenderId: "817259487218",
+        appId: "1:817259487218:web:c64c81d3cf0c5465"
+    };
+    firebase.initializeApp(firebaseConfig);
+
+    let root = firebase.database();
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+
+    if(firebaseUser != null) {
+      
+    } else {
         $("#account-main-body").replaceWith( "<p>You must log in first</p> <button type ='button' id='return_log'> Log in </button>");
     }
 
-    //gonna have to connect to database to get these
-    let name = "James Duke";
-    let reports = "5";
-    let upvotes = "6";
-    let downvotes = "2";
-    let points = "100";
-    ///////////////server and databse ^^^^////////////////////
+    
+    let userId = firebase.auth().currentUser.uid;
+  
+    root.ref('useraccount').once('value').then(snapshot => {        
+      let data = snapshot.val();
+      let keys = Object.keys(data);
+             
+      for (let i = 0; i < keys.length; i++) {            
+          let k = keys[i];
+          let ud = data[k].uid;    
+          
+                 
+          if (ud == userId) {
+            let fName = data[k].firstname;
+            let lName = data[k].lastname;     
+            let nam = fName + ' ' + lName;
+            let reports = data[k].updates;
+            let points = data[k].points;
+            
+            $("#user-name").replaceWith(nam);
+            $("#user-reports").replaceWith(reports);
+            $("#user-points").replaceWith(points);
+        
 
-    $("#user-name").replaceWith(name);
-    $("#user-reports").replaceWith(reports);
-    $("#user-upvotes").replaceWith(upvotes);
-    $("#user-downvotes").replaceWith(downvotes);
-    $("#user-points").replaceWith(points);
+          }
+      }     
+    });
+   
+   
 
+   
 
 
 
@@ -64,5 +94,8 @@ $(document).ready(function() {
               // indicate error
           } 
     });
+
+});
+
 
 });
