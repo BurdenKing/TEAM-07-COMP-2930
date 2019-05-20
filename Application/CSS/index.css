@@ -18,10 +18,6 @@
     position: relative;
 }
 
-/* --------- Pre Loading Screen -----*/
-
-
-
 /* ------------ Main Title ----------------- */
 
 .titleText {
@@ -413,3 +409,66 @@ header > .Easter {
             margin-right: 4%;
         }
 }
+
+/*****************************************\
+              DESKTOP VERSION
+/*****************************************/
+
+@media only screen 
+    and (min-width : 700px)
+    and (max-width : 1024px) {
+        .titleText {
+            top: 210px;
+        }
+        
+        h1 {
+            font-size: 140px;
+        }
+        
+        .middleText {
+            font-size: 42px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
+
+@media only screen 
+    and (min-width : 500px)
+    and (max-width : 699px) {
+        .titleText {
+            top: 150px;
+        }
+        
+        h1 {
+            font-size: 100px;
+        }
+        
+        .middleText {
+            font-size: 32px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
+
+@media only screen 
+    and (min-width : 400px)
+    and (max-width : 499px) {
+        .titleText {
+            top: 120px;
+        }
+        
+        h1 {
+            font-size: 80px;
+        }
+        
+        .middleText {
+            font-size: 24px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
+
+

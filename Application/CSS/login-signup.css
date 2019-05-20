@@ -8,7 +8,6 @@
 	box-sizing: border-box;
 }
 
-
 .container {
 	margin-top: 6em;
 	background-color: #fff;
@@ -42,8 +41,6 @@ h1 {
 }
 
 
-
-
 /* Edit the sign in and sign up button */
 .button {	
 	padding: 12px 15px;
@@ -64,8 +61,6 @@ h1 {
 .button:active {  
     transform: scale(.9);
 }
-
-
 
 .button:focus {
     transform: scale(.95);
@@ -91,14 +86,9 @@ h1 {
 	
 }
 
-
-
 .changeButton:focus {
     transform: scale(.95);
 }
-
-
-
 
 form {
 	background-color: #FFFFFF;
@@ -178,7 +168,7 @@ input {
 }
 
 .overlay {
-	background: rgba(39,62,84,0.89);;
+	background: rgba(39,62,84,0.89);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -227,20 +217,6 @@ input {
 	transform: translateX(20%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .underline {
 	display: block;
 	height: 1px;
@@ -248,4 +224,55 @@ input {
 	border-top: 4px solid whitesmoke;
 	z-index: 2;
 	width: 80%;
+}
+
+/*----- MOBILE CSS -----*/
+
+#create_acc_link_mobile {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.slider_sign_out_button {
+	display: block;
+	margin-bottom: 10px;
+}
+
+#acc_link_mobile {
+	font-size: 18px;
+}
+
+@media only screen and (min-width: 997px) {
+	.container {
+		display: block;
+	}
+
+	.container_mobile {
+		display: none;
+	}
+
+}
+
+@media only screen and (max-width: 996px) {
+	.container {
+		display: none;
+	}
+
+	.container_mobile {
+		display: block;
+		width: 600px;
+		margin: 50px auto;
+	}
+
+	#sign_up_container_mobile {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 620px) {
+	.container_mobile {
+		display: block;
+		width: 94%;
+		margin: 50px auto;
+	}
 }

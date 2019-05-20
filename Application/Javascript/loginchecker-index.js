@@ -23,9 +23,17 @@ $(document).ready(function() {
             let useremail = firebase.auth().currentUser.email;
 
             $(".rightNav").empty();
-            let loggedinwidget = "<div id='logged-in-widget'>"
-            + "<div id='acc_name'></div>"
-            + "<div><button id='sign_out_button' class='btn btn-primary btn-lg myButton' type='submit'>"
+            $("#slider_user_widget").empty();
+
+            let loggedinwidget = "<div class='logged-in-widget'>"
+            + "<div class='acc_name' id='acc_name_desktop'></div>"
+            + "<div><button class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>"
+            + "Sign Out</button>"
+            + "</div></div>";
+
+            let loggedinwidgetmobile = "<div class='logged-in-widget'>"
+            + "<div class='acc_name' id='acc_name_mobile'></div>"
+            + "<div><button id='slider_sign_out_button' class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>"
             + "Sign Out</button>"
             + "</div></div>";
                         
@@ -37,9 +45,11 @@ $(document).ready(function() {
                     console.log(error);
                 });
             }
-
+            
             $(".rightNav").append(loggedinwidget);
-            document.getElementById('sign_out_button').addEventListener('click', toSignOut);
+            $("#slider_user_widget").append(loggedinwidgetmobile);
+
+            $('.sign_out_button').on('click', toSignOut);
             
             root.ref('useraccount').on('value', snapshot => {
     
@@ -52,9 +62,9 @@ $(document).ready(function() {
                     let dataemail = data[k].email;
     
                     if (useremail == dataemail) {
-                        $("#acc_name").empty();
+                        $(".acc_name").empty();
                         //Greet full name of the user.
-                        $("#acc_name").append("Welcome <b>" + data[k].firstname + " " + data[k].lastname + "</b>");
+                        $(".acc_name").append("Welcome <b>" + data[k].firstname + "</b>");
                     }
                 }
             
@@ -63,18 +73,26 @@ $(document).ready(function() {
 
         //If firebaseuser info doesn't exist, then show sign in and sign up button. 
         } else {
-            
+
             $(".rightNav").empty();
-            let loggedoutwidget = "<button id='sign_in_button' class='btn btn-primary btn-lg myButton'"
+            $("#slider_user_widget").empty();
+
+            let loggedoutwidget = "<button class='sign_in_button btn btn-primary btn-lg myButton myButton_desktop'"
             + "type='submit'>Sign In</button>"
             + "<div id='signUpBox'><h3><a class='signUp' href='./HTML/login-signup.html'>Or Sign Up</a></h3></div>";
+
+            let loggedoutwidgetmobile = "<button class='sign_in_button btn btn-primary btn-lg myButton slider_widget_button'"
+            + "type='submit'>Sign In</button>"
+            + "<div id='signUpBox'><h3><a class='signUp' id='slider_widget_text' href='./HTML/login-signup.html'>Or Sign Up</a></h3></div>";
 
             function toSignIn() {
                 window.location.href = './HTML/login-signup.html';
             }
 
             $(".rightNav").append(loggedoutwidget);
-            document.getElementById('sign_in_button').addEventListener('click', toSignIn);
+            $("#slider_user_widget").append(loggedoutwidgetmobile);
+
+            $(".sign_in_button").on('click', toSignIn);
 
         }
     
