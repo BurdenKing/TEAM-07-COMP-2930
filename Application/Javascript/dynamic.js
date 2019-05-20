@@ -149,7 +149,7 @@ $(document).ready(function(){
                 });
                 
 
-                
+                  
 
                 //updates message to comment0 after moving comment0 to comment1, and comment1 to comment2
                 updateRest(fName + ' ' + lName, com, sta, time, 2);
