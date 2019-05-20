@@ -3,8 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
 html {
-    padding: 0;
-    margin: 0;
+   
 }
 
 #background {
@@ -12,6 +11,8 @@ html {
     background-size: cover;
     background-position: center;
     overflow: hidden;
+    width: 100%;
+    height: 100%;
 }
 
 #overlay {
@@ -100,6 +101,22 @@ html {
     height: 300px;
 }
 
+.upper_info-patrick {
+    background-image: url(../Images/patrick_about-us.jpg);
+    background-size: contain;
+    background-size: cover;
+    width: 350px;
+    height: 300px;
+}
+
+.upper_info-l {
+    background-image: url(../Images/);
+    background-size: contain;
+    background-size: cover;
+    width: 350px;
+    height: 300px;
+}
+
 .item-overlay {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
@@ -164,8 +181,8 @@ html {
 .memberOverall:hover .bio {
     display: block;
     margin-top: 130px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 6%;
+    margin-right: 6%;
     -webkit-animation: fadein 1.8s; /* Safari, Chrome and Opera > 12.1 */
 }
 
@@ -293,7 +310,6 @@ html {
 }
 
 /* Keep the About Us readable throughput resposiveness */
-
 @media screen and (max-width: 1900px) {     
     #section1 {
         width: 59%;
@@ -315,6 +331,10 @@ html {
 @media screen and (max-width: 1400px) {     
     #section1 {
         width: 80%;
+    }
+
+    br {
+        display: none;
     }
 }
 
@@ -355,3 +375,157 @@ html {
 }
 
 
+/*****************************************\
+              MOBILE VERSION
+/*****************************************/
+
+/*****************************************\
+              MOBILE VERSION
+/*****************************************/
+
+/* Galaxy S5 */
+@media only screen and (width : 360px) 
+    and (height : 640px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        #section1 {
+            width: 80%;
+        }
+
+        #heading {
+            width: 100%;
+        }
+}
+
+
+/* Pixel */
+@media only screen 
+    and (width : 411px) 
+    and (height : 731px)
+    and (orientation : portrait)   { 
+
+        .mediaIcon {
+            margin-top: 15.5px;
+            width: 40px;
+            height: 40px;
+            padding: 31px 31px;
+            margin-right: -13.5px;
+        }       
+
+        .leftNav {
+            margin-left: 12px;
+         }
+         
+         .logo {
+             padding-left: 10px;
+         }
+}
+
+
+/* Pixel XL */
+@media only screen 
+    and (width : 411px) 
+    and (height : 823px)
+    and (orientation : portrait)   { 
+
+        .mediaIcon {
+            margin-top: 15.5px;
+            width: 40px;
+            height: 40px;
+            padding: 31px 31px;
+            margin-right: -13.5px;
+        }       
+
+        .leftNav {
+            margin-left: 12px;
+         }
+         
+         .logo {
+             padding-left: 10px;
+         }
+}
+
+
+/* Iphone 5/SE */
+@media only screen 
+    and (width : 320px) 
+    and (height : 568px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .mediaIcon {
+            margin-top: 11px;
+            width: 40px;
+            height: 40px;
+            padding: 32px 32px;
+            margin-right: -15px;
+        }       
+}
+
+
+/* Iphone 6/7/8 */
+@media only screen 
+    and (width : 375px) 
+    and (height : 667px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .mediaIcon {
+            margin-top: 10px;
+            width: 40px;
+            height: 40px;
+            padding: 31.5px 31.5px;
+            margin-right: -13px;
+        }    
+
+        .leftNav {
+           margin-left: 10px;
+        }
+        
+        .logo {
+            padding-left: 10px;
+        }
+}
+
+
+/* Iphone 6/7/8 Plus */
+@media only screen 
+    and (width : 414px) 
+    and (height : 736px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        .mediaIcon {
+            margin-top: 16.5px;
+            width: 40px;
+            height: 40px;
+            padding: 33px 33px;
+            margin-right: -15px;
+        }    
+
+        .leftNav {
+           margin-left: 10px;
+        }
+        
+        .logo {
+            padding-left: 10px;
+        }
+}
+
+
+/* Iphone X */
+@media only screen 
+    and (width : 375px) 
+    and (height : 812px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        .mediaIcon {
+            margin-top: 11px;
+            width: 40px;
+            height: 40px;
+            padding: 33px 33px;
+            margin-right: -15px;
+        }       
+}
