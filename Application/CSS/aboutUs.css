@@ -2,9 +2,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
-html {
-   
-}
+
 
 #background {
     background-image: url(../Images/about_background.gif);
@@ -379,23 +377,13 @@ html {
               MOBILE VERSION
 /*****************************************/
 
-/*****************************************\
-              MOBILE VERSION
-/*****************************************/
-
 /* Galaxy S5 */
 @media only screen and (width : 360px) 
     and (height : 640px)
     and (orientation : portrait)  
     and (-webkit-device-pixel-ratio : 3) { 
 
-        #section1 {
-            width: 80%;
-        }
-
-        #heading {
-            width: 100%;
-        }
+        
 }
 
 
@@ -521,11 +509,4 @@ html {
     and (orientation : portrait)  
     and (-webkit-device-pixel-ratio : 3) { 
 
-        .mediaIcon {
-            margin-top: 11px;
-            width: 40px;
-            height: 40px;
-            padding: 33px 33px;
-            margin-right: -15px;
-        }       
 }

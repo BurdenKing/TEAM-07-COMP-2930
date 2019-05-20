@@ -27,11 +27,12 @@
 .titleText {
     position: relative;
     top: 200px;
+    text-align: center;
     display: block;
     margin: 0 auto;
-    margin: 0 auto 0 auto;
     text-align: center;
     color: whitesmoke;
+    z-index: -1;
 }
 
 h1 {
@@ -199,7 +200,216 @@ header > .Easter {
 }
 
 
-/***********************************\
-         MOBILE REPSOVINESS
-/***********************************\ 
+/*****************************************\
+              MOBILE VERSION
+/*****************************************/
 
+/* Galaxy S5 */
+@media only screen and (width : 360px) 
+    and (height : 640px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        .titleText {
+            top: 150px;
+        }
+        
+        h1 {
+            font-size: 80px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+
+/* Pixel */
+@media only screen 
+    and (width : 411px) 
+    and (height : 731px)
+    and (orientation : portrait)   { 
+
+        .titleText {
+            top: 150px;
+        }
+        
+        h1 {
+            font-size: 93px;
+        }
+        
+        .middleText {
+            font-size: 22px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+
+/* Pixel XL */
+@media only screen 
+    and (width : 411px) 
+    and (height : 823px)
+    and (orientation : portrait)   { 
+
+        .titleText {
+            top: 190px;
+        }
+        
+        h1 {
+            font-size: 93px;
+        }
+        
+        .middleText {
+            font-size: 22px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+
+/* Iphone 5/SE */
+@media only screen 
+    and (width : 320px) 
+    and (height : 568px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .titleText {
+            top: 120px;
+        }
+        
+        h1 {
+            font-size: 70px;
+        }
+        
+        .middleText {
+            font-size: 16px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }    
+}
+
+
+/* Iphone 6/7/8 */
+@media only screen 
+    and (width : 375px) 
+    and (height : 667px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .titleText {
+            top: 155px;
+        }
+        
+        h1 {
+            font-size: 85px;
+        }
+        
+        .middleText {
+            font-size: 21px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+
+/* Iphone 6/7/8 Plus */
+@media only screen 
+    and (width : 414px) 
+    and (height : 736px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        .titleText {
+            top: 170px;
+        }
+        
+        h1 {
+            font-size: 93px;
+        }
+        
+        .middleText {
+            font-size: 22px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+
+/* Iphone X */
+@media only screen 
+    and (width : 375px) 
+    and (height : 812px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 3) { 
+
+        .titleText {
+            top: 230px;
+        }
+        
+        h1 {
+            font-size: 85px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+/* Ipad */
+@media only screen 
+    and (width : 768px) 
+    and (height : 1024px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .titleText {
+            top: 230px;
+        }
+        
+        h1 {
+            font-size: 170px;
+        }
+        
+        .middleText {
+            font-size: 32px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
+
+/* Ipad Pro */
+@media only screen 
+    and (width : 1024px) 
+    and (height : 1366px)
+    and (orientation : portrait)  
+    and (-webkit-device-pixel-ratio : 2) { 
+
+        .titleText {
+            top: 320px;
+        }
+        
+        h1 {
+            font-size: 230px;
+        }
+        
+        .middleText {
+            font-size: 42px;
+            line-height: 1.3em;
+            margin-left: 4%;
+            margin-right: 4%;
+        }
+}
