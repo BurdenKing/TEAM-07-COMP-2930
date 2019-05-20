@@ -82,7 +82,7 @@ html {
     transition: all .3s ease-in-out;
     box-shadow: 0 0 30px #cccccc;
     display: inline-block;
-    margin-top: 2em;
+    margin-top: 5em;
     margin-left: 2.5em;
     margin-right: 2.5em;
 }
@@ -280,38 +280,6 @@ html {
     font-family: 'Oswald', sans-serif;
 }
 
-/* Go before member 4 */
-.memberBottom2 {
-    /* Spacing between top set of members and 
-    bottom set of members (e.g 3 on top, 2 
-    on the bottom */
-    margin-top: 5em;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 860px) {     
     .ptop {
         margin-top: 2em;
@@ -323,10 +291,6 @@ html {
     }
     
 }
-
-
-
-
 
 /* Keep the About Us readable throughput resposiveness */
 
@@ -357,6 +321,36 @@ html {
 @media screen and (max-width: 1200px) {     
     #section1 {
         width: 80%;
+    }
+}
+
+@media screen and (max-width: 1200px) {     
+    #section1 {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 499px) {
+    .memberOverall {
+        margin: 32px auto 0px auto;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .memberOverall {
+        width: 300px;
+    }
+
+    .upper_info {
+        width: 300px;
+    }
+    
+    .bottom_info {
+        width: 300px;
+    }
+
+    .memberBottom2 {
+        margin-top: 32px;
     }
 }
 

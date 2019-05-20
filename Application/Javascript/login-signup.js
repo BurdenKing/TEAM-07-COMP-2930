@@ -1,4 +1,18 @@
-//Initialize Firebase
+/* Switches bteween login and sign up*/
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
+
+signUpButton.addEventListener('click', () => {
+    container.classList.add('right-panel-active');
+});
+
+signInButton.addEventListener('click', () => {
+    container.classList.remove('right-panel-active');
+});
+
+/* Firebase-Related Scripts */ 
+
 const firebaseConfig = {
     apiKey: "AIzaSyC92FAonMbNaZiapSbs_A0RDzS0YPgpcMw",
     authDomain: "parkaway-comp2930.firebaseapp.com",
@@ -11,8 +25,9 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const auth = firebase.auth();
-
 let database = firebase.database();
+
+/* ----- SIGN-UP-RELATED JAVASCRIPT ----- */
 
 //When submit is clicked.
 document.getElementById("create_acc_submit").addEventListener('click', e => {
@@ -85,14 +100,73 @@ function saveAccInfo(username, email, password, firstname, lastname) {
     let root = firebase.database();
     let uid = firebase.auth().currentUser.uid;
 
+    let fmtfirstname = firstname.substring(0,1).toUpperCase() 
+        + firstname.substring(1).toLowerCase();
+    let fmtlastname = lastname.substring(0,1).toUpperCase() 
+        + lastname.substring(1).toLowerCase();
+
     root.ref('useraccount').push({
-        username: username,
-        email: email,
+        username: username.toLowerCase(),
+        email: email.toLowerCase(),
         password: password,
-        firstname: firstname,
-        lastname: lastname,
-        uid: uid
+        firstname: fmtfirstname,
+        lastname: fmtlastname,
+        uid: uid,
+        updates: 0,
+        points: 0
     });
 
 }
+
+/* ----- LOGIN-RELATED JAVASCRIPT ----- */
+
+//when submit is clicked
+document.getElementById('loginsubmit').addEventListener('click', e => {
+   
+    e.preventDefault();
+
+    const database = firebase.database();
+    const username = document.getElementById("sign_in_username").value;
+    database.ref('useraccount').once('value').then(snapshot => {
+
+        let data = snapshot.val();
+        let keys = Object.keys(data);
+        let usernameIsValid = false;
+        let counter = 0;
+
+        for (let i = 0; i < keys.length; i++) {
+
+            let k = keys[i];
+            let usernamequery = data[k].username;
+
+            if (username == usernamequery) {
+                counter = k;
+                usernameIsValid = true;
+            }
+        }
+
+        if (!usernameIsValid) {
+            alert("Please check your username.");
+        } else {
+
+            const pass = document.getElementById("sign_in_password").value;
+            const auth = firebase.auth();
+
+            //Sign in
+            const promise = auth.signInWithEmailAndPassword(data[counter].email, pass);
+
+            promise.then(() => {
+                alert("Success!");
+                setTimeout(window.location.href = "../index.html");
+            }).catch(e => {
+                console.log(e.message);
+            }); 
+        }
+
+    }).catch(err => {
+        console.log(err);
+    });
+
+});
+
 
