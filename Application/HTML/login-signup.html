@@ -9,108 +9,107 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
     <link rel="stylesheet" type="text/css" href = "../CSS/login-signup.css">  
-    <link rel="stylesheet" type="text/css" href = "../CSS/header.css">       
+    <link rel="stylesheet" type="text/css" href = "../CSS/header-login-signup.css">       
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   </head>
   
   <body>
-       
-      <!-- Adding a heading (with a navigation bar) -->  
-      <header>
-            <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
-            <!-- Adding a navigation bar --> 
-            <nav>
-              <ul>
-                <li><a href='../Application/HTML/map.html'>BCIT Map</a></li>
-                <li><a href='../Application/HTML/aboutUS.html'>About Us</a></li>
-                <li><a href="../Application/HTML/services.html">Services</a></li>
-                <li><a href="../Application/HTML/contact.html">Contact</a></li>  
-              </ul>    
-            </nav>
-            <!-- Right side of the header -->
-            <div class = "rightNav "></div>
-            <div class = "mediaIconDiv">
-              <img class = "mediaIcon" src="../Application/Images/menu_icon.png" width="120px" height="120px">
-            </div>
-          </header>
-          <div class='slider'>
-            <ul>
-              <li><a href='../Application/HTML/map.html'>BCIT Map</a></li>
-              <li><a href='../Application/HTML/aboutUS.html'>About Us</a></li>
-              <li><a href="../Application/HTML/services.html">Services</a></li>
-              <li><a href="../Application/HTML/contact.html">Contact</a></li> 
-            </ul>
+    <!-- Adding a heading (with a navigation bar) -->  
+    <header>
+      <div class = "leftNav">
+        <a class="logo" href="../index.html">ParkAway</a>
+      </div>
+    </header>  
+
+    <div class="container" id="container">    
+      <!-- SIGN UP-->
+      <div class="form-container sign-up-container">
+        <form id="create_acc_form_desktop" name="create_acc_form_desktop">
+          <h1 class="formText">Create an Account</h1> 
+          <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname_desktop" placeholder="FIRST NAME" required="required">
+          <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname_desktop" placeholder="LAST NAME" required="required">
+          <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username_desktop" pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
+          <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email_desktop" placeholder="EMAIL" required="required">
+          <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password_desktop" required="required" placeholder="PASSWORD">
+          <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword_desktop" required="required" placeholder="CONFIRM PASSWORD">
+          <button class="btn btn-primary button" id="create_acc_submit_desktop" type="submit" value="Create Account">Sign Up</button>
+        </form>
+      </div>
+      <!-- SIGN IN-->
+      <div class="form-container sign-in-container">
+        <form id="sign_in_desktop" name="sign_in_desktop">
+          <h1 class="formText"> SIGN IN</h1>
+          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_desktop" required="required" placeholder="USERNAME" required="required">
+          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_desktop" required="required" placeholder="PASSWORD"/>
+          <button class="btn btn-primary button" id="loginsubmit_desktop" type="submit" value="Sign in">Sign In</button> 
+          <p class="forgotPass">Forgot your password?</p>
+        </form>
+      </div>
+      <!-- OVERLAY-->
+      <div class="overlay-container">
+        <div class="overlay"> 
+          <!-- SIGN IN-->
+          <div class="overlay-panel overlay-left">
+              <h1>Already Have An Account?</h1>
+              <hr class="underline">
+              <p>Sign in to continue with your account</p>
+              <button class="btn btn-outline-primary changeButton" id="signIn">Sign In</button>
           </div>
 
-
-
-
-
-    <div class="container" id="container">
-            
-        <!-- SIGN UP-->
-        <div class="form-container sign-up-container">
-          <form id="create_acc_form" name="create_acc_form">
-            <h1 class="formText">Create an Account</h1> 
-            <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="FIRST NAME" required="required">
-            <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="LAST NAME" required="required">
-            <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username" pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
-            <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email" placeholder="EMAIL" required="required">
-            <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password" required="required" placeholder="PASSWORD">
-            <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword" required="required" placeholder="CONFIRM PASSWORD">
-            <button class="btn btn-primary button" id="create_acc_submit" type="submit" value="Create Account">Sign Up</button>
-          </form>
+          <!-- SIGN UP-->
+          <div class="overlay-panel overlay-right">
+              <h1>New to ParkAway?</h1>
+              <hr class="underline">
+              <p>Enter your details and start your journey now</p>
+              <button class="btn btn-outline-primary changeButton" id="signUp">Sign Up</button>
+          </div>
         </div>
+      </div>
+    </div>
 
-        <!-- SIGN IN-->
-        <div class="form-container sign-in-container">
-          <form id="sign_in" name="sign_in">
-            <h1 class="formText"> SIGN IN</h1>
-            <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username" required="required" placeholder="USERNAME" required="required">
-            <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password" required="required" placeholder="PASSWORD"/>
-            <button class="btn btn-primary button" id="loginsubmit" type="submit" value="Sign in">Sign In</button> 
-            <p class="forgotPass">Forgot your password?</p>
-          </form>
-        </div>
+    <div class='container_mobile'>
+      <!-- SIGN IN-->
+      <div id='sign_in_container_mobile'>
+        <form id="sign_in" name="sign_in">
+          <h1 class="formText"> SIGN IN</h1>
+          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_mobile" required="required" placeholder="USERNAME" required="required">
+          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_mobile" required="required" placeholder="PASSWORD"/>
+          <button class="btn btn-primary button" id="loginsubmit_mobile" type="submit" value="Sign in">Sign In</button> 
+          <p class="forgotPass">Forgot your password?</p>
+          <p>New to ParkAway? <a id='create_acc_link_mobile'>Create an account.</a></p>
+        </form>
+      </div>
+      <!--SIGN UP-->
+      <div id='sign_up_container_mobile'>
+        <form id="create_acc_form" name="create_acc_form">
+          <h1 class="formText">Create an Account</h1> 
+          <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname_mobile" placeholder="FIRST NAME" required="required">
+          <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname_mobile" placeholder="LAST NAME" required="required">
+          <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username_mobile" pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
+          <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email_mobile" placeholder="EMAIL" required="required">
+          <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password_mobile" required="required" placeholder="PASSWORD">
+          <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword_mobile" required="required" placeholder="CONFIRM PASSWORD">
+          <button class="btn btn-primary button" id="create_acc_submit_mobile" type="submit" value="Create Account">Sign Up</button>
+        </form>
+      </div>
+    </div>
 
-            <!-- OVERLAY-->
-            <div class="overlay-container">
-                <div class="overlay">
-                    
-                    <!-- SIGN IN-->
-                    <div class="overlay-panel overlay-left">
-                        <h1>Already Have An Account?</h1>
-                        <hr class="underline">
-                        <p>Sign in to continue with your account</p>
-                        <button class="btn btn-outline-primary changeButton" id="signIn">Sign In</button>
-                    </div>
 
-                    <!-- SIGN UP-->
-                    <div class="overlay-panel overlay-right">
-                        <h1>New to ParkAway?</h1>
-                        <hr class="underline">
-                        <p>Enter your details and start your journey now</p>
-                        <button class="btn btn-outline-primary changeButton" id="signUp">Sign Up</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <!--
-        <div id="firebaseui-auth-container"></div>
-        <div id="loader">Loading...</div>
-        -->
-        <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
-        <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
-        <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
-        <script src="../Javascript/login-signup.js"></script>
-    </body>
-
+    <!--
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+    -->
+    <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <script src="../Javascript/login-signup.js"></script>
+  </body>
 </html>
 
 

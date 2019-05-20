@@ -6,7 +6,7 @@ header {
     display:flex;
     justify-content: space-between;
     color: white;
-    background: rgba(0,0,0,0.2)
+    background: rgba(0,0,0,0.2);
   }
     
 header nav {
@@ -46,6 +46,12 @@ header nav {
     border-radius: 0;
 }
 
+.myButton_desktop {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
 .myButton:active { 
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
     transform: scale(.9);
@@ -80,20 +86,29 @@ header nav {
     text-decoration: none;
 }
 
-#sign_in_button {
+.sign_in_button {
     display: block;
     margin: auto;
     font-size: 26px;
 }
 
-#sign_out_button {
+.sign_out_button {
     background-color: red;
     border: red;
 }
 
-#acc_name {
+.sign_out_button:hover {
+    background-color: #DC143C;
+    border: #DC143C;
+}
+
+.acc_name {
     margin: 10px 0;
     font-size: 28px;
+}
+
+#acc_name_mobile {
+	font-size: 24px;
 }
 
 /* ---------- Left side of heading ----------*/
@@ -214,7 +229,20 @@ h3 {
     font-size: 28px;
 }
 
+.slider_widget_button {
+    margin-left: 0px;
+    margin-bottom: 10px;
+}
 
+#slider_widget_text {
+    color: #0183DA;
+    font-size: 18px;
+}
+
+#slider_user_widget {
+    height: 120px;
+    border-bottom: solid;
+}
 
 /* -----Responsiveness -----*/
 @media only screen and (max-width: 1759px) {
@@ -245,12 +273,12 @@ h3 {
 
     /* -----Slider Changes----- */
     .slider ul li a {
-        font-size: 36px;
+        font-size: 24px;
         text-decoration: none;
     }
 
     .slider ul li {
-        margin: 5px 0px;
+        margin: 0px;
         padding: 10px 20px;
     }
 
@@ -320,6 +348,11 @@ h3 {
         text-align: center;
     }
 
+    .slider_widget_button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
 }
 
 @media only screen and (max-width: 499px) {
@@ -377,6 +410,15 @@ h3 {
 
     .mediaIcon {
         margin-right: 0px;
+    }
+
+    .slider_widget_button {
+        font-size: 18px;
+    }
+    
+    #slider_user_widget {
+        height: 100px;
+        border-bottom: solid;
     }
 }
 
@@ -462,7 +504,7 @@ h3 {
             height: 40px;
             padding: 32px 32px;
             margin-right: -15px;
-        }       
+        }     
 }
 
 
