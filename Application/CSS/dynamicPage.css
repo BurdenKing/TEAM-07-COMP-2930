@@ -311,6 +311,12 @@ header {
 
 }
 
+.actualOverall {
+    width: 1310px;
+    height: 400px;
+    margin-left: 250px;
+}
+
 .overall{
     background-color: white;
     width: 50px;
@@ -318,7 +324,9 @@ header {
     margin-left: 800px;
     margin-top: 75px;
     margin-bottom: 20px;
+    border-style: solid;
     float: right;
+    overflow: scroll;
 }
 
 .float-my-children > * {
@@ -328,23 +336,21 @@ header {
     margin-top: 150px;
     float:left;
 }
-.lotNo{
+.test{
     border-style: solid;
     text-align: center;
     margin-bottom: 5px;
     border-width: 2px;
-    height: 121px;
+    height: 90px;
     width: 450px;
     border-color: black;
 }
-.status-div{
-    border-style: solid;
+.header{
     text-align: center;
     margin-bottom: 5px;
     border-width: 2px;  
-    height: 121px;
+    height: 40px;
     width: 450px;
-    border-color: black;
 }
 
 .updates{
@@ -370,8 +376,3 @@ header {
     margin-top: 10px;
 }
 
-.actualOverall {
-    width: 1310px;
-    height: 400px;
-    margin-left: 330px;
-}
