@@ -322,7 +322,12 @@ header {
     border-style: solid;
     border-color: black;
     overflow: scroll;
+}
 
+#lotNo{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 50px;
 }
 
 .float-my-children > * {
@@ -334,43 +339,54 @@ header {
 }
 #upid0{
     border-style: solid;
+    font-family: 'Libre Baskerville', serif;
+        background-color: lightgrey;
     text-align: center;
     margin-bottom: 5px;
     border-width: 2px;
     height: 155px;
-    width: 450px;
+    width: 580px;
     border-color: black;
 }
 
 #upid1{
     border-style: solid;
+    font-family: 'Libre Baskerville', serif;
+    background-color: lightgrey;
     text-align: center;
     margin-bottom: 5px;
     border-width: 2px;
     height: 155px;
-    width: 450px;
+    width: 580px;
     border-color: black;
 }
 
 #upid2{
     border-style: solid;
+    font-family: 'Libre Baskerville', serif;
+    background-color: lightgrey;
     text-align: center;
     margin-bottom: 5px;
     border-width: 2px;
     height: 155px;
-    width: 450px;
+    width: 580px;
     border-color: black;
 }
 
-.status-div{
-    border-style: solid;
-    text-align: center;
-    margin-bottom: 5px;
-    border-width: 2px;  
-    height: 121px;
-    width: 450px;
-    border-color: black;
+#status-div{
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+    padding-top: 10px;
 }
+
+#updates-div{
+    margin-top: -10px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
 
 .updates{
     border-style: solid;
@@ -399,4 +415,9 @@ header {
     width: 1310px;
     height: 400px;
     margin-left: 330px;
+}
+
+#log-in-btn {
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
