@@ -48,7 +48,7 @@ $(document).ready(function(){
     let updateContent = "";
 
     // sets up divs for updates
-    // div ids are upid0 ~ upid4
+    // div ids are upid0 ~ upid2
     for(i = 0; i < 3; i++) {
         upid2 = upid + i;
         updateContent = updateContent + '<div class="update-cls" id="' + upid2 + '"><div><p>Name</p> <p>status</p></div><div><p>comments</p></div><div><p>timestamp</p> </div></div>';
@@ -78,6 +78,8 @@ $(document).ready(function(){
             let name = snapshot.child("username").val();   
             let s;
             console.log(status);
+            
+            
             if(status < 24) {
               s = '<p> Status: </p> <p style="color:#00bc45"> EMPTY </p>';
             } else if(status < 50) {
@@ -89,9 +91,24 @@ $(document).ready(function(){
             } else {
               s = '<p> Status: </p> <p style="color:#ff2100"> FULL </p>';
             }
-    
+            
+            let divName = 'divName';
+            let divCom = 'divCom';
+            let divTime = 'divTime';
+
+            let pName ='pName';
+            let pCom ='pCom';
+            let pTime = 'pTime';
+
+            let tex = '<div id="' + upid + j + '">'
+                       //upid 0 ~ 2
+                       + '<div id="' + divName + j + '"><p id="' + pName + j + '"> Name: ' + name + '</p>' + s +  '</div>'                  
+                       + '<div id="' +divCom + j + '"><p id="' + pCom + j + '">Comments: ' + comment + '</p></div>'
+                       + '<div id="' + divTime + j +'"><p id="' + pTime + j + '">' + timestamp + '</p> </div>'
+                       + '</div>';
+
             if(comment != null)
-              $('#upid' + j++).replaceWith('<div><p> Name: ' + name + '</p>' + s +  '</div><div><p>Comments: ' + comment + '</p></div><div><p>' + timestamp + '</p> </div>');
+              $('#upid' + j++).replaceWith(tex);
           });
           
     }
