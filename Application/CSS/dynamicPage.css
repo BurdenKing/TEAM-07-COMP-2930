@@ -20,9 +20,19 @@ body {
     
 }
 
+header {
+    background-color: rgba(39,62,84,0.89);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",
+    Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
+    "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.slider {
+    z-index: 99;
+}
 
 #overlay {
-
     background: rgba(39,62,84,0.89);
     overflow: hidden;
     z-index: 2;
@@ -39,160 +49,6 @@ body {
     text-transform: uppercase;
     border-radius: 0;
 }
-
-/* --------- Pre Loading Screen -----*/
-
-
-#load{
-    width:100%;
-    height:100%;
-    position:fixed;
-    z-index:9999;
-    background:url("https://www.creditmutuel.fr/cmne/fr/banques/webservices/nswr/images/loading.gif") no-repeat center center rgba(0,0,0,0.25)
-}
-/* --------------- Heading --------------*/
-
-header {
-    display:flex;
-    justify-content: space-between;
-    color: white;
-    background: rgba(0,0,0,0.2)
-}
-  
-header nav {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    /* Font size and type for navigation bar (centered) */
-    font-size: 20px;
-    /* Navigation bar (center) font size and type */
-    font-size: 23px;
-    font-weight: 900;
-    line-height: 20px;
-    padding-top: 3em;
-    padding-bottom: 2em;  
-}
-
-/* ---------- Right side of heading ----------*/
-
-.rightNav {
-    margin-top: 1.1em;
-    display:block;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.myButton {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding-left: 60px;
-    padding-right: 60px;
-    text-transform: uppercase;
-    border-radius: 0;
-}
-
-.myButton:active { 
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
-    transform: scale(.9);
-}
-
-.myButton:hover {
-    transform: scale(1.05);
-}
-
-.myButton:focus {
-    transform: scale(1.05);
-}
-
-.myButton .btn-ripple {
-    position: absolute;
-    transform: scale(0);
-    animation: ripple 1s;
-}
-
-.rightNav > div {
-    margin: 8px 0 8px 0;
-    width: 100%;
-    float: right;
-    position: relative;
-    text-align: center;
-}
-
-.signUp {
-    font-size: 20px;
-    color: white;
-    text-decoration: none;
-}
-
-/* ---------- Left side of heading ----------*/
-
-.leftNav {
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 2em;    
-}
-
-.logo {
-    font-size: 23px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    padding-left: 60px;
-    padding-right: 60px;
-    background-color: transparent;
-    color: whitesmoke;
-    border: none;
-    font-family: 'Niconne', cursive;
-    font: bold;
-    font-weight: 900;
-    font-size: 50px;
-    text-decoration: none;
-    list-style: none;
-    display: inline;
-}
-
-.logo:hover {
-    text-decoration: none;
-    color: whitesmoke;
-}
-
-.logo {
-    font-size: 63px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-family: 'Niconne', cursive;
-    font: bold;
-    font-weight: 900;
-    cursor: pointer;
-}
-
-/* ---------- Center of heading ----------*/
-
-nav ul li{
-    list-style: none;
-    display: inline;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-family: 100px;
-    letter-spacing: 5px;
-}
-  
-nav li > a{
-    /* Padding is for the hover background. */
-    padding: 1.5em;
-    padding-top: 1.7em;
-    padding-bottom: 1.7em;
-    text-decoration: none;
-    color: white;
-}
-
-nav li a:hover{
-    text-decoration: none;
-    color:whitesmoke;
-    background: rgba(255,255,255,.2);
-}
-
 
 /* Page Load Fade In */
 header {

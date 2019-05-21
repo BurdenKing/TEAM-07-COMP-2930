@@ -9,43 +9,46 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
-    <link rel="stylesheet" type="text/css" href="../CSS/index.css">
+    <!--<link rel="stylesheet" type="text/css" href="../CSS/index.css">
     <link rel="stylesheet" type="text/css" href="../CSS/aboutUs.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/services.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/services.css">-->
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
     <script src="../Javascript/dynamic.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
     <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
-
 </head>
 
 <body>
-    <div id="backgroundServices">
-        <!-- Adding a heading (with a navigation bar) -->
-        <header>
-            <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
-            <!-- Adding a navigation bar -->
-            <nav>
-                <ul>
-                    <li><a href="../HTML/aboutUS.html">About Us</a></li>
-                    <li><a href="../HTML/services.html">Services</a></li>
-                    <li><a href="../HTML/contact.html">Contact</a></li>
-                </ul>
-            </nav>
-            <!-- Right side of the header -->
-            <div class="rightNav">
-                <div>
-                    <button class="btn btn-primary btn-lg myButton" type="submit"
-                        onclick="window.location.href = '/login';">Sign In</button>
-                </div>
-                <div><a class="signUp" href="/create-acc">Or Sign Up</a></div>
-            </div>
-
-
-        </header>
+     <!-- Adding a heading (with a navigation bar) -->  
+     <header>
+        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+        <!-- Adding a navigation bar --> 
+        <nav>
+            <ul>
+            <li><a href='./map.html'>BCIT Map</a></li>
+            <li><a href='./aboutUS.html'>About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>  
+            </ul>    
+        </nav>
+        <!-- Right side of the header -->
+        <div class = "rightNav "></div>
+        <div class = "mediaIconDiv">
+            <img class = "mediaIcon" src="../Images/menu_icon.png" width="120px" height="120px">
         </div>
+    </header>
+    <div class='slider'>
+        <ul>
+        <li><div id='slider_user_widget'></div></li>
+        <li><a href='./map.html'>BCIT Map</a></li>
+        <li><a href='./aboutUS.html'>About Us</a></li>
+        <li><a href="./services.html">Services</a></li>
+        <li><a href="./contact.html">Contact</a></li> 
+        </ul>
+    </div>
+
         <div class="actualOverall">
             <div class="clearfix float-my-children">
                 <img src="../Images/main_background.jpg" alt="image background">

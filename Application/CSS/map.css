@@ -1,7 +1,13 @@
-
 #map {
   height: 900px;  /* The height is 900 pixels */
   width: 100%;  /* The width is the width of the web page */
   margin: auto;
+ }
 
+ .slider {
+   z-index: 99;
+ }
+
+ header {
+  background-color:rgba(39,62,84,0.89);
  }
