@@ -41,9 +41,9 @@ class TypeWriter {
 
         var imageDataArray = [];
         var canvasCount = 100;
-        $("#EB").click(function(){
+        $("#easter").click(function(){
      
-          html2canvas($(".snap")[0]).then(canvas => {
+          html2canvas($("#background")[0]).then(canvas => {
             //capture all div data as image
             ctx = canvas.getContext("2d");
      
@@ -70,7 +70,7 @@ class TypeWriter {
               $("body").append(c);
             }
             //clear all children except the canvas
-            $(".snap").children().not(".dust").fadeOut(5500);
+            $("#background").children().not(".dust").fadeOut(5500);
             //apply animation
             $(".dust").each( function(index){
               animateBlur($(this),0.8,1900);
