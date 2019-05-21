@@ -400,3 +400,10 @@ header {
     height: 400px;
     margin-left: 330px;
 }
+
+.colorIndicator {
+    text-align: center; 
+    font-size: 30px; 
+    margin-top: 20px;
+    font-weight: 700;
+}

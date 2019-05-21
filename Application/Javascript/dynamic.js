@@ -230,7 +230,7 @@ $(document).ready(function(){
     
     var values = ['EMPTY', 'MOSTLY EMPTY', 'HALF', 'MOSTLY FULL', 'FULL'];
     $('#slider1').change(function() {
-        $('span').text(values[this.value]);
+        $('.colorIndicator').text(values[this.value]);
         statusVal = values[this.value];
         switch (values[this.value]) {
             case 'EMPTY':
