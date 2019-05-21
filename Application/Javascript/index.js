@@ -40,10 +40,10 @@ class TypeWriter {
         //Easter Egg Snap
 
         var imageDataArray = [];
-        var canvasCount = 100;
+        var canvasCount = 35;
         $("#easter").click(function(){
      
-          html2canvas($("#background")[0]).then(canvas => {
+          html2canvas($(".snap")[0]).then(canvas => {
             //capture all div data as image
             ctx = canvas.getContext("2d");
      
@@ -70,10 +70,10 @@ class TypeWriter {
               $("body").append(c);
             }
             //clear all children except the canvas
-            $("#background").children().not(".dust").fadeOut(5500);
+            $(".snap").children().not(".dust").fadeOut(3500);
             //apply animation
             $(".dust").each( function(index){
-              animateBlur($(this),0.8,1900);
+              animateBlur($(this),0.8,1000);
               setTimeout(() => {
                 animateTransform($(this),100,-100,chance.integer({ min: -15, max: 15 }),800+(110*index));
               }, 70*index); 
