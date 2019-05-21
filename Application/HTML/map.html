@@ -4,29 +4,58 @@
     <title>ParkAway</title> 
     <meta charset="utf-8" />
     <meta name = "viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Adding CSS for map-->
-    <link rel="stylesheet" href="../CSS/map.css">
-   
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> 
     <!-- Adding jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
     <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
-    <script type = "text/javascript" src ="../Javascript/map.js"></script>       
+    <script type = "text/javascript" src ="../Javascript/map.js"></script> 
+    <!-- Adding header -->  
+    <link rel="stylesheet" type="text/css" href = "../CSS/header.css">    
+    <!-- Adding CSS for map-->
+    <link rel="stylesheet" href="../CSS/map.css">
+   
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
       </script>
 
   </head>
   <body>
+      <div id="overlay">
+          <!-- Adding a heading (with a navigation bar) -->  
+          <header>
+              <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+              <!-- Adding a navigation bar --> 
+              <nav>
+                <ul>
+                  <li><a href='./map.html'>BCIT Map</a></li>
+                  <li><a href='./aboutUS.html'>About Us</a></li>
+                  <li><a href="./services.html">Services</a></li>
+                  <li><a href="./contact.html">Contact</a></li>  
+                </ul>    
+              </nav>
+              <!-- Right side of the header -->
+              <div class = "rightNav "></div>
+              <div class = "mediaIconDiv">
+                <img class = "mediaIcon" src="../Images/menu_icon.png" width="120px" height="120px">
+              </div>
+          </header>
+          <div class='slider'>
+            <ul>
+              <li><div id='slider_user_widget'></div></li>
+              <li><a href='./map.html'>BCIT Map</a></li>
+              <li><a href='./aboutUS.html'>About Us</a></li>
+              <li><a href="./services.html">Services</a></li>
+              <li><a href="./contact.html">Contact</a></li> 
+            </ul>
+          </div>
     <!-- Map -->
     <div id="map"></div>
-
-
-    <!-- Scroll down button -->
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
+    <!--Event listener if user is logged in-->
+    <script src="../Javascript/loginchecker-pages.js"></script>
   </body>
 </html>
