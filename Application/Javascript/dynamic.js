@@ -28,6 +28,12 @@ $(document).ready(function(){
     $("#lotNo").text(lotName);
     $("#modal-header-title").text(lotName);
 
+
+    let lotPicture = "../Images/lot/" + lot + ".png";
+
+    $("#lotPicture").replaceWith('<img id ="lotPicture" src="' + lotPicture + '" alt="image background">');
+
+
     function updateStat() {
       var ref = firebase.database().ref("parkinglot/" + lot + "/comment0");
       ref.once("value")
