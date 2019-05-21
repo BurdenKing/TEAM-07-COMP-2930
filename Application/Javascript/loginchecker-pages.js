@@ -108,13 +108,13 @@ $(document).ready(function() {
             $(".slider").css({
                 "display" : "block"
             });
-            $(".mediaIcon").attr("src", "./Images/cancel.png");
+            $(".mediaIcon").attr("src", "../Images/cancel.png");
             tab = false;
         } else {
             $(".slider").css({
                 "display" : "none"
             });
-            $(".mediaIcon").attr("src", "./Images/menu_icon.png");
+            $(".mediaIcon").attr("src", "../Images/menu_icon.png");
             tab = true;
         }
     });
