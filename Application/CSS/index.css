@@ -471,4 +471,23 @@ header > .Easter {
         }
 }
 
+@media only screen 
+    and (max-width : 399px) {
+        .titleText {
+            top: 100px;
+        }
+        
+        h1 {
+            font-size: 33px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
+
+
 
