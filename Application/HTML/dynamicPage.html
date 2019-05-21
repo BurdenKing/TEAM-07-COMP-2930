@@ -18,6 +18,8 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/header.css">
     <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -60,10 +62,10 @@
                         <h2 id="lotNo">Lot</h2>
                     </div>
                     <div id="status-div">
-                        <p>Status <b></b></p>
+                        <p class= "statusText">Status <b></b></p>
                     </div>
-                    <div>
-                        <p> recent updates</p>
+                    <div id="updates-div">
+                        <p class = "statusText"> Recent Updates</p>
                     </div>
                     <!-- div for updates-->
                     <div id="updates"></div>
@@ -74,13 +76,16 @@
                             data-target="#myModal">update status</button>
                     </div>
 
-                    <div class="modal fade" id="myModal" role="dialog">
+
+                    <!-- Modal -->
+                    
+                    <div class="modal fade mm" id="myModal" role="dialog">
                         <div class="modal-dialog">
 
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title" id="modal-header-title">Modal Header</h4>
+                                    <h4 class="modal-title" id="modal-header-title"></h4>
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -88,11 +93,21 @@
                                         <div id="status-bar">
                                             <p>Status </p>
                                             <div>
-                                                <input id="slider1" type="range" min="0" max="4">
+                                                <input id="slider1" type="range" min="0" max="100">
                                             </div>
-                                            <span id="color">HALF</span> <!-- default value -->
+<<<<<<< HEAD
+                                            <p class="colorIndicator" id="color">HALF</p> <!-- default value -->
+                                            <br>
                                             <input type="text" id="txt-area" placeholder="Enter Comment..">
+                                            <br>
+                                            <button class="btn btn-default" id="updt-btn" type="button" data-dismiss="modal" style="margin-top: 20px;">Confirm</button>
+=======
+                                            <span id="color">How full is the lot right now?</span> <!-- default value -->
+                                        </br>
+                                            <input type="text" id="txt-area" placeholder="Enter Comment..">
+                                        </br>
                                             <button id="updt-btn" type="button" data-dismiss="modal">Confirm</button>
+>>>>>>> aa5d8fe66bd6460c4735e69ed50e128289921718
                                         </div>
                                     </form>
                                 </div>
@@ -103,6 +118,8 @@
 
                         </div>
                     </div>
+
+
                 </div>
             </div>    
         </div>
