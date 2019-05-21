@@ -78,12 +78,12 @@ $(document).ready(function(){
             let name = snapshot.child("username").val();   
             let s;
             console.log(status);
-            if(status < 24) {
+            if(status < 25) {
               s = '<p> Status: </p> <p style="color:#00bc45"> EMPTY </p>';
             } else if(status < 50) {
               s = '<p> Status: </p> <p style="color:#04f7a5"> MOSTLY EMPTY </p>';
             } else if (status < 75) {
-              s =  '<p> Status: </p> <p style="color:#042cf7"> HALF FULL </p>';
+              s =  '<p> Status: </p> <p style="color:#BBBB2B"> HALF FULL </p>';
             } else if (status < 100) {
               s = '<p> Status: </p> <p style="color:#ffa500"> MOSTLY FULL </p>';
             } else {
@@ -211,26 +211,43 @@ $(document).ready(function(){
     $("#color").css("color", "#042cf7");
     
     
-    var values = ['EMPTY', 'MOSTLY EMPTY', 'HALF', 'MOSTLY FULL', 'FULL'];
+    var values = ['EMPTY'];
+
+    for(var x = 0; x < 33; x ++){
+      values.push('MOSTLY EMPTY');
+    } 
+    for(var J = 0; J < 33; J++){
+      values.push('SOMEWHAT FULL');
+    }
+
+    for(var K = 0; K < 33; K++){
+      values.push('MOSTLY FULL');
+    }
+
+    values.push('FULL');
+
+    console.log(values);
+
+
     $('#slider1').change(function() {
         $('span').text(values[this.value]);
         statusVal = values[this.value];
         switch (values[this.value]) {
             case 'EMPTY':
                 $("#color").css("color", "#00bc45");
-                sta = 0;
+                sta = Math.floor(Math.random() * 24);
                 break;
             case 'MOSTLY EMPTY':
                 $("#color").css("color", "#04f7a5");
-                sta = 25;
+                sta = Math.floor(Math.random() * 24) + 25 ;
                 break;
-            case 'HALF FULL':
-                $("#color").css("color", "#042cf7");
-                sta = 50;
+            case 'SOMEWHAT FULL':
+                $("#color").css("color", "#BBBB2B");
+                sta = Math.floor(Math.random() * 24) + 50 ;
                 break;
             case 'MOSTLY FULL':
                 $("#color").css("color", "#ffa500");
-                sta = 75;
+                sta = Math.floor(Math.random() * 24) + 75 ;
                 break;
             case 'FULL':
                 $("#color").css("color", "#ff2100");
@@ -242,13 +259,13 @@ $(document).ready(function(){
     });
 
     function extraStuff(q) {
-      if(q < 24) {
+      if(q < 1) {
         return  '<p> Status: <b style="color:#00bc45"> EMPTY </b> </p>';
-      } else if(q < 50) {
+      } else if(q < 33) {
         return  '<p> Status: <b style="color:#04f7a5"> MOSTLY EMPTY </b> </p>';
-      } else if (q < 75) {
-        return   '<p> Status: <b style="color:#042cf7"> HALF FULL </b> </p>';
-      } else if (q < 100) {
+      } else if (q < 66) {
+        return   '<p> Status: <b style="color:#BBBB2B"> SOMEWHATFULL </b> </p>';
+      } else if (q < 99) {
         return  '<p> Status: <b style="color:#ffa500"> MOSTLY FULL </b> </p>';
       } else {
         return  '<p> Status: <b style="color:#ff2100"> FULL </b> </p>';
