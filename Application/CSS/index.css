@@ -171,30 +171,18 @@ header {
     }
 
 /* Easter Egg */
-.EasterButton {
-    background: green;
-    color: transparent;
-    border: none;
-    border: none !important;
-    float: right;
+#easter {
+    cursor: pointer;
+    position:absolute;
+    bottom:0;
+    right:0;
+    margin: 40px;
+    opacity: 0;
 }
 
-header > .Easter {
-    display: block;
-    z-index: -1;
-    position: relative;  
-    float: right;
-    margin-left: 0;
+#easter:hover {
+    opacity: 1;
 }
-
-.Easter {
-    position: relative;
-}
-
-.dust {
-    position: absolute;
-}
-
 
 /*****************************************\
               MOBILE VERSION
