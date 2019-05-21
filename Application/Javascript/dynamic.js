@@ -15,18 +15,18 @@ $(document).ready(function(){
     firebase.auth().onAuthStateChanged(firebaseUser => {
 
     if(firebaseUser != null) {
-      $(".rightNav").replaceWith("<div id ='signout'><button class='btn btn-primary btn-lg myButton' type='submit' onclick=' firebase.auth().signOut().then(function() { location.reload(); });'> Sign Out </button></div>");
-      $("#signout").css("margin-top", "45px");
-      $("#signout").css("margin-right", "30px");
+      
     } else {
-       $("#add-update").replaceWith('<button id="log-in-btn"> Log in </button>');
+       $("#add-update").replaceWith('<button id="log-in-btn" class="log-in-btn"> Log in </button>');
     }
 
     // lot should be the ID of the button clicked on map, refer to my test example i uploaded on slack
     // which parking lot is picked
     let lot = window.location.hash.substring(1);
+    let lotName = "Lot " + lot.substring(3);
     
-    $("#lotNo").replaceWith('<h2>' + lot + '</h2>');
+    $("#lotNo").text(lotName);
+    $("#modal-header-title").text(lotName);
 
     function updateStat() {
       var ref = firebase.database().ref("parkinglot/" + lot + "/comment0");
@@ -103,8 +103,8 @@ $(document).ready(function(){
     let sta = 50;
 
     //button takes to login page
-    $("#log-in-btn").click(function() {
-        window.location.href = "./login.html";
+    $("body").on('click', '.log-in-btn', function() {
+        window.location.href = "./login-signup.html";
     }); 
     
     //  updates database with new comments
@@ -255,6 +255,9 @@ $(document).ready(function(){
       }
     } 
     });
+
+
+   
 
     //Header Script is included here because I can't add two firebase configs in one html page
     firebase.auth().onAuthStateChanged(firebaseUser => {

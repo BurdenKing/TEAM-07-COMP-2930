@@ -19,9 +19,12 @@ $(document).ready(function() {
     if(firebaseUser != null) {
       
     } else {
-        $("#account-main-body").replaceWith( "<p>You must log in first</p> <button type ='button' id='return_log'> Log in </button>");
+        $("#account-main-body").replaceWith( "<p>You must log in first</p> <button type ='button' id ='return_log' class='return_log'> Log in </button>");
     }
 
+    $("body").on('click', '.return_log', function() {
+        window.location.href = "./login-signup.html";
+    }); 
     
     let userId = firebase.auth().currentUser.uid;
     let points;
@@ -60,9 +63,7 @@ $(document).ready(function() {
 
 
     //button takes to log in page
-    $("#return_home").click(function() {
-        window.location.href = "./login.html";
-    }); 
+    
     
     $("#btn-change-password").click(function() {
         $("#changePass").css("display", "block");
