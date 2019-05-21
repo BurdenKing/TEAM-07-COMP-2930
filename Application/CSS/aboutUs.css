@@ -99,26 +99,10 @@
     height: 300px;
 }
 
-.upper_info-patrick {
-    background-image: url(../Images/patrick_about-us.jpg);
-    background-size: contain;
-    background-size: cover;
-    width: 350px;
-    height: 300px;
-}
-
-.upper_info-l {
-    background-image: url(../Images/);
-    background-size: contain;
-    background-size: cover;
-    width: 350px;
-    height: 300px;
-}
-
 .item-overlay {
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
     color: #fff;
     overflow: hidden;
     text-align: center;
@@ -165,7 +149,7 @@
     display: block;
     position: absolute;
     /* Height from top of div hover */
-    margin-top: 50px; 
+    margin-top: 25px; 
     /*background-color: whitesmoke;
     border-radius: 35px;*/
     left: 10%;
@@ -178,9 +162,9 @@
 
 .memberOverall:hover .bio {
     display: block;
-    margin-top: 130px;
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-top: 95px;
+    margin-left: 3.8%;
+    margin-right: 3.8%;
     -webkit-animation: fadein 1.8s; /* Safari, Chrome and Opera > 12.1 */
 }
 
