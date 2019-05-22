@@ -366,7 +366,7 @@ $(document).ready(function(){
 
           let loggedoutwidget = "<button class='sign_in_button btn btn-primary btn-lg myButton myButton_desktop'"
           + "type='submit'>Sign In</button>"
-          + "<div id='signUpBox'><h3><a class='signUp' href='.login-signup.html'>Or Sign Up</a></h3></div>";
+          + "<div id='signUpBox'><h3><a class='signUp' href='./login-signup.html'>Or Sign Up</a></h3></div>";
 
           let loggedoutwidgetmobile = "<button class='sign_in_button btn btn-primary btn-lg myButton slider_widget_button'"
           + "type='submit'>Sign In</button>"
