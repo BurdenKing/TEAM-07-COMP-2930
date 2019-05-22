@@ -13,6 +13,7 @@
   display: none;
   position: fixed;
   border: 3px solid #f1f1f1;
+  top: 20%;
   z-index: 9;
 }
 
@@ -83,6 +84,45 @@
 #account-user-name-div {
   font-size: 40px;
 }
+
+#user-reports {
+  font-size: 24px;
+}
+
+#title {
+  font-size: 24px;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.rewards {
+  width: 33.33%;
+  float: left;
+  display: block;
+}
+
+.rewards > input[type=radio] {
+  display: block;
+  margin: 5px auto 0 auto;
+}
+
+.rewards > p {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 5px;
+}
+
+.rewards > img {
+  width: 75px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+#user-points {
+  font-size: 24px;
+}
+
 
 @media screen and (max-width: 900px) {
   #account-main-body {
