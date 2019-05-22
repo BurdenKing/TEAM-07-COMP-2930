@@ -124,21 +124,25 @@ header {
     opacity: 1;
 }
 
-.dust{
+.dust {
     position: absolute;
 }
+
 
 /*****************************************\
               DESKTOP VERSION
 /*****************************************/
 
+
 @media only screen 
     and (min-width : 700px)
     and (max-width : 1024px) {
+        /* Fixing the margin from the top */
         .titleText {
             top: 210px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 140px;
         }
@@ -154,10 +158,12 @@ header {
 @media only screen 
     and (min-width : 500px)
     and (max-width : 699px) {
+        /* Fixing the margin from the top */
         .titleText {
             top: 150px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 100px;
         }
@@ -173,10 +179,12 @@ header {
 @media only screen 
     and (min-width : 415px)
     and (max-width : 499px) {
+        /* Fixing the margin from the top */
         .titleText {
             top: 120px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 80px;
         }
@@ -191,10 +199,12 @@ header {
 
 @media only screen 
     and (max-width : 415px) {
+        /* Fixing the margin from the top */
         .titleText {
             top: 100px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 33px;
         }
@@ -212,12 +222,16 @@ header {
               MOBILE VERSION
 /*****************************************/
 
+
+/* Phones such as the Pixel, or any with a width around 400px */
 @media only screen 
     and (max-width : 415px)  { 
+        /* Fixing the margin from the top */
         .titleText {
             top: 150px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 92px;
         }
@@ -231,12 +245,15 @@ header {
         
 }
 
+/* Phones such as the Iphone X, Iphone 6,7,8 */
 @media only screen 
     and (max-width : 375px)  { 
+        /* Fixing the margin from the top */
         .titleText {
             top: 170px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 85px;
         }
@@ -252,10 +269,12 @@ header {
 
 @media only screen 
     and (max-width : 375px)  { 
+        /* Fixing the margin from the top */
         .titleText {
             top: 120px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 80px;
         }
@@ -269,12 +288,14 @@ header {
         
 }
 
+/* Smaller phones, such as Iphone 5 */
 @media only screen 
     and (max-width : 320px)  { 
         .titleText {
             top: 100px;
         }
         
+        /* Resizing the title text */
         h1 {
             font-size: 70px;
         }
@@ -285,7 +306,6 @@ header {
             margin-left: 5%;
             margin-right: 5%;
         }
-        
 }
 
 
