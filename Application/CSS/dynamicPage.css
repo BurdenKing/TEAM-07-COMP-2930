@@ -1,17 +1,21 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
+/* Overall html margin for the page */
 html {
     padding: 0;
     margin: 0;
 }
 
+/* The image for the parking lot */
 body {
     background-image: ('../Images');
     
 }
 
+/* The basic background image of the page */
 #background {
     background-image: url(../Images/about_background.gif);
     background-size: cover;
@@ -20,8 +24,10 @@ body {
     
 }
 
+/* Styling the header */
 header {
     background-color: rgba(39,62,84,0.89);
+    /* Adding fonts */
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",
     Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,
     "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol",
@@ -29,10 +35,12 @@ header {
 }
 
 .slider {
+    /* Slider index above */
     z-index: 99;
 }
 
 #overlay {
+    /* Blue overlay as the background */
     background: rgba(39,62,84,0.89);
     overflow: hidden;
     z-index: 2;
