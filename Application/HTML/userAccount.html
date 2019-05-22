@@ -15,7 +15,7 @@
 <body>
         <!-- Adding a heading (with a navigation bar) -->  
       <header id='userAccheader'>
-        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
         <!-- Adding a navigation bar --> 
         <nav>
           <ul>
@@ -28,7 +28,7 @@
         <!-- Right side of the header -->
         <div class = "rightNav "></div>
         <div class = "mediaIconDiv">
-          <img class = "mediaIcon" src="../Images/menu_icon.png" width="120px" height="120px">
+          <img class = "mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Media Icon">
         </div>
     </header>
     <div class='slider'>
@@ -51,7 +51,7 @@
             <!-- left side -->
             <div id="account-stats">
                 <div>
-                    <img></img>
+                
                     <p id="user-reports"></p>
                 </div>
                 <div>
@@ -64,22 +64,21 @@
                     <p>Redeem Rewards</p>
                 </div>
                 <div class='rewards'>
-                    <img src='../Images/reward01.png'></img>
+                    <img src='../Images/reward01.png' alt="Rewards">
                     <input type="radio" name="radioBtn" id="reward-1" value ="reward1" checked>
                     <p>50</p>
                 </div>
                 <div class='rewards'>
-                    <img src='../Images/reward02.png'></img>
+                    <img src='../Images/reward02.png' alt="Rewards 2">
                     <input type="radio" name="radioBtn" id="reward-2" value="reward2">
                     <p>30</p>
                 </div>
                 <div class='rewards'>
-                    <img src='../Images/reward03.png'></img>
+                    <img src='../Images/reward03.png' alt="Rewards 3">
                     <input type="radio" name="radioBtn" id="reward-3" value="reward3">
                     <p>25</p>
                 </div>
                 <div>
-                    <img></img>
                     <p id="user-points"></p>
                 </div>
             
@@ -96,7 +95,7 @@
                 <!-- Modal content-->
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title"></h4>
+                        <h4 class="modal-title">.</h4>
                     </div>
                     <div class="modal-body" id="content-redeem">
                         <div id="redeem-confirmation">
@@ -119,13 +118,13 @@
         <!-- this form is hidden until user clicks change password button-->
         <div class="form-popup" id="changePass">
             <form class="form-container" method ="POST" >   
-                <label for="opsw"><b>Old Password</b></label>
+                <label for="oldPas"><b>Old Password</b></label>
                 <input type="password" id="oldPas" placeholder="Old Password" name="opsw" required>
                       
-                <label for="psw"><b>New Password</b></label>
+                <label for="newPass"><b>New Password</b></label>
                 <input type="password" id ="newPass" placeholder="Enter Password" name="psw" required >
 
-                <label for="psw2"><b>Confirm Password</b></label>
+                <label for="newPass2"><b>Confirm Password</b></label>
                 <input type="password" id ="newPass2" placeholder="Enter Password Again" name="psw2" required >
                 <div id="errorMsg" > </div>
 
