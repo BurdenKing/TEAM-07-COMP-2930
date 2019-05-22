@@ -119,6 +119,7 @@ $(document).ready(function() {
         }
     });
 
+    //If browser window is more that 1550px, then remove the slider.
     $(window).resize(function(){
         if ($(window).width() >= 1550){	
             $(".slider").css({

@@ -4,14 +4,17 @@ const signInButton = document.getElementById('signIn');
 const createAccLinkMobile = document.getElementById('create_acc_link_mobile');
 const container = document.getElementById('container');
 
+/* Animation that makes right panel active */
 signUpButton.addEventListener('click', () => {
     container.classList.add('right-panel-active');
 });
 
+/* Animation that makes left panel active */
 signInButton.addEventListener('click', () => {
     container.classList.remove('right-panel-active');
 });
 
+/*Displays a registration form on mobile */
 createAccLinkMobile.addEventListener('click', () => {
     document.getElementById('sign_in_container_mobile').style.display = 'none';
     document.getElementById('sign_up_container_mobile').style.display = 'block';
