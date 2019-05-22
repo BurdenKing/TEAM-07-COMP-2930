@@ -435,8 +435,16 @@ h3 {
     }
     
     #slider_user_widget {
-        height: 80px;
+        height: 100px;
         border-bottom: solid;
+    }
+
+    #acc_name_mobile {
+        font-size: 18px;
+    }
+
+    .myButton {
+        font-size: 16px;
     }
 }
 
