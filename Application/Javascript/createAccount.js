@@ -9,12 +9,9 @@ $(document).ready(function(){
         $("#form-div").replaceWith(replaceIfLogged);
     }
 
-
- //button takes to main page
- $("#return_main").click(function() {
-    window.location.href = "../index.html";
-}); 
-
-
+    //button takes to main page
+    $("#return_main").click(function() {
+        window.location.href = "../index.html";
+    }); 
 
 });

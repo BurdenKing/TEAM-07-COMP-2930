@@ -336,6 +336,7 @@ header {
     margin-top: 150px;
     float:left;
 }
+
 #upid0{
     border-style: solid;
     font-family: 'Barlow', sans-serif;
@@ -348,8 +349,6 @@ header {
     width: 580px;
     border-color: black;
 }
-
-
 
 #upid1{
     border-style: solid;
@@ -468,6 +467,8 @@ header {
     text-transform: uppercase;
 }
 
+
+/* Change the content size of the dynamic page */
 @media screen and (max-width: 1390px) {
     .actualOverall {
         width: 80%;
@@ -489,4 +490,39 @@ header {
         position: relative;
         margin-top: 50px;
     }
+
+    #upid0 {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    #upid1 {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    #upid2 {
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+
+/* Change the box size of each update */
+@media screen and (max-width: 765px) {
+
+    #upid0 {
+        height: 300px;
+        padding: 5% 10px;
+    }
+
+    #upid1 {
+        height: 300px;
+        padding: 10px;
+    }
+
+    #upid2 {
+        height: 300px;
+        padding: 10px;
+    }
+
 }
