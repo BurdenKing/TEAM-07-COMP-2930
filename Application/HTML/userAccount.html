@@ -1,6 +1,7 @@
+<!-- Html page for the users account, shows their points, name, etc-->
 <!DOCTYPE html>
 <html lang="en">
-
+<!-- Header which shows the users account info-->
 <head>
     <title>ParkAway Account Info</title>
     <meta charset="utf-8">
@@ -31,6 +32,7 @@
             <img class="mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Media Icon">
         </div>
     </header>
+    <!-- Shows the different pages they can navigate to-->
     <div class='slider'>
         <ul>
             <li>
@@ -62,28 +64,32 @@
 
             <!-- right side-->
             <div id="account-reward">
+                <!-- Divs for the different rewards that the user can obtain-->
                 <div id='title'>
                     <p>Redeem Rewards</p>
                 </div>
+                <!-- Div for the 1st reward-->
                 <div class='rewards'>
                     <img src='../Images/reward01.png' alt="Rewards">
                     <input type="radio" name="radioBtn" id="reward-1" value="reward1" checked>
                     <p>50</p>
                 </div>
+                <!-- Div for the 2nd reward-->
                 <div class='rewards'>
                     <img src='../Images/reward02.png' alt="Rewards 2">
                     <input type="radio" name="radioBtn" id="reward-2" value="reward2">
                     <p>30</p>
                 </div>
+                <!-- Div for the 3rd reward-->
                 <div class='rewards'>
                     <img src='../Images/reward03.png' alt="Rewards 3">
                     <input type="radio" name="radioBtn" id="reward-3" value="reward3">
                     <p>25</p>
                 </div>
                 <div>
+                    <!-- Shows the users their points-->
                     <p id="user-points"></p>
                 </div>
-
                 <div id="add-update">
                     <button id="btn-redeem" type="button" class="btn btn-info btn-lg" data-toggle="modal"
                         data-target="#myModal">Redeem</button>
@@ -96,6 +102,7 @@
 
                         <!-- Modal content-->
                         <div class="modal-content">
+                            <!-- Section for when the user redeems a prize-->
                             <div class="modal-header">
                                 <h4 class="modal-title">.</h4>
                             </div>
@@ -120,12 +127,13 @@
         <!-- this form is hidden until user clicks change password button-->
         <div class="form-popup" id="changePass">
             <form class="form-container" method="POST">
+                <!-- Different divs for the sections when changing password-->
                 <label for="oldPas"><b>Old Password</b></label>
                 <input type="password" id="oldPas" placeholder="Old Password" name="opsw" required>
-
+                <!-- Section for the new password-->
                 <label for="newPass"><b>New Password</b></label>
                 <input type="password" id="newPass" placeholder="Enter Password" name="psw" required>
-
+                <!-- Section for the confirm password-->
                 <label for="newPass2"><b>Confirm Password</b></label>
                 <input type="password" id="newPass2" placeholder="Enter Password Again" name="psw2" required>
                 <div id="errorMsg"> </div>
