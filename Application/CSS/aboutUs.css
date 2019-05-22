@@ -15,7 +15,7 @@
 
 #overlay {
     /* Blue overlay over the gif */
-    background: rgba(39,62,84,0.89);
+    background: rgba(39, 62, 84, 0.89);
     overflow: hidden;
     z-index: 2;
 }
@@ -58,7 +58,7 @@
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
-     /* Adding curisve font family */
+    /* Adding curisve font family */
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
 }
@@ -107,7 +107,7 @@
     /* A box shadow displays on hover to emphasize
        the div that is hovered */
     transform: translateY(-30px);
-    box-shadow:4px 4px 20px #999 , -4px -4px 20px #999 ;
+    box-shadow: 4px 4px 20px #999, -4px -4px 20px #999;
 }
 
 .upper_info {
@@ -127,15 +127,18 @@
 .item-overlay {
     /* Adding the CSS code for the animation effect */
     position: absolute;
-    top: 0; right: 0; bottom: 0; left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     /* Background colour of the image */
-    background: rgba(0,0,0,0.65);
+    background: rgba(0, 0, 0, 0.65);
     /* Text of the colour for our bio */
     color: #fff;
     overflow: hidden;
     /* Centering the text for everything */
     text-align: center;
-    width: 100%; 
+    width: 100%;
     /* Animation effect, that goes from top to bottom */
     -webkit-transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s ease-in-out;
     transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s ease-in-out;
@@ -161,29 +164,39 @@
     left: 10%;
     right: 10%;
     /* Making the icons fade in on hover */
-    -webkit-animation: fadein 1.8s; 
+    -webkit-animation: fadein 1.8s;
 }
 
 /* Fade in animation effect for all media links */
 @keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
- }
- 
- /* Doing it again for safari and Chrome */
- @-webkit-keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
- }
+    from {
+        opacity: 0;
+    }
 
-.memberOverall:hover .memberSocialMedia{
+    to {
+        opacity: 1;
+    }
+}
+
+/* Doing it again for safari and Chrome */
+@-webkit-keyframes fadein {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.memberOverall:hover .memberSocialMedia {
     /* If you hover over a memberOverall
        social media links will display
        in white background */
     display: block;
     position: absolute;
     /* Height from top of div hover */
-    margin-top: 25px; 
+    margin-top: 25px;
     /*background-color: whitesmoke;
     border-radius: 35px;*/
     left: 10%;
@@ -202,20 +215,30 @@
     margin-top: 95px;
     margin-left: 3.8%;
     margin-right: 3.8%;
-    -webkit-animation: fadeins 1.8s; 
+    -webkit-animation: fadeins 1.8s;
 }
 
 /* Fade in animation effect for bio */
 @keyframes fadeins {
-    from { opacity: 0; }
-    to   { opacity: 1; }
- }
- 
- /* Doing it again for safari and Chrome */
- @-webkit-keyframes fadeins {
-    from { opacity: 0; }
-    to   { opacity: 1; }
- }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Doing it again for safari and Chrome */
+@-webkit-keyframes fadeins {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 .bottom_info {
     /* Displays all the bottom information including,
@@ -228,9 +251,9 @@
     position: relative;
     text-align: center;
     z-index: 9;
-    display: inline-block;    
+    display: inline-block;
 }
-  
+
 .up_arrow {
     /* Adding an up arrow. This is good UI, so the user 
        knows to hover over the div */
@@ -261,9 +284,11 @@
     /* Padding/space between white border */
     padding: 10px;
     /* Adding a transition */
-    -webkit-transition-duration: 1s; /* Safari and Chrome */
+    -webkit-transition-duration: 1s;
+    /* Safari and Chrome */
     transition-duration: 1s;
-    -webkit-transition-property: -webkit-transform; /* Safari and Chrome */
+    -webkit-transition-property: -webkit-transform;
+    /* Safari and Chrome */
     transition-property: transform;
 }
 
@@ -290,35 +315,43 @@
     color: blue;
 }
 
-.fa:hover{
+.fa:hover {
     text-decoration: none;
     /* A shake effect on hover of media icon */
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
     perspective: 1000px;
 }
 
 /* Creating the shake effect on hover for media icon */
 @keyframes shake {
+
     /* Chaning the pixels every 10 pixels to maximize
        thw effect for user interface */
-    10%, 90% {
-      transform: translate3d(-.5px, 0, 0);
+    10%,
+    90% {
+        transform: translate3d(-.5px, 0, 0);
     }
 
     /* Test the pixels and feel free to change
        them if you find a better pixel size */
-    20%, 80% {
-      transform: translate3d(1px, 0, 0);
+    20%,
+    80% {
+        transform: translate3d(1px, 0, 0);
     }
-    30%, 50%, 70% {
-      transform: translate3d(-2px, 0, 0);
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-2px, 0, 0);
     }
-    40%, 60% {
-      transform: translate3d(2px, 0, 0);
+
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
     }
 }
-    
+
 .memberName {
     /* Adding a font for the user name */
     text-transform: uppercase;
@@ -331,34 +364,34 @@
 /*****************************************/
 
 
-@media screen and (max-width: 860px) {     
+@media screen and (max-width: 860px) {
     .ptop {
         margin-top: 2em;
     }
-    
+
     /* Text turns into block needs more spacing in between each paragraph */
     .pspacing {
         margin-top: 2.5em;
     }
-    
+
 }
 
 /* Keep the About Us readable throughput resposiveness */
-@media screen and (max-width: 1900px) {     
+@media screen and (max-width: 1900px) {
     #section1 {
         width: 59%;
     }
 }
 
 /* Keeping the width consistent */
-@media screen and (max-width: 1800px) {     
+@media screen and (max-width: 1800px) {
     #section1 {
         width: 60%;
     }
 }
 
 /* Keeping the width consistent */
-@media screen and (max-width: 1600px) {     
+@media screen and (max-width: 1600px) {
     #section1 {
         width: 70%;
     }
@@ -366,7 +399,7 @@
 
 /* Keeping the width consistent  and removing
    the break tag as it is not needed anymore */
-@media screen and (max-width: 1400px) {     
+@media screen and (max-width: 1400px) {
     #section1 {
         width: 80%;
     }
@@ -377,14 +410,14 @@
 }
 
 /* Keeping the width consistent */
-@media screen and (max-width: 1200px) {     
+@media screen and (max-width: 1200px) {
     #section1 {
         width: 80%;
     }
 }
 
 /* Keeping the width consistent */
-@media screen and (max-width: 1200px) {     
+@media screen and (max-width: 1200px) {
     #section1 {
         width: 80%;
     }
@@ -407,7 +440,7 @@
     .upper_info {
         width: 300px;
     }
-    
+
     .bottom_info {
         width: 300px;
     }
@@ -424,135 +457,107 @@
 
 
 /* Galaxy S5 */
-@media only screen and (width : 360px) 
-    and (height : 640px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) {      
-}
+@media only screen and (width : 360px) and (height : 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio : 3) {}
 
 
 /* Pixel */
-@media only screen 
-    and (width : 411px) 
-    and (height : 731px)
-    and (orientation : portrait)   { 
+@media only screen and (width : 411px) and (height : 731px) and (orientation : portrait) {
 
-        .mediaIcon {
-            margin-top: 15.5px;
-            width: 40px;
-            height: 40px;
-            padding: 31px 31px;
-            margin-right: -13.5px;
-        }       
+    .mediaIcon {
+        margin-top: 15.5px;
+        width: 40px;
+        height: 40px;
+        padding: 31px 31px;
+        margin-right: -13.5px;
+    }
 
-        .leftNav {
-            margin-left: 12px;
-         }
-         
-         .logo {
-             padding-left: 10px;
-         }
+    .leftNav {
+        margin-left: 12px;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
 }
 
 
 /* Pixel XL */
-@media only screen 
-    and (width : 411px) 
-    and (height : 823px)
-    and (orientation : portrait)   { 
+@media only screen and (width : 411px) and (height : 823px) and (orientation : portrait) {
 
-        .mediaIcon {
-            margin-top: 15.5px;
-            width: 40px;
-            height: 40px;
-            padding: 31px 31px;
-            margin-right: -13.5px;
-        }       
+    .mediaIcon {
+        margin-top: 15.5px;
+        width: 40px;
+        height: 40px;
+        padding: 31px 31px;
+        margin-right: -13.5px;
+    }
 
-        .leftNav {
-            margin-left: 12px;
-         }
-         
-         .logo {
-             padding-left: 10px;
-         }
+    .leftNav {
+        margin-left: 12px;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
 }
 
 
 /* Iphone 5/SE */
-@media only screen 
-    and (width : 320px) 
-    and (height : 568px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
+@media only screen and (width : 320px) and (height : 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio : 2) {
 
-        .mediaIcon {
-            margin-top: 11px;
-            width: 40px;
-            height: 40px;
-            padding: 32px 32px;
-            margin-right: -15px;
-        }       
+    .mediaIcon {
+        margin-top: 11px;
+        width: 40px;
+        height: 40px;
+        padding: 32px 32px;
+        margin-right: -15px;
+    }
 }
 
 
 /* Iphone 6/7/8 */
-@media only screen 
-    and (width : 375px) 
-    and (height : 667px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
+@media only screen and (width : 375px) and (height : 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio : 2) {
 
-        .mediaIcon {
-            margin-top: 10px;
-            width: 40px;
-            height: 40px;
-            padding: 31.5px 31.5px;
-            margin-right: -13px;
-        }    
+    .mediaIcon {
+        margin-top: 10px;
+        width: 40px;
+        height: 40px;
+        padding: 31.5px 31.5px;
+        margin-right: -13px;
+    }
 
-        .leftNav {
-           margin-left: 10px;
-        }
-        
-        .logo {
-            padding-left: 10px;
-        }
+    .leftNav {
+        margin-left: 10px;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
 }
 
 
 /* Iphone 6/7/8 Plus */
-@media only screen 
-    and (width : 414px) 
-    and (height : 736px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
+@media only screen and (width : 414px) and (height : 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio : 3) {
 
-        .mediaIcon {
-            margin-top: 16.5px;
-            width: 40px;
-            height: 40px;
-            padding: 33px 33px;
-            margin-right: -15px;
-        }    
+    .mediaIcon {
+        margin-top: 16.5px;
+        width: 40px;
+        height: 40px;
+        padding: 33px 33px;
+        margin-right: -15px;
+    }
 
-        .leftNav {
-           margin-left: 10px;
-        }
-        
-        .logo {
-            padding-left: 10px;
-        }
+    .leftNav {
+        margin-left: 10px;
+    }
+
+    .logo {
+        padding-left: 10px;
+    }
 }
 
 /* Iphone X */
-@media only screen 
-    and (width : 375px) 
-    and (height : 812px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-}
+@media only screen and (width : 375px) and (height : 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio : 3) {}
 
 /* Make content cover 85% of the browser-width when browser-size is less than 450px */
 @media only screen and (max-width: 450px) {

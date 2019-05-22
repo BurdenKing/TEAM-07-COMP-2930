@@ -8,55 +8,57 @@
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href = "../CSS/header.css"> 
+    <link rel="stylesheet" type="text/css" href="../CSS/header.css">
     <script src="../Javascript/userAccount.js"></script>
 </head>
 
 <body>
-        <!-- Adding a heading (with a navigation bar) -->  
-      <header id='userAccheader'>
-        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
-        <!-- Adding a navigation bar --> 
+    <!-- Adding a heading (with a navigation bar) -->
+    <header id='userAccheader'>
+        <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
+        <!-- Adding a navigation bar -->
         <nav>
-          <ul>
-            <li><a href='./map.html'>BCIT Map</a></li>
-            <li><a href='./aboutUS.html'>About Us</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./contact.html">Contact</a></li>  
-          </ul>    
+            <ul>
+                <li><a href='./map.html'>BCIT Map</a></li>
+                <li><a href='./aboutUS.html'>About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
         </nav>
         <!-- Right side of the header -->
-        <div class = "rightNav "></div>
-        <div class = "mediaIconDiv">
-          <img class = "mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Media Icon">
+        <div class="rightNav "></div>
+        <div class="mediaIconDiv">
+            <img class="mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Media Icon">
         </div>
     </header>
     <div class='slider'>
-      <ul>
-        <li><div id='slider_user_widget'></div></li>
-        <li><a href='./map.html'>BCIT Map</a></li>
-        <li><a href='./aboutUS.html'>About Us</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li> 
-      </ul>
+        <ul>
+            <li>
+                <div id='slider_user_widget'></div>
+            </li>
+            <li><a href='./map.html'>BCIT Map</a></li>
+            <li><a href='./aboutUS.html'>About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+        </ul>
     </div>
 
-        <div id="account-main-body">
-            
-            <!-- user Name-->
-            <div id="account-user-name-div">   
-                <p id ="user-name"></p>
+    <div id="account-main-body">
+
+        <!-- user Name-->
+        <div id="account-user-name-div">
+            <p id="user-name"></p>
+        </div>
+
+        <!-- left side -->
+        <div id="account-stats">
+            <div>
+
+                <p id="user-reports"></p>
             </div>
-            
-            <!-- left side -->
-            <div id="account-stats">
-                <div>
-                
-                    <p id="user-reports"></p>
-                </div>
-                <div>
-                    <button type='button' id="btn-change-password">Change password</button>
-                </div>
+            <div>
+                <button type='button' id="btn-change-password">Change password</button>
+            </div>
 
             <!-- right side-->
             <div id="account-reward">
@@ -65,7 +67,7 @@
                 </div>
                 <div class='rewards'>
                     <img src='../Images/reward01.png' alt="Rewards">
-                    <input type="radio" name="radioBtn" id="reward-1" value ="reward1" checked>
+                    <input type="radio" name="radioBtn" id="reward-1" value="reward1" checked>
                     <p>50</p>
                 </div>
                 <div class='rewards'>
@@ -81,61 +83,62 @@
                 <div>
                     <p id="user-points"></p>
                 </div>
-            
+
                 <div id="add-update">
                     <button id="btn-redeem" type="button" class="btn btn-info btn-lg" data-toggle="modal"
                         data-target="#myModal">Redeem</button>
                 </div>
-            
 
 
-        <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
 
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h4 class="modal-title">.</h4>
-                    </div>
-                    <div class="modal-body" id="content-redeem">
-                        <div id="redeem-confirmation">
-                            
+                <div class="modal fade" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">.</h4>
+                            </div>
+                            <div class="modal-body" id="content-redeem">
+                                <div id="redeem-confirmation">
+
+                                </div>
+
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
                         </div>
-                        
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
                     </div>
                 </div>
 
             </div>
         </div>
 
-    </div>
-</div>
-
 
         <!-- this form is hidden until user clicks change password button-->
         <div class="form-popup" id="changePass">
-            <form class="form-container" method ="POST" >   
+            <form class="form-container" method="POST">
                 <label for="oldPas"><b>Old Password</b></label>
                 <input type="password" id="oldPas" placeholder="Old Password" name="opsw" required>
-                      
+
                 <label for="newPass"><b>New Password</b></label>
-                <input type="password" id ="newPass" placeholder="Enter Password" name="psw" required >
+                <input type="password" id="newPass" placeholder="Enter Password" name="psw" required>
 
                 <label for="newPass2"><b>Confirm Password</b></label>
-                <input type="password" id ="newPass2" placeholder="Enter Password Again" name="psw2" required >
-                <div id="errorMsg" > </div>
+                <input type="password" id="newPass2" placeholder="Enter Password Again" name="psw2" required>
+                <div id="errorMsg"> </div>
 
-                <button type="button" class="btn" value ="Change" id="changebtn"> Change </button>
-                <button type="button" class="btn cancel" id="closeForm">Close</button>           
-             </form>
-        </div> 
+                <button type="button" class="btn" value="Change" id="changebtn"> Change </button>
+                <button type="button" class="btn cancel" id="closeForm">Close</button>
+            </form>
+        </div>
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
 </body>
+
 </html>

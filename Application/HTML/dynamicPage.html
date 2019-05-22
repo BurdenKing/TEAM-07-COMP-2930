@@ -19,96 +19,100 @@
 </head>
 
 <body>
-     <!-- Adding a heading (with a navigation bar) -->  
-     <header>
-        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
-        <!-- Adding a navigation bar --> 
+    <!-- Adding a heading (with a navigation bar) -->
+    <header>
+        <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
+        <!-- Adding a navigation bar -->
         <nav>
             <ul>
-            <li><a href='./map.html'>BCIT Map</a></li>
-            <li><a href='./aboutUS.html'>About Us</a></li>
-            <li><a href="./services.html">Services</a></li>
-            <li><a href="./contact.html">Contact</a></li>  
-            </ul>    
+                <li><a href='./map.html'>BCIT Map</a></li>
+                <li><a href='./aboutUS.html'>About Us</a></li>
+                <li><a href="./services.html">Services</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
         </nav>
         <!-- Right side of the header -->
-        <div class = "rightNav "></div>
-        <div class = "mediaIconDiv">
-            <img class = "mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Menu Icon">
+        <div class="rightNav "></div>
+        <div class="mediaIconDiv">
+            <img class="mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Menu Icon">
         </div>
     </header>
     <div class='slider'>
         <ul>
-        <li><div id='slider_user_widget'></div></li>
-        <li><a href='./map.html'>BCIT Map</a></li>
-        <li><a href='./aboutUS.html'>About Us</a></li>
-        <li><a href="./services.html">Services</a></li>
-        <li><a href="./contact.html">Contact</a></li> 
+            <li>
+                <div id='slider_user_widget'></div>
+            </li>
+            <li><a href='./map.html'>BCIT Map</a></li>
+            <li><a href='./aboutUS.html'>About Us</a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./contact.html">Contact</a></li>
         </ul>
     </div>
 
-        <div class="actualOverall">
-            <div class="clearfix float-my-children">
-                <img id ="lotPicture" src="../Images/placeholder_lot.png" alt="image background">
-                <!--right side status-->
-                <div class="overall">
-                    <div>
-                        <h2 id="lotNo">Lot</h2>
-                    </div>
-                    <div id="status-div">
-                        <p>Status <b></b></p>
-                    </div>
-                    <div id="updates-div">
-                        <p> Recent Updates</p>
-                    </div>
-                    <!-- div for updates-->
-                    <div id="updates"></div>
-
-                    <!-- button for new updates or login-->
-                    <div id="add-update">
-                        <button id="update-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal"
-                            data-target="#myModal">update status</button>
-                    </div>
-
-
-                    <!-- Modal -->
-                    
-                    <div class="modal fade mm" id="myModal" role="dialog">
-                        <div class="modal-dialog">
-
-                            <!-- Modal content-->
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="modal-header-title">.</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <form>
-                                        <div id="lot-title"></div>
-                                        <div id="status-bar">
-                                            <p id = "status1">Status </p>
-                                            <div>
-                                                <input id="slider1" type="range" min="0" max="100">
-                                            </div>
-                                            <p class="colorIndicator" id="color">HALF</p> <!-- default value -->
-                                            <br>
-                                            <textarea id="txt-area" rows="2" cols="63" placeholder="Enter Comment" maxlength="70"></textarea>
-                                            <br>
-                                            <button class="btn btn-info confirm" id="updt-btn" type="button" data-dismiss="modal" style="margin-top: 8px;">Confirm</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-
+    <div class="actualOverall">
+        <div class="clearfix float-my-children">
+            <img id="lotPicture" src="../Images/placeholder_lot.png" alt="image background">
+            <!--right side status-->
+            <div class="overall">
+                <div>
+                    <h2 id="lotNo">Lot</h2>
                 </div>
-            </div>    
+                <div id="status-div">
+                    <p>Status <b></b></p>
+                </div>
+                <div id="updates-div">
+                    <p> Recent Updates</p>
+                </div>
+                <!-- div for updates-->
+                <div id="updates"></div>
+
+                <!-- button for new updates or login-->
+                <div id="add-update">
+                    <button id="update-btn" type="button" class="btn btn-info btn-lg" data-toggle="modal"
+                        data-target="#myModal">update status</button>
+                </div>
+
+
+                <!-- Modal -->
+
+                <div class="modal fade mm" id="myModal" role="dialog">
+                    <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="modal-header-title">.</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div id="lot-title"></div>
+                                    <div id="status-bar">
+                                        <p id="status1">Status </p>
+                                        <div>
+                                            <input id="slider1" type="range" min="0" max="100">
+                                        </div>
+                                        <p class="colorIndicator" id="color">HALF</p> <!-- default value -->
+                                        <br>
+                                        <textarea id="txt-area" rows="2" cols="63" placeholder="Enter Comment"
+                                            maxlength="70"></textarea>
+                                        <br>
+                                        <button class="btn btn-info confirm" id="updt-btn" type="button"
+                                            data-dismiss="modal" style="margin-top: 8px;">Confirm</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
         </div>
+    </div>
     <!-- firebase scripts-->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
@@ -116,5 +120,3 @@
 </body>
 
 </html>
-
-
