@@ -333,67 +333,62 @@ $(document).ready(function () {
   });
 
 
+    //Header Script is included here because I can't add two firebase configs in one html page
+    firebase.auth().onAuthStateChanged(firebaseUser => {
+      //console.log(firebaseUser);
+      //console.log(firebaseUser.uid);
+      //If firebaseuser info exists, then show personalized message and log out button.
+      if (firebaseUser != null) {
+  
+          let useremail = firebase.auth().currentUser.email;
 
+          $(".rightNav").empty();
+          $("#slider_user_widget").empty();
 
-  //Header Script is included here because I can't add two firebase configs in one html page
-  firebase.auth().onAuthStateChanged(firebaseUser => {
-    //console.log(firebaseUser);
-    //console.log(firebaseUser.uid);
-    //If firebaseuser info exists, then show personalized message and log out button.
-    if (firebaseUser != null) {
+          let loggedinwidget = "<div class='logged-in-widget'>"
+          + "<div class='acc_name' id='acc_name_desktop'></div>"
+          + "<div><button class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>"
+          + "Sign Out</button>"
+          + "</div></div>";
 
-      let useremail = firebase.auth().currentUser.email;
-
-      $(".rightNav").empty();
-      $("#slider_user_widget").empty();
-
-      let loggedinwidget = "<div class='logged-in-widget'>" +
-        "<div class='acc_name' id='acc_name_desktop'></div>" +
-        "<div><button class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>" +
-        "Sign Out</button>" +
-        "</div></div>";
-
-      let loggedinwidgetmobile = "<div class='logged-in-widget'>" +
-        "<div class='acc_name' id='acc_name_mobile'></div>" +
-        "<div><button id='slider_sign_out_button' class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>" +
-        "Sign Out</button>" +
-        "</div></div>";
-
-      function toSignOut() {
-        firebase.auth().signOut().then(() => {
-          alert("You are now signed out from ParkAway.");
-          // Sign-out successful.
-        }, function (error) {
-          console.log(error);
-        });
-      }
-
-      $(".rightNav").append(loggedinwidget);
-      $("#slider_user_widget").append(loggedinwidgetmobile);
-      
-      //sign out button
-      $('.sign_out_button').on('click', toSignOut);
-
-      //gets user data, appends username to html
-      root.ref('useraccount').on('value', snapshot => {
-
-        let data = snapshot.val();
-        let keys = Object.keys(data);
-
-        for (let i = 0; i < keys.length; i++) {
-
-          let k = keys[i];
-          let dataemail = data[k].email;
-
-          if (useremail == dataemail) {
-            $(".acc_name").empty();
-            //Greet full name of the user.
-            $(".acc_name").append("Welcome <b>" + data[k].firstname + "</b>");
+          let loggedinwidgetmobile = "<div class='logged-in-widget'>"
+          + "<div class='acc_name' id='acc_name_mobile'></div>"
+          + "<div><button id='slider_sign_out_button' class='sign_out_button btn btn-primary btn-lg myButton' type='submit'>"
+          + "Sign Out</button>"
+          + "</div></div>";
+                      
+          function toSignOut() {     
+              firebase.auth().signOut().then(() => {
+                  alert("You are now signed out from ParkAway.");
+                  // Sign-out successful.
+              }, function(error) {
+                  console.log(error);
+              });
           }
-        }
+          
+          $(".rightNav").append(loggedinwidget);
+          $("#slider_user_widget").append(loggedinwidgetmobile);
 
-      });
+          $('.sign_out_button').on('click', toSignOut);
+          
+          root.ref('useraccount').on('value', snapshot => {
+  
+              let data = snapshot.val();
+              let keys = Object.keys(data);
+  
+              for (let i = 0; i < keys.length; i++) {
 
+                  let k = keys[i];
+                  let dataemail = data[k].email;
+  
+                  if (useremail == dataemail) {
+                      $(".acc_name").empty();
+                      //Greet full name of the user.
+                      $(".acc_name").append("<a id='acc_name_text' href='./userAccount.html'>Welcome <b>" + data[k].firstname + "</b></a>");
+                  }
+              }
+          
+          });
 
       //If firebaseuser info doesn't exist, then show sign in and sign up button. 
     } else {
