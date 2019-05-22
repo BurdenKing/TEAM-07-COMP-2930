@@ -61,7 +61,10 @@ class TypeWriter {
 
         var imageDataArray = [];
         var canvasCount = 35;
+
+        if ( $(window).width() > 739){
         $("#easter").click(function(){
+
      
           html2canvas($(".snap")[0]).then(canvas => {
 
@@ -162,6 +165,7 @@ class TypeWriter {
      
           return canvas;
         }
+      }
   
      
 
