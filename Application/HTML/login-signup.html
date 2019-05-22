@@ -119,10 +119,13 @@
 
       <form id="sign_in" name="sign_in">
         <h1 class="formText"> SIGN IN</h1>
+         <!-- Input field for the username -->
         <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_mobile" required="required"
           placeholder="USERNAME">
+           <!-- Input field for the password -->
         <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_mobile"
           required="required" placeholder="PASSWORD">
+          <!-- Sign in button for the change over -->
         <button class="btn btn-primary button" id="loginsubmit_mobile" type="submit" value="Sign in">Sign In</button>
         <p class="forgotPass">Forgot your password?</p>
         <p>New to ParkAway? <a id='create_acc_link_mobile'>Create an account.</a></p>
@@ -133,16 +136,22 @@
     <div id='sign_up_container_mobile'>
       <form id="create_acc_form" name="create_acc_form">
         <h1 class="formText">Create an Account</h1>
+        <!-- Input field for the first name -->
         <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname_mobile"
           placeholder="FIRST NAME" required="required">
+        <!-- Input field for the last name -->
         <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname_mobile"
           placeholder="LAST NAME" required="required">
+        <!-- Input field for the username -->
         <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username_mobile"
           pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
+        <!-- Input field for the email -->
         <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email_mobile" placeholder="EMAIL"
           required="required">
+          <!-- Input field for the passwrod, required and placeholder -->
         <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password_mobile"
           required="required" placeholder="PASSWORD">
+        <!-- Input field for the confirm password -->
         <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword_mobile"
           required="required" placeholder="CONFIRM PASSWORD">
         <button class="btn btn-primary button" id="create_acc_submit_mobile" type="submit" value="Create Account">Sign
