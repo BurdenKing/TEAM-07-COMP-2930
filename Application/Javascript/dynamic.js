@@ -17,7 +17,7 @@ $(document).ready(function(){
     if(firebaseUser != null) {
       
     } else {
-       $("#add-update").replaceWith('<button id="log-in-btn" class="log-in-btn"> Log in </button>');
+       $("#add-update").replaceWith('<button id="log-in-btn" class="log-in-btn btn btn-primary"> Sign Up </button>');
     }
 
     // lot should be the ID of the button clicked on map, refer to my test example i uploaded on slack
@@ -44,6 +44,7 @@ $(document).ready(function(){
             $("#status-div").replaceWith(extraStuff(stat));
           } else {
             $("#status-div").replaceWith('<p> Status: <b> Not Availiable </b><p>');
+          
           }
         });
     }
@@ -283,15 +284,15 @@ $(document).ready(function(){
 
     function extraStuff(q) {
       if(q < 1) {
-        return  '<p> Status: <b style="color:#00bc45"> EMPTY </b> </p>';
+        return  '<p id="status-div"> Status: <b style="color:#00bc45"> EMPTY </b> </p>';
       } else if(q < 33) {
-        return  '<p> Status: <b style="color:#04f7a5"> MOSTLY EMPTY </b> </p>';
+        return  '<p id="status-div"> Status: <b style="color:#04f7a5"> MOSTLY EMPTY </b> </p>';
       } else if (q < 66) {
-        return   '<p> Status: <b style="color:#BBBB2B"> SOMEWHATFULL </b> </p>';
+        return   '<p id="status-div"> Status: <b style="color:#BBBB2B"> SOMEWHATFULL </b> </p>';
       } else if (q < 99) {
-        return  '<p> Status: <b style="color:#ffa500"> MOSTLY FULL </b> </p>';
+        return  '<p id="status-div"> Status: <b style="color:#ffa500"> MOSTLY FULL </b> </p>';
       } else {
-        return  '<p> Status: <b style="color:#ff2100"> FULL </b> </p>';
+        return  '<p id="status-div"> Status: <b style="color:#ff2100"> FULL </b> </p>';
       }
     } 
     });

@@ -1,0 +1,25 @@
+[debug] [2019-05-21T19:35:07.505Z] ----------------------------------------------------------------------
+[debug] [2019-05-21T19:35:07.510Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Pat\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2019-05-21T19:35:07.510Z] CLI Version:   6.0.1
+[debug] [2019-05-21T19:35:07.510Z] Platform:      win32
+[debug] [2019-05-21T19:35:07.510Z] Node Version:  v8.12.0
+[debug] [2019-05-21T19:35:07.511Z] Time:          Tue May 21 2019 12:35:07 GMT-0700 (Pacific Daylight Time)
+[debug] [2019-05-21T19:35:07.511Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2019-05-21T19:35:07.533Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2019-05-21T19:35:07.534Z] > authorizing via signed-in user
+[debug] [2019-05-21T19:35:07.534Z] [iam] checking project parkaway-comp2930 for permissions ["firebase.projects.get"]
+[debug] [2019-05-21T19:35:07.538Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930:testIamPermissions  
+
+[debug] [2019-05-21T19:35:07.727Z] <<< HTTP RESPONSE 200
+[debug] [2019-05-21T19:35:07.727Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/parkaway-comp2930  
+ 
+[debug] [2019-05-21T19:35:08.380Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'C:\Users\Pat\Documents\BCIT Projects 2\ParkAway\TEAM-07-COMP-2930'...
+[info] 
+[debug] [2019-05-21T19:35:08.400Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/817259487218/clients/_:getWebAppConfig  
+ 
+[debug] [2019-05-21T19:35:08.591Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: Application
+[info] +  hosting: Local server: http://localhost:5000
