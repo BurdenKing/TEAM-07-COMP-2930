@@ -175,14 +175,19 @@ function saveAccInfo(username, email, password, firstname, lastname) {
     let root = firebase.database();
     let uid = firebase.auth().currentUser.uid;
 
+    let fmtusername = username.trim().toLowerCase();
+    let fmtemail = email.trim().toLowerCase();
+
     let fmtfirstname = firstname.substring(0,1).toUpperCase() 
         + firstname.substring(1).toLowerCase();
+    fmtfirstname = fmtfirstname.trim();
     let fmtlastname = lastname.substring(0,1).toUpperCase() 
         + lastname.substring(1).toLowerCase();
+    fmtlastname = fmtlastname.trim();
 
     root.ref('useraccount').push({
-        username: username.toLowerCase(),
-        email: email.toLowerCase(),
+        username: fmtusername,
+        email: fmtemail,
         password: password,
         firstname: fmtfirstname,
         lastname: fmtlastname,

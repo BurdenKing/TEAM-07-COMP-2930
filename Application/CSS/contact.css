@@ -20,7 +20,7 @@
     /* Blue overlay over the gif */
     position: absolute;
     /* Overlay colour */
-    background: rgba(39,62,84,0.89);
+    background: rgba(39, 62, 84, 0.89);
     overflow: scroll;
     /* Need this z index so it can be above the map */
     z-index: 99;
@@ -58,18 +58,18 @@
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
-     /* Adding curisve font family */
+    /* Adding curisve font family */
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
- 
+
 }
 
 .pspacing {
-     /* Spacing between each paragraphs following */
+    /* Spacing between each paragraphs following */
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
-     /* Adding curisve font family */
+    /* Adding curisve font family */
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
 }
@@ -78,8 +78,8 @@
    Don't need to display any of those buttons.
    This css code was found through slack, can
    not find the link again. */
-.gmnoprint { 
-    display: none; 
+.gmnoprint {
+    display: none;
 }
 
 /* Make content cover 85% of the browser-width when browser-size is less than 450px */
