@@ -76,7 +76,8 @@ lotQColor = lotColor("lotQ");
 var BCIT = {lat: 49.248, lng: -123.0018124};
 //customize icon.
 var parkingIcon = "https://img.icons8.com/dusk/48/000000/parking.png"
-  
+
+//google map
 var map = new google.maps.Map(document.getElementById('map'), {
   zoom: 15.5,
   zoomControl: false,
@@ -201,7 +202,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   ]
 });
   
-          
+          //geolocations of parking lot locations        
   
           var lotA = new google.maps.Marker({
             position: {lat: 49.2520931, lng:-122.9987794},

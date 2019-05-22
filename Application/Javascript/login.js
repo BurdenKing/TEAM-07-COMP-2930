@@ -26,7 +26,7 @@ firebase.initializeApp(firebaseConfig);
 
 //when submit is clicked
 document.getElementById('loginsubmit').addEventListener('click', e => {
-   
+    //prevents automatic refresh
     e.preventDefault();
 
     const database = firebase.database();
