@@ -37,13 +37,36 @@ class TypeWriter {
     }
    }
 
+
+   
+
+
         //Easter Egg Snap
+
+        //Background music
+
+                    
+        let audio = new Audio('Javascript/alltimelow.mp3');
+        $("#easter").click(function playMusic() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+          audio.pause();
+        }
+       });
+
+
+        
+       //Snap visual effect
 
         var imageDataArray = [];
         var canvasCount = 35;
         $("#easter").click(function(){
      
           html2canvas($(".snap")[0]).then(canvas => {
+
+
+
             //capture all div data as image
             ctx = canvas.getContext("2d");
      
@@ -154,6 +177,7 @@ class TypeWriter {
     new TypeWriter(txtElement, words, wait);
   }
 
+  
 
 
   
