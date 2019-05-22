@@ -332,7 +332,7 @@ header {
 .float-my-children > * {
     width: 650px;
     height: 500px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 150px;
     float:left;
 }
@@ -348,6 +348,8 @@ header {
     width: 580px;
     border-color: black;
 }
+
+
 
 #upid1{
     border-style: solid;
@@ -416,7 +418,8 @@ header {
 .actualOverall {
     width: 1310px;
     height: 400px;
-    margin-left: 330px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #log-in-btn {
@@ -465,4 +468,25 @@ header {
     text-transform: uppercase;
 }
 
+@media screen and (max-width: 1390px) {
+    .actualOverall {
+        width: 80%;
+    }
 
+    #lotPicture {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        position: relative;
+    }
+
+    .overall {
+        width: 100%;
+        float: left;
+        position: relative;
+        margin-top: 50px;
+    }
+}
