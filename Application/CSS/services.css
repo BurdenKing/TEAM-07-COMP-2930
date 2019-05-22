@@ -76,8 +76,9 @@ body {
     font-weight: 550;
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
+}
 
-
+/* Media queires */
 /* Make content cover 85% of the browser-width when browser-size is less than 450px */
 @media only screen and (max-width: 450px) {
     #section1 {
