@@ -1,4 +1,6 @@
 //Javascript for the text in the middle of the page, that increases and deletes
+// source; https://www.youtube.com/watch?v=POX3dT-pB4E
+// followed video to create this effect 
 class TypeWriter {
   constructor(txtElement, words, wait = 3000) {
     this.txtElement = txtElement;
