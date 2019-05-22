@@ -8,6 +8,7 @@
 
 .slider {
   z-index: 99;
+  top: 131px;
 }
 
 header {
@@ -26,4 +27,10 @@ body {
 
 #overlay {
   height: 100%;
+}
+
+@media screen and (max-width: 399px) {
+  .slider {
+    top: 120px;
+  }
 }
