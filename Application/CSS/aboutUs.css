@@ -1,10 +1,10 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
-
-
 #background {
+    /* Includes the background gif */
     background-image: url(../Images/about_background.gif);
     background-size: cover;
     background-position: center;
@@ -14,14 +14,19 @@
 }
 
 #overlay {
+    /* Blue overlay over the gif */
     background: rgba(39,62,84,0.89);
     overflow: hidden;
     z-index: 2;
 }
 
-/* ---------- Section 1 ---------*/
+/* -------------------- Section 1 -------------------- */
+
+/* This section includes the heading, along with the 
+   paragraphs placed over the gifs */
 
 #section1 {
+    /* Creating a width for entire section */
     width: 57%;
     margin: 0 auto;
     text-align: center;
@@ -31,6 +36,7 @@
 }
 
 #heading {
+    /* The about us title of the page */
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-size: 48px;
@@ -38,18 +44,21 @@
 }
 
 .ptop {
+    /* First paragraph spacing from top */
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
+    /* Adding curisve font family */
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
- 
 }
 
 .pspacing {
+    /* Spacing between each paragraphs following */
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
+     /* Adding curisve font family */
     font-family: 'Oswald', sans-serif;
     font-family: 'Courgette', cursive;
 }
@@ -57,13 +66,19 @@
 
 /* ---------- Section 2 ---------*/
 
+/* This section includes each team members
+   information and bios along with their
+   pictures */
+
 #section2 {
+    /* Overall section code */
     padding-top: 4em;
     background-color: white;
     margin: 0 auto;
 }
 
 #section2Title {
+    /* The title of the section "Our Team" */
     text-align: center;
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
@@ -74,10 +89,12 @@
 
 .membersAll {
     width: 100%;
+    /* Centering all the divs */
     text-align: center;
 }
 
 .memberOverall {
+    /* Every members div will have this */
     transition: all .3s ease-in-out;
     box-shadow: 0 0 30px #cccccc;
     display: inline-block;
@@ -87,11 +104,19 @@
 }
 
 .memberOverall:hover {
+    /* A box shadow displays on hover to emphasize
+       the div that is hovered */
     transform: translateY(-30px);
     box-shadow:4px 4px 20px #999 , -4px -4px 20px #999 ;
 }
 
 .upper_info {
+    /* Member image will be placed in this div. The background
+       below is an automatic image for those who do not have
+       a headshot */
+
+    /* If you have a headhsot add it to your memberOverall div
+       using inline styling */
     background-image: url(../Images/about_background.jpg);
     background-size: contain;
     background-size: cover;
@@ -100,11 +125,15 @@
 }
 
 .item-overlay {
+    /* Adding the CSS code for the animation effect */
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
+    /* Background colour of the image */
     background: rgba(0,0,0,0.65);
+    /* Text of the colour for our bio */
     color: #fff;
     overflow: hidden;
+    /* Centering the text for everything */
     text-align: center;
     width: 100%; 
     /* Animation effect, that goes from top to bottom */
@@ -112,22 +141,27 @@
     transition: top 0.3s, right 0.3s, bottom 0.3s, left 0.3s ease-in-out;
 }
 
+/* Animation works when user hovers over a memberOverall div */
 .memberOverall:hover .item-overlay.bottom {
     bottom: 0;
 }
-  
+
+/* Making sure the animation effect goes from top to bottom */
 .item-overlay.bottom {
     bottom: 100%;
 }
 
-/* DO NOT CHANGE */
+/* Div for all the social media icons, github, linkedin, and email */
 .memberSocialMedia {
     display: none;
+    /* Positioning them over the image. Will only display on hover. */
     position: absolute;
     margin-top: 0px;
+    /* Spacing the icons from the right side and left side */
     left: 10%;
     right: 10%;
-    -webkit-animation: fadein 1.8s; /* Safari, Chrome and Opera > 12.1 */
+    /* Making the icons fade in on hover */
+    -webkit-animation: fadein 1.8s; 
 }
 
 /* Fade in animation effect for all media links */
@@ -136,7 +170,7 @@
     to   { opacity: 1; }
  }
  
- /* Safari, Chrome and Opera > 12.1 */
+ /* Doing it again for safari and Chrome */
  @-webkit-keyframes fadein {
     from { opacity: 0; }
     to   { opacity: 1; }
@@ -157,30 +191,35 @@
 }
 
 .bio {
+    /* Hiding the bio as it should only display on hover */
     display: none;
 }
 
 .memberOverall:hover .bio {
+    /* Displaying the bio on the hover only */
     display: block;
+    /* Bio spacing from the top */
     margin-top: 95px;
     margin-left: 3.8%;
     margin-right: 3.8%;
-    -webkit-animation: fadein 1.8s; /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation: fadeins 1.8s; 
 }
 
-/* Fade in animation effect for all media links */
-@keyframes fadein {
+/* Fade in animation effect for bio */
+@keyframes fadeins {
     from { opacity: 0; }
     to   { opacity: 1; }
  }
  
- /* Safari, Chrome and Opera > 12.1 */
- @-webkit-keyframes fadein {
+ /* Doing it again for safari and Chrome */
+ @-webkit-keyframes fadeins {
     from { opacity: 0; }
     to   { opacity: 1; }
  }
 
 .bottom_info {
+    /* Displays all the bottom information including,
+       the users name, and position goals */
     background: whitesmoke;
     width: 350px;
     margin: 0 auto;
@@ -192,10 +231,13 @@
     display: inline-block;    
 }
   
- .up_arrow {
+.up_arrow {
+    /* Adding an up arrow. This is good UI, so the user 
+       knows to hover over the div */
     background-color: whitesmoke;
     border-radius: 50%;
     box-shadow: 0 0 30px #cccccc;
+    /* Positioning the arrow between upper and lower info */
     height: 50px;
     line-height: 40px;
     margin-left: -25px;
@@ -207,7 +249,8 @@
     cursor: context-menu;
 }
 
-.fa{
+.fa {
+    /* A class for all the media icons */
     color: whitesmoke;
     font-size: 30px;
     display: inline-block;
@@ -217,13 +260,10 @@
     margin-right: 12px;
     /* Padding/space between white border */
     padding: 10px;
-    -webkit-transition-duration: 1s;
-    -moz-transition-duration: 1s;
-    -o-transition-duration: 1s;
+    /* Adding a transition */
+    -webkit-transition-duration: 1s; /* Safari and Chrome */
     transition-duration: 1s;
-    -webkit-transition-property: -webkit-transform;
-    -moz-transition-property: -moz-transform;
-    -o-transition-property: -o-transform;
+    -webkit-transition-property: -webkit-transform; /* Safari and Chrome */
     transition-property: transform;
 }
 
@@ -260,9 +300,14 @@
 
 /* Creating the shake effect on hover for media icon */
 @keyframes shake {
+    /* Chaning the pixels every 10 pixels to maximize
+       thw effect for user interface */
     10%, 90% {
       transform: translate3d(-.5px, 0, 0);
     }
+
+    /* Test the pixels and feel free to change
+       them if you find a better pixel size */
     20%, 80% {
       transform: translate3d(1px, 0, 0);
     }
@@ -275,9 +320,16 @@
 }
     
 .memberName {
+    /* Adding a font for the user name */
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
 }
+
+
+/*****************************************\
+              MOBILE VERSION
+/*****************************************/
+
 
 @media screen and (max-width: 860px) {     
     .ptop {
@@ -298,18 +350,22 @@
     }
 }
 
+/* Keeping the width consistent */
 @media screen and (max-width: 1800px) {     
     #section1 {
         width: 60%;
     }
 }
 
+/* Keeping the width consistent */
 @media screen and (max-width: 1600px) {     
     #section1 {
         width: 70%;
     }
 }
 
+/* Keeping the width consistent  and removing
+   the break tag as it is not needed anymore */
 @media screen and (max-width: 1400px) {     
     #section1 {
         width: 80%;
@@ -320,24 +376,29 @@
     }
 }
 
+/* Keeping the width consistent */
 @media screen and (max-width: 1200px) {     
     #section1 {
         width: 80%;
     }
 }
 
+/* Keeping the width consistent */
 @media screen and (max-width: 1200px) {     
     #section1 {
         width: 80%;
     }
 }
 
+/* Fixing the margin for the memberOverall div */
 @media screen and (max-width: 499px) {
     .memberOverall {
         margin: 32px auto 0px auto;
     }
 }
 
+/* Keeping the width consistent and fixing the margin
+   for the memberOverall div */
 @media screen and (max-width: 399px) {
     .memberOverall {
         width: 300px;
@@ -361,13 +422,12 @@
               MOBILE VERSION
 /*****************************************/
 
+
 /* Galaxy S5 */
 @media only screen and (width : 360px) 
     and (height : 640px)
     and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        
+    and (-webkit-device-pixel-ratio : 3) {      
 }
 
 
