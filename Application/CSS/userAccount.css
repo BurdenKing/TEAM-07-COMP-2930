@@ -1,7 +1,3 @@
-#account-reward {
-
-}
-
 #btn-change-password {
     background-color: #555;
     color: white;
@@ -62,4 +58,14 @@
   /* Add some hover effects to buttons */
   .form-container .btn:hover, .open-button:hover {
     opacity: 1;
+  }
+
+  /* Set slider property */
+  .slider {
+    z-index: 99;
+  }
+
+  /* Set header color */
+  #userAccheader {
+    background: rgba(39,62,84,0.89);
   }

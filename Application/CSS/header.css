@@ -105,6 +105,17 @@ header nav {
 .acc_name {
     margin: 10px 0;
     font-size: 28px;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+#acc_name_text {
+    color: #FFFFFF;
+}
+
+#acc_name_text:hover {
+    text-decoration: none;
+    color: #0183DA;
 }
 
 #acc_name_mobile {
@@ -235,13 +246,19 @@ h3 {
 }
 
 #slider_widget_text {
-    color: #0183DA;
+    color: white;
     font-size: 18px;
 }
 
 #slider_user_widget {
     height: 120px;
-    border-bottom: solid;
+    border-bottom: 1px solid white;
+}
+
+.my_acc_link {
+    font-size: 18px;
+    height: 40px;
+    padding: auto 0px;
 }
 
 /* -----Responsiveness -----*/
@@ -275,6 +292,7 @@ h3 {
     .slider ul li a {
         font-size: 24px;
         text-decoration: none;
+        color: white;
     }
 
     .slider ul li {
@@ -288,9 +306,9 @@ h3 {
 
     .slider {
         float : right;
-        color : #0183DA;
+        color : white;
         position : absolute;
-        background-color: white;
+        background-color: #3e4f6b;
         padding : 20px 50px;
         width : 600px;
     }
@@ -417,7 +435,7 @@ h3 {
     }
     
     #slider_user_widget {
-        height: 100px;
+        height: 80px;
         border-bottom: solid;
     }
 }

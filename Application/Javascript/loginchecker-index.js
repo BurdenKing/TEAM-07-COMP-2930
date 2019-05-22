@@ -64,7 +64,7 @@ $(document).ready(function() {
                     if (useremail == dataemail) {
                         $(".acc_name").empty();
                         //Greet full name of the user.
-                        $(".acc_name").append("Welcome <b>" + data[k].firstname + "</b>");
+                        $(".acc_name").append("<a id='acc_name_text' href='./HTML/userAccount.html'>Welcome <b>" + data[k].firstname + "</b></a>");
                     }
                 }
             
@@ -106,7 +106,7 @@ $(document).ready(function() {
         if (tab) {
             $(".slider").animate({width:'toggle', paddingLeft: 'toggle', paddingRight: 'toggle'}, 500);
             $(".slider").css({
-                "display" : "block"
+                "display" : "block",        
             });
             $(".mediaIcon").attr("src", "./Images/cancel.png");
             tab = false;
