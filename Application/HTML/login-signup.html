@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>ParkAway</title>
+  <!-- Login title -->
+  <title>Log In</title>
+  <!-- Meta values -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Adding Bootstrap CSS Stylesheet -->
@@ -15,72 +17,106 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 
+<!-- This video is a resource for the slider we used to build it 
+  https://www.youtube.com/watch?v=mUdo6w87rh4 -->
+
 <body>
   <!-- Adding a heading (with a navigation bar) -->
   <header>
+    <!-- Left navigation bar of the page, that contaisn the logo -->
     <div class="leftNav">
+      <!-- Link to the index page if oyu click the logo-->
       <a class="logo" href="../index.html">ParkAway</a>
     </div>
   </header>
 
+  <!-- Container contaisn all the -->
   <div class="container" id="container">
     <!-- SIGN UP-->
     <div class="form-container sign-up-container">
+      <!-- Form for the sign up page -->
       <form id="create_acc_form_desktop" name="create_acc_form_desktop">
+        <!-- Title of the create an ccount section -->
         <h1 class="formText">Create an Account</h1>
+        <!-- Input field for the first name -->
         <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname_desktop"
           placeholder="FIRST NAME" required="required">
+        <!-- Input field for the last name -->
         <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname_desktop"
           placeholder="LAST NAME" required="required">
+        <!-- Input field for the username -->
         <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username_desktop"
           pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
+        <!-- Input field for the email -->
         <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email_desktop"
           placeholder="EMAIL" required="required">
+        <!-- Input field for the password -->
         <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password_desktop"
           required="required" placeholder="PASSWORD">
+        <!-- Input field for the confrim password -->
         <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword_desktop"
           required="required" placeholder="CONFIRM PASSWORD">
+        <!-- Butotn that creates the account-->
         <button class="btn btn-primary button" id="create_acc_submit_desktop" type="submit" value="Create Account">Sign
           Up</button>
       </form>
     </div>
+
     <!-- SIGN IN-->
     <div class="form-container sign-in-container">
+      <!-- Form for the sign in section-->
       <form id="sign_in_desktop" name="sign_in_desktop">
+        <!-- Title for the sign in section -->
         <h1 class="formText"> SIGN IN</h1>
+        <!-- Username input field is required and placeholder-->
         <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_desktop" required="required"
           placeholder="USERNAME">
+        <!-- Password input field is required and addding a placeholder -->
         <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_desktop"
           required="required" placeholder="PASSWORD">
+        <!-- Sign In button -->
         <button class="btn btn-primary button" id="loginsubmit_desktop" type="submit" value="Sign in">Sign In</button>
         <p class="forgotPass">Forgot your password?</p>
       </form>
     </div>
+
     <!-- OVERLAY-->
     <div class="overlay-container">
+      <!-- The informtion on the opposite side of the -->
       <div class="overlay">
+
         <!-- SIGN IN-->
         <div class="overlay-panel overlay-left">
+          <!-- Title for the switch over -->
           <h1>Already Have An Account?</h1>
+          <!-- An underline below the title of siwtch over -->
           <hr class="underline">
+          <!-- Context to advise the user to switch over if they already have an account -->
           <p>Sign in to continue with your account</p>
           <button class="btn btn-outline-primary changeButton" id="signIn">Sign In</button>
         </div>
 
         <!-- SIGN UP-->
         <div class="overlay-panel overlay-right">
+          <!-- Title for the switch over -->
           <h1>New to ParkAway?</h1>
+          <!-- An underline below the title of siwtch over -->
           <hr class="underline">
+          <!-- Context to advise the user to switch over if they already have an account -->
           <p>Enter your details and start your journey now</p>
+          <!-- Sign up button for the change over -->
           <button class="btn btn-outline-primary changeButton" id="signUp">Sign Up</button>
         </div>
+
       </div>
     </div>
   </div>
 
+  <!-- Div that contains the mobile version -->
   <div class='container_mobile'>
     <!-- SIGN IN-->
     <div id='sign_in_container_mobile'>
+
       <form id="sign_in" name="sign_in">
         <h1 class="formText"> SIGN IN</h1>
         <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_mobile" required="required"
@@ -92,6 +128,7 @@
         <p>New to ParkAway? <a id='create_acc_link_mobile'>Create an account.</a></p>
       </form>
     </div>
+
     <!--SIGN UP-->
     <div id='sign_up_container_mobile'>
       <form id="create_acc_form" name="create_acc_form">
