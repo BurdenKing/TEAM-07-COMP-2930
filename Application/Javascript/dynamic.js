@@ -58,7 +58,7 @@ $(document).ready(function(){
     // div ids are upid0 ~ upid2
     for(i = 0; i < 3; i++) {
         upid2 = upid + i;
-        updateContent = updateContent + '<div class="update-cls" id="' + upid2 + '"><div><p>Name</p> <p>status</p></div><div><p>comments</p></div><div><p>timestamp</p> </div></div>';
+        updateContent = updateContent + '<div class="update-cls" id="' + upid2 + '"><div><p><b>Name</b></p> <p>status</p></div><div><p>comments</p></div><div><p>timestamp</p> </div></div>';
     }
     $("#updates").replaceWith(updateContent);
     
@@ -82,7 +82,7 @@ $(document).ready(function(){
             let comment = snapshot.child("message").val();
             let status = snapshot.child("status").val();
             let timestamp = snapshot.child("timestamp").val();
-            let name = snapshot.child("username").val();   
+            let name = snapshot.child("username").val().bold();   
             let s;
             console.log(status);
             
