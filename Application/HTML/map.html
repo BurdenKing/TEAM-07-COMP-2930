@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>ParkAway</title>
+  <!-- Title of the page -->
+  <title>Map</title>
+  <!-- Meta values -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Adding Bootstrap CSS Stylesheet -->
@@ -12,7 +14,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
   <script type="text/javascript" src="../Javascript/map.js"></script>
-  <!-- Adding header -->
+  <!-- Adding CSS stylesheets -->
   <link rel="stylesheet" type="text/css" href="../CSS/header.css">
   <!-- Adding CSS for map-->
   <link rel="stylesheet" href="../CSS/map.css">
@@ -23,6 +25,7 @@
 </head>
 
 <body>
+  <!-- Blue overlay -->
   <div id="overlay">
     <!-- Map -->
     <div id="map"></div>
@@ -31,6 +34,7 @@
       <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
       <!-- Adding a navigation bar -->
       <nav>
+        <!-- The centered items -->
         <ul>
           <li><a href='./map.html'>BCIT Map</a></li>
           <li><a href='./aboutUS.html'>About Us</a></li>
@@ -40,12 +44,17 @@
       </nav>
       <!-- Right side of the header -->
       <div class="rightNav "></div>
+      <!-- Media Icons for the rigth hand side of the header with media queries-->
       <div class="mediaIconDiv">
+        <!-- Adding the three line menu icon -->
         <img class="mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Menu Icon">
       </div>
     </header>
+
+    <!-- Adding the slider this will display during the media queries and mobile version -->
     <div class='slider'>
       <ul>
+        <!-- Moving the centered items to the slider -->
         <li>
           <div id='slider_user_widget'></div>
         </li>
@@ -56,6 +65,7 @@
       </ul>
     </div>
   </div>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
