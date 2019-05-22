@@ -1,36 +1,49 @@
+/* Adding map to the webpage */
 #map {
-  width: 100%;  /* The width is the width of the web page */
-  margin: auto;
-  height: 100%;
-  position: relative;
-  float: left;
- }
-
+    width: 100%;  /* The width is the width of the web page */
+    margin: auto;
+    height: 100%;
+    position: relative;
+    float: left;
+}
+  
 .slider {
-  z-index: 99;
-  top: 131px;
+    /* Slider for mobile version of the map */
+    z-index: 99;
+    top: 131px;
 }
 
 header {
-  background-color:rgba(39,62,84,0.89);
-  float: left;
-  position: absolute;
-  width: 100%;
-  z-index: 99;
+    /* Modifying the header on the map page */
+    background-color:rgba(39,62,84,0.89);
+    float: left;
+    position: absolute;
+    width: 100%;
+    /* Making sure the header is above the map */
+    z-index: 99;
 }
 
 body {
-  position: absolute;
-  width: 100%;
-  height: 100%;
+    /* Styling hte body as we want map to cover screen */
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 #overlay {
-  height: 100%;
+    /* Fixing overlay height */
+    height: 100%;
 }
 
+
+/*****************************************\
+              DESKTOP VERSION
+/*****************************************/
+
+
+/* Fixing the slider for the mobile version of the map page */
 @media screen and (max-width: 399px) {
-  .slider {
-    top: 120px;
-  }
+    .slider {
+        top: 120px;
+    }
 }

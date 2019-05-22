@@ -4,15 +4,10 @@
 <head>
     <title>ParkAway</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="viewport" content="width=device-width,initial-scale=2.0">
-    <meta name="viewport" content="width=device-width,initial-scale=3.0">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- Adding CSS Stylsheet-->
-    <!--<link rel="stylesheet" type="text/css" href="../CSS/index.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/aboutUs.css">
-    <link rel="stylesheet" type="text/css" href="../CSS/services.css">-->
     <script src="../Javascript/jquery-3.4.1.min.js"></script>
     <script src="../Javascript/dynamic.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
@@ -21,14 +16,12 @@
     <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
     <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-
-
 </head>
 
 <body>
      <!-- Adding a heading (with a navigation bar) -->  
      <header>
-        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</span></a></div>
+        <div class = "leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
         <!-- Adding a navigation bar --> 
         <nav>
             <ul>
@@ -41,7 +34,7 @@
         <!-- Right side of the header -->
         <div class = "rightNav "></div>
         <div class = "mediaIconDiv">
-            <img class = "mediaIcon" src="../Images/menu_icon.png" width="120px" height="120px">
+            <img class = "mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Menu Icon">
         </div>
     </header>
     <div class='slider'>
@@ -56,9 +49,7 @@
 
         <div class="actualOverall">
             <div class="clearfix float-my-children">
-                <img id ="lotPicture" src="" alt="image background">
-
-
+                <img id ="lotPicture" src="../Images/placeholder_lot.png" alt="image background">
                 <!--right side status-->
                 <div class="overall">
                     <div>
@@ -88,7 +79,7 @@
                             <!-- Modal content-->
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h4 class="modal-title" id="modal-header-title"></h4>
+                                    <h4 class="modal-title" id="modal-header-title">.</h4>
                                 </div>
                                 <div class="modal-body">
                                     <form>
@@ -100,7 +91,7 @@
                                             </div>
                                             <p class="colorIndicator" id="color">HALF</p> <!-- default value -->
                                             <br>
-                                            <textarea type="text" id="txt-area" rows="2" cols="63" placeholder="Enter Comment" maxlength="70"></textarea>
+                                            <textarea id="txt-area" rows="2" cols="63" placeholder="Enter Comment" maxlength="70"></textarea>
                                             <br>
                                             <button class="btn btn-info confirm" id="updt-btn" type="button" data-dismiss="modal" style="margin-top: 8px;">Confirm</button>
                                         </div>

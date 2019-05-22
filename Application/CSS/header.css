@@ -468,6 +468,7 @@ h3 {
         margin: 0px;
     }
 
+    /* Slider positioning */
     .slider {
         padding: 10px 50px;
     }
@@ -487,6 +488,7 @@ h3 {
         margin: 0px;
     }
 
+    /* Fixing the logo */
     .logo {
         margin-top: 10px;
     }

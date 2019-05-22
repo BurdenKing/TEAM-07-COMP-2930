@@ -1,43 +1,48 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
 
 #background {
+    /* Background o fthe page positioning */
     position: relative;
+    /* Fixing margins and padding */
     padding:0;
     margin:0;
-
     top:0;
     left:0;
-
     width: 100%;
     height: 100%;
-
+    /* Background information */
     background-image: url(../Images/services.gif);
-
-  /* Center and scale the image nicely */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 body {
+    /* Main body styling */
     position: absolute;
     height: 100%;
 }
 
 #overlay {
+    /* Adding the blue overlay */
     background: rgba(39,62,84,0.89);
     overflow: scroll;
     height: 100%;
     z-index: 2;
 }
 
-/* ---------- Section 1 ---------*/
+/* ----------------- Section 1 ---------------*/
+
+/* This section includes the heading, along with the 
+   paragraphs placed over the gifs */
 
 #section1 {
+    /* All of the heading and paragraphs */
     width: 57%;
     margin: 0 auto;
     text-align: center;
@@ -47,6 +52,7 @@ body {
 }
 
 #heading {
+    /* The contact title of the page */
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
     font-size: 48px;
@@ -54,6 +60,7 @@ body {
 }
 
 .ptop {
+    /* First paragraph spacing from top */
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
@@ -63,6 +70,7 @@ body {
 }
 
 .pspacing {
+    /* Spacing between each paragraphs following */
     margin-top: 1.7em;
     font-size: 21px;
     font-weight: 550;
@@ -70,162 +78,7 @@ body {
     font-family: 'Courgette', cursive;
 }
 
-/* Galaxy S5 */
-@media only screen and (width : 360px) 
-    and (height : 640px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        #section1 {
-            width: 80%;
-        }
-        
-        #heading {
-            font-size: 40px;
-        }
-        
-        .ptop {
-            font-size: 20px;
-        }
-        
-        .pspacing {
-            font-size: 20px;
-        }
-}
-
-
-/* Pixel */
-@media only screen 
-    and (width : 411px) 
-    and (height : 731px)
-    and (orientation : portrait)   { 
-
-
-        .mediaIcon {
-            margin-top: 15.5px;
-            width: 40px;
-            height: 40px;
-            padding: 31px 31px;
-            margin-right: -13.5px;
-        }       
-
-        .leftNav {
-            margin-left: 12px;
-         }
-         
-         .logo {
-             padding-left: 10px;
-         }
-}
-
-
-/* Pixel XL */
-@media only screen 
-    and (width : 411px) 
-    and (height : 823px)
-    and (orientation : portrait)   { 
-
-        .mediaIcon {
-            margin-top: 15.5px;
-            width: 40px;
-            height: 40px;
-            padding: 31px 31px;
-            margin-right: -13.5px;
-        }       
-
-        .leftNav {
-            margin-left: 12px;
-         }
-         
-         .logo {
-             padding-left: 10px;
-         }
-}
-
-
-/* Iphone 5/SE */
-@media only screen 
-    and (width : 320px) 
-    and (height : 568px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .mediaIcon {
-            margin-top: 11px;
-            width: 40px;
-            height: 40px;
-            padding: 32px 32px;
-            margin-right: -15px;
-        }       
-}
-
-
-/* Iphone 6/7/8 */
-@media only screen 
-    and (width : 375px) 
-    and (height : 667px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .mediaIcon {
-            margin-top: 10px;
-            width: 40px;
-            height: 40px;
-            padding: 31.5px 31.5px;
-            margin-right: -13px;
-        }    
-
-        .leftNav {
-           margin-left: 10px;
-        }
-        
-        .logo {
-            padding-left: 10px;
-        }
-}
-
-
-/* Iphone 6/7/8 Plus */
-@media only screen 
-    and (width : 414px) 
-    and (height : 736px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        .mediaIcon {
-            margin-top: 16.5px;
-            width: 40px;
-            height: 40px;
-            padding: 33px 33px;
-            margin-right: -15px;
-        }    
-
-        .leftNav {
-           margin-left: 10px;
-        }
-        
-        .logo {
-            padding-left: 10px;
-        }
-}
-
-
-/* Iphone X */
-@media only screen 
-    and (width : 375px) 
-    and (height : 812px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        .mediaIcon {
-            margin-top: 11px;
-            width: 40px;
-            height: 40px;
-            padding: 33px 33px;
-            margin-right: -15px;
-        }       
-}
-
+/* Media queires */
 /* Make content cover 85% of the browser-width when browser-size is less than 450px */
 @media only screen and (max-width: 450px) {
     #section1 {
