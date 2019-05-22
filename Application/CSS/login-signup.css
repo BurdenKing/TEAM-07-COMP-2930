@@ -1,41 +1,46 @@
-
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
+/* Making sure everyhting is box */
 * {
 	box-sizing: border-box;
 }
 
 .container {
+	/* Overall container of the sign in and log up panels */
 	margin-top: 6em;
 	background-color: #fff;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
 	overflow: hidden;
-    
     /* Height of overall box */
 	height: 630px;
 }
 
 h1 {
+	/* Font information for the main, larger text */
 	font-family: 'Oswald', sans-serif;
 	text-transform: uppercase;
 	font-size: 50px;
 }
 
 .formText {
+	/* Padding from the bottom for the form text */
 	padding-bottom: 20px;
 }
 
 .forgotPass {
+	/* Styling for the forgot password */
 	margin-top: 20px;
 	cursor: pointer;
 	text-align: left;
 }
 
 .forgotPass:hover {
+	/* Remove underline for forgot passsword hover */
 	cursor: pointer;
 	text-decoration: underline;
 }
@@ -47,7 +52,8 @@ h1 {
     border-radius: 0px;
     /* Width of the buttons */
     width: 100%;
-    color: #ffffff;
+	color: #ffffff;
+	/* Button font information */
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -62,16 +68,18 @@ h1 {
     transform: scale(.9);
 }
 
+/* Makes the transition look better */
 .button:focus {
     transform: scale(.95);
 }
 
-/* Buttons that switch over to other page */
+/* Buttons that switch over to other panel */
 .changeButton {
 	padding: 12px 15px;
     border-radius: 0px;
     /* Width of the buttons */
-    width: 50%;
+	width: 50%;
+	/* Font information */
     font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
@@ -81,16 +89,21 @@ h1 {
 	color: whitesmoke;
 }
 
+/* Switch panels button, make the scale smaller on click */
 .changeButton:active {  
 	transform: scale(.9);
-	
 }
 
+/* Makes the transition look better */
 .changeButton:focus {
     transform: scale(.95);
 }
 
 form {
+	/* Styling the form of the create an account and login page */
+
+	/* This is for the two white background panels, the oners
+	   with inputs */
 	background-color: #FFFFFF;
 	display: flex;
 	align-items: center;
@@ -102,6 +115,7 @@ form {
 }
 
 input {
+	/* Grey background for the inputs */
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -110,6 +124,7 @@ input {
 }
 
 .form-container {
+	/* Position the forms and adding a transition */
 	position: absolute;
 	top: 0;
 	height: 100%;
@@ -117,16 +132,20 @@ input {
 }
 
 .sign-in-container {
+	/* Positioning the sign in panel */
 	left: 0;
 	width: 50%;
+	/* Making sure it's ahead one level */
 	z-index: 2;
 }
 
 .container.right-panel-active .sign-in-container {
+	/* Adding the transformation */
 	transform: translateX(100%);
 }
 
 .sign-up-container {
+	/* Positioning the sign in panel */
 	left: 0;
 	width: 50%;
 	opacity: 0;
@@ -134,12 +153,14 @@ input {
 }
 
 .container.right-panel-active .sign-up-container {
+	/* Adding a transition from left to right */
 	transform: translateX(100%);
 	opacity: 1;
 	z-index: 5;
 	animation: show 0.6s;
 }
 
+/* Creating the transistion, what it shwos during the process */
 @keyframes show {
 	0%, 49.99% {
 		opacity: 0;
@@ -153,6 +174,7 @@ input {
 }
 
 .overlay-container {
+	/* Styling the containers the overlap each other over transition */
 	position: absolute;
 	top: 0;
 	left: 50%;
@@ -164,15 +186,18 @@ input {
 }
 
 .container.right-panel-active .overlay-container{
+	/* Transforming completely */
 	transform: translateX(-100%);
 }
 
 .overlay {
+	/* The overlay background information */
 	background: rgba(39,62,84,0.89);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
 	color: #FFFFFF;
+	/* Positioning the overlay */
 	position: relative;
 	left: -100%;
 	height: 100%;
@@ -182,10 +207,12 @@ input {
 }
 
 .container.right-panel-active .overlay {
+	/* Transforming the other panel */
   	transform: translateX(50%);
 }
 
 .overlay-panel {
+	/* The overlay panel styling */
 	position: absolute;
 	display: flex;
 	align-items: center;
@@ -201,24 +228,30 @@ input {
 }
 
 .overlay-left {
+	/* The translation for left side */
 	transform: translateX(-20%);
 }
 
 .container.right-panel-active .overlay-left {
+	/* The translation */
 	transform: translateX(0);
 }
 
 .overlay-right {
+	/* The overlay from the right side */
 	right: 0;
 	transform: translateX(0);
 }
 
 .container.right-panel-active .overlay-right {
+	/* Adding transition */
 	transform: translateX(20%);
 }
 
 .underline {
-	display: block;
+	/* Adding styling to the underline for right/left 
+	   switch over panels */
+   	display: block;
 	height: 1px;
 	border: 0;
 	border-top: 4px solid whitesmoke;
@@ -226,14 +259,16 @@ input {
 	width: 80%;
 }
 
-/*----- MOBILE CSS -----*/
+/*----------------- MOBILE CSS -----------------*/
 
 #create_acc_link_mobile {
+	/* Creating the account link styling for mobile */
 	font-weight: bold;
 	cursor: pointer;
 }
 
 .slider_sign_out_button {
+	/* Adding the sign out button */
 	display: block;
 	margin-bottom: 10px;
 }
@@ -242,34 +277,45 @@ input {
 	font-size: 18px;
 }
 
+
+/*****************************************\
+         DESKTOP/MOBILE VERSION
+/*****************************************/
+
+
 @media only screen and (min-width: 997px) {
+	/* Display only the one panel */
 	.container {
 		display: block;
 	}
 
+	/* Hides the other panel */
 	.container_mobile {
 		display: none;
 	}
-
 }
 
 @media only screen and (max-width: 996px) {
+	/* Hides the other panel */
 	.container {
 		display: none;
 	}
 
+	/* Display only the one panel */
 	.container_mobile {
 		display: block;
 		width: 600px;
 		margin: 50px auto;
 	}
 
+	/* Hiding the sign up on mobile */
 	#sign_up_container_mobile {
 		display: none;
 	}
 }
 
 @media only screen and (max-width: 620px) {
+	/* Fixing the width for the mobile width */
 	.container_mobile {
 		display: block;
 		width: 94%;
