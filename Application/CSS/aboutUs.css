@@ -545,7 +545,6 @@
         }
 }
 
-
 /* Iphone X */
 @media only screen 
     and (width : 375px) 
@@ -553,4 +552,11 @@
     and (orientation : portrait)  
     and (-webkit-device-pixel-ratio : 3) { 
 
+}
+
+/* Make content cover 85% of the browser-width when browser-size is less than 450px */
+@media only screen and (max-width: 450px) {
+    #section1 {
+        width: 85%;
+    }
 }

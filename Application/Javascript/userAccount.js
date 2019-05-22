@@ -233,7 +233,7 @@ $(document).ready(function() {
                     if (useremail == dataemail) {
                         $(".acc_name").empty();
                         //Greet full name of the user.
-                        $(".acc_name").append("Welcome <b>" + data[k].firstname + "</b>");
+                        $(".acc_name").append("<a id='acc_name_text' href='./userAccount.html'>Welcome <b>" + data[k].firstname + "</b></a>");
                     }
                 }
             
