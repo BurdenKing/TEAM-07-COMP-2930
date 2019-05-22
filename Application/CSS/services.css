@@ -70,7 +70,6 @@ body {
     font-family: 'Courgette', cursive;
 }
 
-
 /* Galaxy S5 */
 @media only screen and (width : 360px) 
     and (height : 640px)
@@ -225,4 +224,11 @@ body {
             padding: 33px 33px;
             margin-right: -15px;
         }       
+}
+
+/* Make content cover 85% of the browser-width when browser-size is less than 450px */
+@media only screen and (max-width: 450px) {
+    #section1 {
+        width: 85%;
+    }
 }
