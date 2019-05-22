@@ -1,16 +1,21 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
 /* --------------- Heading --------------*/
+
+/* Need a diffrerent heading for the login 
+   sign up page.  */
 
 header {
     display:block;
     color: white;
     background: rgba(39,62,84,0.89);
-  }
+}
 
-/* ---------- Left side of heading ----------*/
+/* ---------- Left side of heading -------------*/
 
 .leftNav {
+    /* Positioning the leftnav section */
     display: block;
     width: 50%;
     margin-left: auto; 
@@ -18,28 +23,36 @@ header {
 }
 
 .logo {
+    /* Spacing out the logo */
     letter-spacing: 2px;
     margin-left: auto;
     margin-right: auto;
+    /* Adding the colour */
     background-color: transparent;
     color: whitesmoke;
     border: none;
     font-family: 'Niconne', cursive;
+    /* Logo font information */
     font: bold;
     font-weight: 900;
     font-size: 50px;
     text-decoration: none;
     list-style: none;
     display: block;
+    /* Centering the logo */
     text-align: center;
     padding: 10px 0px;
 }
 
 .logo:hover {
+    /* Remove the undelrine on hover */
     text-decoration: none;
     color: whitesmoke;
 }
 
+/* Fixing the font size for the media queries.
+   This media query works for everyhting.
+   DO NOT CHANGE OR ADD ANY MEDIA QUERIES */
 @media screen and (max-width: 500px) {
     .logo {
         font-size: 28px;

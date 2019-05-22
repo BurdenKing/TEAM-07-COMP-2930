@@ -1,10 +1,16 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
-/* --------------- Heading --------------*/
+/* ------------------------ Heading -------------------------*/
+
+/* Setting up the flex for the overall heading and main features
+   of the headingssssss */
 
 header {
+    /* Flex and creating the space between them */
     display:flex;
     justify-content: space-between;
+    /* Colour of all the text in headings */
     color: white;
     background: rgba(0,0,0,0.2);
 }
@@ -23,23 +29,31 @@ header nav {
     padding-bottom: 2em;   
 }
 
-/* ---------- Right side of heading ----------*/
+/* ------------------- Right side of heading ----------------- */
+
+/* Everything from the right side of the heading */
 
 .rightNav {
+    /* Positoning, margining and setting up
+       the right side of the div */
     margin-top: auto;
     margin-bottom: auto;
     display:block;
     justify-content: space-between;
+    /* Aligning items in the center of the heading */
     align-items: center; 
+    /* Spacing out from left side and center */
     margin-right: 2em;
     padding-left: 70px;
     padding-right: 70px;
 }
 
 .myButton {
+    /* Adding styling to the Bootsrap sign up button */
     font-size: 23px;
     font-weight: 700;
     letter-spacing: 2px;
+    /* Spacing between text right and left side */
     padding-left: 60px;
     padding-right: 60px;
     text-transform: uppercase;
@@ -47,32 +61,32 @@ header nav {
 }
 
 .myButton_desktop {
+    /* Fixing the button desktop. 
+       IMPORTANT FOR MEDIA QUERIES */
     margin-left: auto;
     margin-right: auto;
     display: block;
 }
 
 .myButton:active { 
+    /* Creates a more effecient button hover effect
+       Source of this is from stack overflow */
     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.4); 
     transform: scale(.9);
 }
 
 .myButton:hover {
+    /* Makes button larger on hover */
     transform: scale(1.05);
 }
 
 .myButton:focus {
+    /* Helps make the hover effect more natural */
     transform: scale(1.05);
 }
 
-.myButton .btn-ripple {
-    background: rgba(255, 255, 255, 0.3);
-    position: absolute;
-    transform: scale(0);
-    animation: ripple 1s;
-}
-
 .rightNav > div {
+    /* Fixing the div in the rightNav */
     margin: 8px 0 8px 0;
     width: 100%;
     float: right;
@@ -81,28 +95,36 @@ header nav {
 }
 
 .signUp {
+    /* Adding sign up text styling */
     font-size: 24px;
     color: white;
     text-decoration: none;
 }
 
 .sign_in_button {
+    /* Touching up the sign in button 
+       IMPORTANT FOR MEDIA QUERIES */
     display: block;
     margin: auto;
     font-size: 26px;
 }
 
 .sign_out_button {
+    /* Styling the sign out button bootsrap */
     background-color: red;
     border: red;
 }
 
 .sign_out_button:hover {
+    /* Adding a red border on the hover*/
     background-color: #DC143C;
     border: #DC143C;
 }
 
 .acc_name {
+    /* Styling the users account name */
+
+    /* Only when user is logged in, you see this */
     margin: 10px 0;
     font-size: 28px;
     text-decoration: none;
@@ -110,10 +132,12 @@ header nav {
 }
 
 #acc_name_text {
+    /* Making the text colour of the user account name */
     color: #FFFFFF;
 }
 
 #acc_name_text:hover {
+    /* Making sure there is no underline on hover */
     text-decoration: none;
     color: #0183DA;
 }
@@ -122,24 +146,32 @@ header nav {
 	font-size: 24px;
 }
 
-/* ---------- Left side of heading ----------*/
+/* ---------------- Left side of heading --------------*/
+
+/* Everything from the left side of the heading */
 
 .leftNav {
+    /* Felx and creating the space between them */
     display:flex;
     justify-content: space-between;
     align-items: center;
+    /* Margining the sign up button from top of heading */
     margin-left: 2em;    
 }
 
 .logo {
+      /* Logo font information */
     font-size: 23px;
     font-weight: 700;
+      /* Spacing out the logo */
     letter-spacing: 2px;
     padding-left: 60px;
     padding-right: 60px;
+      /* Adding the colour */
     background-color: transparent;
     color: whitesmoke;
     border: none;
+    /* More font information */
     font-family: 'Niconne', cursive;
     font: bold;
     font-weight: 900;
@@ -150,11 +182,14 @@ header nav {
 }
 
 .logo:hover {
+    /* Making sure no underline on hover */
     text-decoration: none;
     color: whitesmoke;
 }
 
 .logo {
+    /* Adding more to the logo
+       KEEP FOR MEDIA QUERIES */
     font-size: 63px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -164,9 +199,11 @@ header nav {
     cursor: pointer;
 }
 
-/* ---------- Center of heading ----------*/
+/* ------------------- Center of heading ------------------*/
 
 nav ul li{
+    /* Removing undelrine and aligning them 
+       side by side */
     list-style: none;
     display: inline;
     text-transform: uppercase;
@@ -176,42 +213,59 @@ nav ul li{
 }
 
 nav li > a{
-    /* Padding is for the hover background. */
+    /* Padding is for the hover background.
+       This is the gray background padding. */
     padding: 1.5em;
     padding-top: 1.7em;
     padding-bottom: 1.7em;
+    /* Remove the underline */
     text-decoration: none;
     color: white;
 }
 
-nav li a:hover{
+nav li a:hover {
+    /* Adding grey backgorund on hover for centered
+       lists */
     text-decoration: none;
     color:whitesmoke;
     background: rgba(255,255,255,.2);
 }
 
-/* ------------------- Button -------------*/
+/* ------------------- Button --------------------*/
 
 .myButton {
+    /* Adding to the bootrap button */
     font-size: 23px;
     font-weight: 700;
     letter-spacing: 2px;
+    /* Increasing the spacing on left and rigth side of 
+       the button text */
     padding-left: 60px;
     padding-right: 60px;
     text-transform: uppercase;
     border-radius: 0;
-  }
+}
   
 h3 {
+    /* Increasing the font size of the heading and
+       adding the styling to it */
     text-transform: uppercase;
     font-size: 40px;
     margin: 0px;
     line-height: 0.5em;
 }
 
-/* -----Icon and Slider CSS -----*/
+/* ---------------- Icon and Slider CSS ------------------ */
+
+/* This section of styling is important for the media queries.
+   when you decrease the wdith of the window a nav icon displays
+   instead of the header. This nav icon will show a slide in 
+   header */
 
 .mediaIconDiv {
+    /* A nav icon image will show on right side */
+
+    /* Flexing the div and displaying it on the right side */
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -220,52 +274,69 @@ h3 {
 }
 
 .mediaIcon {
+    /* The icon image */
     display:flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 18px;
+    /* Dimensions of the icon image */
     width: 95px;
     height: 95px;
     padding: 20px 20px;
     margin-right: 12px;
 }
 
+/* The media query nav bar will display on a slider */
+
 .slider {
+    /* Hide on regular screen. Want it to show on click. */
     display: none;
 }
 
 .slider > ul {
+    /* Creating the slider items (aka the stuff on center nav) */
     list-style: none;
     text-transform: uppercase;
     font-size: 28px;
 }
 
 .slider_widget_button {
+    /* The X button of, returns slider back to none; */
     margin-left: 0px;
     margin-bottom: 10px;
 }
 
 #slider_widget_text {
+    /* Styling the text on the slider */
     color: white;
     font-size: 18px;
 }
 
 #slider_user_widget {
+    /* Margining the lider and creating the full height */
     height: 120px;
     border-bottom: 1px solid white;
 }
 
 .my_acc_link {
+    /* Link to the users account */
+
+    /* Takes you to the users page with prizes */
     font-size: 18px;
     height: 40px;
     padding: auto 0px;
 }
 
+
+/*****************************************\
+              DESKTOP VERSION
+/*****************************************/
+
+
 /* -----Responsiveness -----*/
 @media only screen and (max-width: 1759px) {
 
     /* -----Slider Changes----- */
-
     .logo {
         padding : 0;
     }
@@ -274,7 +345,6 @@ h3 {
 
 @media only screen and (max-width: 1632px) {
     /*-----Header Bar Changes ----- */
-
     nav ul li {
         display: none;
     }
@@ -448,11 +518,11 @@ h3 {
     }
 }
 
+
 /*****************************************\
               MOBILE VERSION
 /*****************************************/
 
-/* For all, pixel, s5, pixel XL, iphone 5,6,7,8 X */
 
 @media only screen 
     and (max-width : 414px)  { 
