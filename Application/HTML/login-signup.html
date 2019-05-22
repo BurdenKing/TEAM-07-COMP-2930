@@ -40,8 +40,8 @@
       <div class="form-container sign-in-container">
         <form id="sign_in_desktop" name="sign_in_desktop">
           <h1 class="formText"> SIGN IN</h1>
-          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_desktop" required="required" placeholder="USERNAME" required="required">
-          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_desktop" required="required" placeholder="PASSWORD"/>
+          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_desktop" required="required" placeholder="USERNAME">
+          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_desktop" required="required" placeholder="PASSWORD">
           <button class="btn btn-primary button" id="loginsubmit_desktop" type="submit" value="Sign in">Sign In</button> 
           <p class="forgotPass">Forgot your password?</p>
         </form>
@@ -73,8 +73,8 @@
       <div id='sign_in_container_mobile'>
         <form id="sign_in" name="sign_in">
           <h1 class="formText"> SIGN IN</h1>
-          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_mobile" required="required" placeholder="USERNAME" required="required">
-          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_mobile" required="required" placeholder="PASSWORD"/>
+          <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username_mobile" required="required" placeholder="USERNAME">
+          <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password_mobile" required="required" placeholder="PASSWORD">
           <button class="btn btn-primary button" id="loginsubmit_mobile" type="submit" value="Sign in">Sign In</button> 
           <p class="forgotPass">Forgot your password?</p>
           <p>New to ParkAway? <a id='create_acc_link_mobile'>Create an account.</a></p>
@@ -109,67 +109,3 @@
     <script src="../Javascript/login-signup.js"></script>
   </body>
 </html>
-
-
-<!--
-
-ORIGINAL ID'S
-
-<form id="sign_in" name="sign_in">
-      <h1>Sign-in to Your Account</h1>
-      <label>Username:<br></label>
-      <input type="text" name="sign_in_username" id="sign_in_username" required="required"/><br>
-      <label>Password: <br></label>
-      <input type="password" name="sign_in_password" id="sign_in_password" required="required" /><br>
-      <input id="loginsubmit" type="submit" value="Sign in"/>
-      // THIS LINE COMMENTED OUT <input type="reset" value="Reset">
-    </form>
-
-
-
-
-
-     <div id="form-div"> // IS THIS LINE RELEVANT
-    <form id="create_acc_form" name="create_acc_form">
-        <h2>Create your Profile!</h2>
-        <label for="create_acc_username"> Username: </label>
-        <div>
-            <input type="text" name="create_acc_username" id="create_acc_username" pattern="^[a-zA-Z0-9]{6,}$" placeholder="username" required="required">
-        </div>
-        <label for="create_acc_email">Email: </label>
-        <div>
-            <input type="email" name="create_acc_email" id="create_acc_email" placeholder="email" required="required">
-        </div>
-        <label for="create_acc_password">Password: </label>
-        <div>
-            <input type="password" name="create_acc_password" id="create_acc_password" required="required">
-        </div> 
-        <label for="confirmpassword">Confirm Password: </label>
-        <div>
-            <input type="password" name="confirmpassword" id="confirmpassword" required="required">
-        </div>
-        <label for="create_acc_firstname">First Name: </label>
-        <div>
-            <input type="text" name="create_acc_firstname" id="create_acc_firstname" placeholder="First Name" required="required">
-        </div>
-        <label for="create_acc_lastname">Last Name: </label>
-        <div>
-            <input type="text" name="create_acc_lastname" id="create_acc_lastname" placeholder="Last Name" required="required">
-        </div>
-        
-        // NOT DOING BELOW
-
-        <label for="create_acc_type">I am a : </label>
-        <select type="text" id="create_acc_type" name="create_acc_type">
-            <option>Student</option>
-            <option>Staff</option>
-            <option>Visitor</option>
-        </select> 
-
-        // NOT DOING ABOVE
-
-        <input id="create_acc_submit" type="submit" value="Create Account"/>
-        // THIS LINE COMMENTED OUT <input type="reset" value="Reset">
-    </form>
-
--->
