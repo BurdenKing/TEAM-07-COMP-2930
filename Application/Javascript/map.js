@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
   
 //Function to read data from firebase
   
-//Read parking lot status from Firebase.
+
   
   
 var database = firebase.database();
@@ -27,7 +27,7 @@ function initMap() {
   var ref = database.ref().child('parkinglot');
     ref.on('value',getData);
 
-
+// Function to convert RGB value to hexdecimal.
 function componentToHex(c) {
   var hex = c.toString(16);
   return hex.length == 1 ? "0" + hex : hex;
@@ -37,38 +37,43 @@ function rgbToHex(r, g, b) {
   return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
 }
 
+//Read parking lot status from Firebase.
 function getData(data) {
-
-  //Rgb color to hex conversion.
 
   var lots = data.val();
   var lotArray = Object.keys(lots);
 
+
+  // Determine the color of the circle based on how full it is.
   function lotColor(lotName) { 
     for (var i = 0; i < lotArray.length; i++) {
       var k = lotArray[i];
       if (lotName.toString() == lotArray[i]) {
         var colorNum = lots[k].full;
-      
+    
+    //get RGB values.
     var a = colorNum >= 50 ? 255 : Math.round(colorNum /50 * 255);
     var b = colorNum >= 50 ? Math.round(255 - ((colorNum -50)/50 * 255)) : 255;
+
+    //Calc color.
     var myColor = rgbToHex(a,b,0);
     return myColor;
     }
   }
 }
-          
-lotAColor = lotColor("lotA");
-lotBColor = lotColor("lotB");
-lotDColor = lotColor("lotD");
-lotFColor = lotColor("lotF");
-lotGColor = lotColor("lotG");
-lotJColor = lotColor("lotJ");
-lotKColor = lotColor("lotK");
-lotLColor = lotColor("lotL");
-lotNColor = lotColor("lotN");
-lotOColor = lotColor("lotO");
-lotQColor = lotColor("lotQ");
+     
+    // Get color responding to fullness from  database
+    lotAColor = lotColor("lotA");
+    lotBColor = lotColor("lotB");
+    lotDColor = lotColor("lotD");
+    lotFColor = lotColor("lotF");
+    lotGColor = lotColor("lotG");
+    lotJColor = lotColor("lotJ");
+    lotKColor = lotColor("lotK");
+    lotLColor = lotColor("lotL");
+    lotNColor = lotColor("lotN");
+    lotOColor = lotColor("lotO");
+    lotQColor = lotColor("lotQ");
 
   
 // Initialize and add the map
@@ -288,7 +293,7 @@ var map = new google.maps.Map(document.getElementById('map'), {
   
   
   
-  
+          //Marker circles for each lot.
           var lotACircle = new google.maps.Circle({
               strokeColor: lotAColor,
               strokeOpacity: 0.8,
@@ -411,6 +416,8 @@ var map = new google.maps.Map(document.getElementById('map'), {
               radius: 80
             });
           
+
+          // Event handlers    
           //lotA event handler.
           lotA.addListener('click',function(){
             window.location.href = "./dynamicPage.html?#lotA";
