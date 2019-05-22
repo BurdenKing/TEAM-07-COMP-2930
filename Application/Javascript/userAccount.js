@@ -69,7 +69,6 @@ $(document).ready(function() {
     $("#changebtn").click(function(e) {
         e.preventDefault();
            
-        
         let OldPasswordCheck;
         let oldPass = document.getElementById("oldPas").value;
         var newPassword = document.getElementById("newPass").value;
