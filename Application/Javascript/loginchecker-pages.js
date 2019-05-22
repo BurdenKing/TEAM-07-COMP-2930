@@ -64,7 +64,7 @@ $(document).ready(function() {
                     if (useremail == dataemail) {
                         $(".acc_name").empty();
                         //Greet full name of the user.
-                        $(".acc_name").append("Welcome <b>" + data[k].firstname + "</b>");
+                        $(".acc_name").append("<a id='acc_name_text' href='./userAccount.html'>Welcome <b>" + data[k].firstname + "</b></a>");
                     }
                 }
             
@@ -119,6 +119,7 @@ $(document).ready(function() {
         }
     });
 
+    //If browser window is more that 1550px, then remove the slider.
     $(window).resize(function(){
         if ($(window).width() >= 1550){	
             $(".slider").css({

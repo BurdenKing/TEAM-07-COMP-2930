@@ -182,7 +182,6 @@ header {
   }
 
 
-
   
 
   .memberName {
@@ -333,16 +332,18 @@ header {
 .float-my-children > * {
     width: 650px;
     height: 500px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 150px;
     float:left;
 }
+
 #upid0{
     border-style: solid;
-    font-family: 'Libre Baskerville', serif;
-        background-color: lightgrey;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;    
+    background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -351,10 +352,11 @@ header {
 
 #upid1{
     border-style: solid;
-    font-family: 'Libre Baskerville', serif;
-    background-color: lightgrey;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;    
+    background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -363,10 +365,11 @@ header {
 
 #upid2{
     border-style: solid;
-    font-family: 'Libre Baskerville', serif;
-    background-color: lightgrey;
+    font-family: 'Barlow', sans-serif;
+    font-size: 15px;    
+    background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -414,7 +417,8 @@ header {
 .actualOverall {
     width: 1310px;
     height: 400px;
-    margin-left: 330px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #log-in-btn {
@@ -424,6 +428,101 @@ header {
 .colorIndicator {
     text-align: center; 
     font-size: 30px; 
-    margin-top: 20px;
+    font-weight: 800;
+    margin-top: 30px;
     font-weight: 700;
+}
+
+#update-btn {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.confirm {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#status1 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
+/* Change the content size of the dynamic page */
+@media screen and (max-width: 1390px) {
+    .actualOverall {
+        width: 80%;
+    }
+
+    #lotPicture {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 5%;
+        position: relative;
+    }
+
+    .overall {
+        width: 100%;
+        float: left;
+        position: relative;
+        margin-top: 50px;
+    }
+
+    #upid0 {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    #upid1 {
+        width: 80%;
+        margin: 5px auto;
+    }
+
+    #upid2 {
+        width: 80%;
+        margin: 5px auto;
+    }
+}
+
+/* Change the box size of each update */
+@media screen and (max-width: 765px) {
+
+    #upid0 {
+        height: 300px;
+        padding: 5% 10px;
+    }
+
+    #upid1 {
+        height: 300px;
+        padding: 10px;
+    }
+
+    #upid2 {
+        height: 300px;
+        padding: 10px;
+    }
+
 }

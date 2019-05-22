@@ -1,41 +1,53 @@
+/* Importing free font from google */
 @import url('https://fonts.googleapis.com/css?family=Niconne');
 
-
 #background {
-     position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url(../Images/main_background.png);
-      background-size: cover;
+    position: absolute;
+    /* Covers the full screen */
+    width: 100%;
+    height: 100%;
+      /* Includes the background image */
+    background-image: url(../Images/main_background.png);
+    background-size: cover;
+    margin: 0;
+    /* Covers full scrern for height.
+       Helps for the mobile resposive */
+    min-height: 100vh;
 }
 
 #overlay {
-
+     /* Blue overlay over the gif */
     background: rgba(39,62,84,0.89);
     overflow: hidden;
+    /* Overlay needs to be positioned over background */
     z-index: 2;
     height: 100%;
     position: relative;
 }
 
-/* ------------ Main Title ----------------- */
+/* -------------------- Main Title ------------------- */
 
 .titleText {
+    /* Styling for the typewritter and title of the homepage */
     position: relative;
+    /* Margining it from top */
     top: 200px;
+    /* Centering everything including the text */
     text-align: center;
     display: block;
     margin: 0 auto;
-    text-align: center;
+    /* Adding the colour */
     color: whitesmoke;
     z-index: -1;
 }
 
 h1 {
+    /* Font information for the title of the homepage */
     font-family: 'Niconne', cursive;
     font: bold;
     font-weight: 900;
     font-size: 200px;
+    /* Giving the text a shadow */
     text-shadow: 5px 5px black
 }
 
@@ -49,129 +61,56 @@ p {
     margin: 0px;
 }
 
-/* Scroll Down Button */
-
-.scrollButton {
-    margin-top: 29em
-}
-
-.ovalShape {
-    width: 25px;
-    margin: 0 auto;
-    height:45px;
-    border: 2px solid white;
-    border-radius: 40px;
-    -webkit-animation: bounceAnimation .7s infinite  alternate;
-    animation: bounceAnimation .7s infinite  alternate;
-    cursor: pointer;
-}
-
-@-webkit-keyframes BounceAnimation {
-    0% { transform: translateY(.5px); }
-    100% { transform: translateY(-13px); }
-}
-@keyframes bounceAnimation {
-    0% { transform: translateY(.5px); }
-    100% { transform: translateY(-13px); }
-}
-
-.downArrow {
-  position: relative;
-  content: "";
-  display: inline-block;
-  width: 12px;
-  margin: 0 auto;
-  height: 12px;
-  border-right: 0.1em solid white;
-  border-top: 0.1em solid white;
-  transform: rotate(135deg);
-  margin-left: 4.950px;
-  
-}
-
 /*--------------- Page Load Fade In Effects ---------------------- */
+
+/* Making the entire header fade in */
+
 header {
--webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
-      -moz-animation: fadein 1.2s; /* Firefox < 16 */
-       -ms-animation: fadein 1.2s; /* Internet Explorer */
-        -o-animation: fadein 1.2s; /* Opera < 12.1 */
-           animation: fadein 1.2s;
+    /* Adding animation effect */
+    -webkit-animation: fadein 1.2s; /* Safari, Chrome and Opera > 12.1 */
+    animation: fadein 1.2s;
 }
 
-
+/* Creating the fade in effect through CSS */
 @keyframes fadein {
-   from { opacity: 0; }
-   to   { opacity: 1; }
-}
-
-/* Firefox < 16 */
-@-moz-keyframes fadein {
-   from { opacity: 0; }
-   to   { opacity: 1; }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-   from { opacity: 0; }
-   to   { opacity: 1; }
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
-/* Internet Explorer */
-@-ms-keyframes fadein {
-   from { opacity: 0; }
-   to   { opacity: 1; }
-}
+/* Making the entire text including the heading and type writter fade in */
 
-/* Opera < 12.1 */
-@-o-keyframes fadein {
-   from { opacity: 0; }
-   to   { opacity: 1; }
-}
-  
 .titleText {
+    /* Adding animation effect */
     -webkit-animation: fadein 5s; /* Safari, Chrome and Opera > 12.1 */
-          -moz-animation: fadein 5s; /* Firefox < 16 */
-           -ms-animation: fadein 5s; /* Internet Explorer */
-            -o-animation: fadein 5s; /* Opera < 12.1 */
-               animation: fadein 5s;
-    }
+    animation: fadein 5s;
+}
     
-    @keyframes fadein {
-       from { opacity: 0; }
-       to   { opacity: 1; }
-    }
-    
-    /* Firefox < 16 */
-    @-moz-keyframes fadein {
-       from { opacity: 0; }
-       to   { opacity: 1; }
-    }
-    
-    /* Safari, Chrome and Opera > 12.1 */
-    @-webkit-keyframes fadein {
-       from { opacity: 0; }
-       to   { opacity: 1; }
-    }
-    
-    /* Internet Explorer */
-    @-ms-keyframes fadein {
-       from { opacity: 0; }
-       to   { opacity: 1; }
-    }
-    
-    /* Opera < 12.1 */
-    @-o-keyframes fadein {
-       from { opacity: 0; }
-       to   { opacity: 1; }
-    }
+/* Creating the fade in effect through CSS */
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+        
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
-    /* Type Write Effect */
-    .txt-type > .txt {
-        border-right: 3px solid white;
-    }
+/* Type Write Effect */
+.txt-type > .txt {
+    border-right: 3px solid white;
+}
 
 /* Easter Egg */
 #easter {
+    /* Hides the easter egg from the user */
     cursor: pointer;
     position:absolute;
     bottom:0;
@@ -181,221 +120,12 @@ header {
 }
 
 #easter:hover {
+    /* Displays the easter egg if the mouse hovers over it */
     opacity: 1;
 }
 
-/*****************************************\
-              MOBILE VERSION
-/*****************************************/
-
-/* Galaxy S5 */
-@media only screen and (width : 360px) 
-    and (height : 640px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        .titleText {
-            top: 150px;
-        }
-        
-        h1 {
-            font-size: 80px;
-        }
-        
-        .middleText {
-            font-size: 20px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-
-/* Pixel */
-@media only screen 
-    and (width : 411px) 
-    and (height : 731px)
-    and (orientation : portrait)   { 
-
-        .titleText {
-            top: 150px;
-        }
-        
-        h1 {
-            font-size: 93px;
-        }
-        
-        .middleText {
-            font-size: 22px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-
-/* Pixel XL */
-@media only screen 
-    and (width : 411px) 
-    and (height : 823px)
-    and (orientation : portrait)   { 
-
-        .titleText {
-            top: 190px;
-        }
-        
-        h1 {
-            font-size: 93px;
-        }
-        
-        .middleText {
-            font-size: 22px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-
-/* Iphone 5/SE */
-@media only screen 
-    and (width : 320px) 
-    and (height : 568px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .titleText {
-            top: 120px;
-        }
-        
-        h1 {
-            font-size: 70px;
-        }
-        
-        .middleText {
-            font-size: 16px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }    
-}
-
-
-/* Iphone 6/7/8 */
-@media only screen 
-    and (width : 375px) 
-    and (height : 667px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .titleText {
-            top: 155px;
-        }
-        
-        h1 {
-            font-size: 85px;
-        }
-        
-        .middleText {
-            font-size: 21px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-
-/* Iphone 6/7/8 Plus */
-@media only screen 
-    and (width : 414px) 
-    and (height : 736px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        .titleText {
-            top: 170px;
-        }
-        
-        h1 {
-            font-size: 93px;
-        }
-        
-        .middleText {
-            font-size: 22px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-
-/* Iphone X */
-@media only screen 
-    and (width : 375px) 
-    and (height : 812px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 3) { 
-
-        .titleText {
-            top: 230px;
-        }
-        
-        h1 {
-            font-size: 85px;
-        }
-        
-        .middleText {
-            font-size: 20px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-/* Ipad */
-@media only screen 
-    and (width : 768px) 
-    and (height : 1024px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .titleText {
-            top: 230px;
-        }
-        
-        h1 {
-            font-size: 170px;
-        }
-        
-        .middleText {
-            font-size: 32px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
-}
-
-/* Ipad Pro */
-@media only screen 
-    and (width : 1024px) 
-    and (height : 1366px)
-    and (orientation : portrait)  
-    and (-webkit-device-pixel-ratio : 2) { 
-
-        .titleText {
-            top: 320px;
-        }
-        
-        h1 {
-            font-size: 230px;
-        }
-        
-        .middleText {
-            font-size: 42px;
-            line-height: 1.3em;
-            margin-left: 4%;
-            margin-right: 4%;
-        }
+.dust{
+    position: absolute;
 }
 
 /*****************************************\
@@ -441,7 +171,7 @@ header {
 }
 
 @media only screen 
-    and (min-width : 400px)
+    and (min-width : 415px)
     and (max-width : 499px) {
         .titleText {
             top: 120px;
@@ -457,6 +187,105 @@ header {
             margin-left: 5%;
             margin-right: 5%;
         }
+}
+
+@media only screen 
+    and (max-width : 415px) {
+        .titleText {
+            top: 100px;
+        }
+        
+        h1 {
+            font-size: 33px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+}
+
+
+/*****************************************\
+              MOBILE VERSION
+/*****************************************/
+
+@media only screen 
+    and (max-width : 415px)  { 
+        .titleText {
+            top: 150px;
+        }
+        
+        h1 {
+            font-size: 92px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        
+}
+
+@media only screen 
+    and (max-width : 375px)  { 
+        .titleText {
+            top: 170px;
+        }
+        
+        h1 {
+            font-size: 85px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        
+}
+
+@media only screen 
+    and (max-width : 375px)  { 
+        .titleText {
+            top: 120px;
+        }
+        
+        h1 {
+            font-size: 80px;
+        }
+        
+        .middleText {
+            font-size: 20px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        
+}
+
+@media only screen 
+    and (max-width : 320px)  { 
+        .titleText {
+            top: 100px;
+        }
+        
+        h1 {
+            font-size: 70px;
+        }
+        
+        .middleText {
+            font-size: 18px;
+            line-height: 1.3em;
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        
 }
 
 

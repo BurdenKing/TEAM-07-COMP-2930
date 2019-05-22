@@ -3,8 +3,9 @@
 
 <head>
     <title>ParkAway</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=2.0">
+    <meta name="viewport" content="width=device-width,initial-scale=3.0">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -18,7 +19,9 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../CSS/header.css">
     <link rel="stylesheet" type="text/css" href="../CSS/dynamicPage.css">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -62,10 +65,10 @@
                         <h2 id="lotNo">Lot</h2>
                     </div>
                     <div id="status-div">
-                        <p class= "statusText">Status <b></b></p>
+                        <p>Status <b></b></p>
                     </div>
                     <div id="updates-div">
-                        <p class = "statusText"> Recent Updates</p>
+                        <p> Recent Updates</p>
                     </div>
                     <!-- div for updates-->
                     <div id="updates"></div>
@@ -91,15 +94,15 @@
                                     <form>
                                         <div id="lot-title"></div>
                                         <div id="status-bar">
-                                            <p>Status </p>
+                                            <p id = "status1">Status </p>
                                             <div>
                                                 <input id="slider1" type="range" min="0" max="100">
                                             </div>
                                             <p class="colorIndicator" id="color">HALF</p> <!-- default value -->
                                             <br>
-                                            <input type="text" id="txt-area" placeholder="Enter Comment..">
+                                            <textarea type="text" id="txt-area" rows="2" cols="63" placeholder="Enter Comment" maxlength="70"></textarea>
                                             <br>
-                                            <button class="btn btn-default" id="updt-btn" type="button" data-dismiss="modal" style="margin-top: 20px;">Confirm</button>
+                                            <button class="btn btn-info confirm" id="updt-btn" type="button" data-dismiss="modal" style="margin-top: 8px;">Confirm</button>
                                         </div>
                                     </form>
                                 </div>
@@ -115,7 +118,7 @@
                 </div>
             </div>    
         </div>
-    
+    <!-- firebase scripts-->
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>

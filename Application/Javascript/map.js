@@ -9,89 +9,83 @@ const firebaseConfig = {
     storageBucket: "parkaway-comp2930.appspot.com",
     messagingSenderId: "817259487218",
     appId: "1:817259487218:web:c64c81d3cf0c5465"
-  };
-    firebase.initializeApp(firebaseConfig);
+};
+
+firebase.initializeApp(firebaseConfig);
+  
+//Function to read data from firebase
+  
+//Read parking lot status from Firebase.
   
   
-  
-  
-  
+var database = firebase.database();
+
+//root ref to firebase.
+
+function initMap() {
+  var lotAColor = 0;
+  var ref = database.ref().child('parkinglot');
+    ref.on('value',getData);
+
+
+function componentToHex(c) {
+  var hex = c.toString(16);
+  return hex.length == 1 ? "0" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+  return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+
+function getData(data) {
+
+  //Rgb color to hex conversion.
+
+  var lots = data.val();
+  var lotArray = Object.keys(lots);
+
+  function lotColor(lotName) { 
+    for (var i = 0; i < lotArray.length; i++) {
+      var k = lotArray[i];
+      if (lotName.toString() == lotArray[i]) {
+        var colorNum = lots[k].full;
+      
+    var a = colorNum >= 50 ? 255 : Math.round(colorNum /50 * 255);
+    var b = colorNum >= 50 ? Math.round(255 - ((colorNum -50)/50 * 255)) : 255;
+    var myColor = rgbToHex(a,b,0);
+    return myColor;
+    }
+  }
+}
           
-          //Function to read data from firebase
+lotAColor = lotColor("lotA");
+lotBColor = lotColor("lotB");
+lotDColor = lotColor("lotD");
+lotFColor = lotColor("lotF");
+lotGColor = lotColor("lotG");
+lotJColor = lotColor("lotJ");
+lotKColor = lotColor("lotK");
+lotLColor = lotColor("lotL");
+lotNColor = lotColor("lotN");
+lotOColor = lotColor("lotO");
+lotQColor = lotColor("lotQ");
+
   
-  
-          //Read parking lot status from Firebase.
-  
-  
-          var database = firebase.database();
-          
-          //root ref to firebase.
-  
-          function initMap() {
-            var lotAColor = 0;
-            var ref = database.ref().child('parkinglot');
-              ref.on('value',getData);
-  
-  
-          function componentToHex(c) {
-            var hex = c.toString(16);
-            return hex.length == 1 ? "0" + hex : hex;
-          }
-  
-          function rgbToHex(r, g, b) {
-            return "#" + componentToHex(r) + componentToHex(g) + componentToHex(b);
-          }
-          
-          function getData(data){
-  
-  
-          //Rgb color to hex conversion.
-  
-  
-            var lots = data.val();
-            var lotArray = Object.keys(lots);
-  
-          function lotColor(lotName){
-            for (var i = 0; i < lotArray.length; i++){
-              var k = lotArray[i];
-              if(lotName.toString() == lotArray[i]){
-                var colorNum = lots[k].full;
-              
-            var a = colorNum >= 50 ? 255 : Math.round(colorNum /50 * 255);
-            var b = colorNum >= 50 ? Math.round(255 - ((colorNum -50)/50 * 255)) : 255;
-            var myColor = rgbToHex(a,b,0);
-            return myColor;
-            }
-            }
-          }
-                    
-          lotAColor = lotColor("lotA");
-          lotBColor = lotColor("lotB");
-          lotDColor = lotColor("lotD");
-          lotFColor = lotColor("lotF");
-          lotGColor = lotColor("lotG");
-          lotJColor = lotColor("lotJ");
-          lotKColor = lotColor("lotK");
-          lotLColor = lotColor("lotL");
-          lotNColor = lotColor("lotN");
-          lotOColor = lotColor("lotO");
-          lotQColor = lotColor("lotQ");
-  
-  
-          // Initialize and add the map
-  
-          var BCIT = {lat: 49.248, lng: -123.0018124};
-          //customize icon.
-          var parkingIcon = "https://img.icons8.com/dusk/48/000000/parking.png"
-  
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 15.5,
-            zoomControl: false,
-            center: BCIT,
-            gestureHandling: 'cooperative',
-            disableDefaultUI: true,
-            styles:
-            [
+// Initialize and add the map
+
+var BCIT = {lat: 49.248, lng: -123.0018124};
+//customize icon.
+var parkingIcon = "https://img.icons8.com/dusk/48/000000/parking.png"
+
+//google map
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 15.5,
+  zoomControl: false,
+  center: BCIT,
+  gestureHandling: 'cooperative',
+  disableDefaultUI: true,
+  styles:
+  [
       {
           "featureType": "road",
           "elementType": "labels",
@@ -206,10 +200,9 @@ const firebaseConfig = {
           ]
       }
   ]
+});
   
-          });
-  
-          
+          //geolocations of parking lot locations        
   
           var lotA = new google.maps.Marker({
             position: {lat: 49.2520931, lng:-122.9987794},

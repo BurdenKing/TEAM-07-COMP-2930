@@ -2,8 +2,7 @@
 <html lang="en">
   <head>
     <title>ParkAway</title> 
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <!-- Adding Bootstrap CSS Stylesheet -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"  
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="Anonymous">
@@ -16,8 +15,8 @@
     <script src = "./Javascript/html2canvas.min.js"></script>
     <script src= "./Javascript/jquery-ui.js"></script>   
   </head>
-  <body>
-    <div id="background">
+  <body >
+    <div id="background" class = "snap">
     <div id="overlay">
       <!-- Adding a heading (with a navigation bar) -->  
       <header>
@@ -54,7 +53,7 @@
       </div>
       <div id="easter" >
   
-        <img src="../Application/Images/easter_egg.gif" width="100px" height="100px">
+        <img src="./Images/easter_egg.gif" width="100px" height="100px">
       </div>
 
       
@@ -69,6 +68,5 @@
   <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-database.js"></script>
   <!--Event listener if user is logged in-->
   <script src="./Javascript/loginchecker-index.js"></script>
-  <script src="./Javascript/anime.min.js"></script>
 </html>
 
