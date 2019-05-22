@@ -120,17 +120,20 @@ header {
 }
 
 .rewards > input[type=radio] {
+    /* Positioning and margining the radio buttons section in reqards */
     display: block;
     margin: 5px auto 0 auto;
 }
 
 .rewards > p {
+    /* Positioning and margining the parapgrah section in reqards */
     text-align: center;
     font-size: 24px;
     margin-top: 5px;
 }
 
 .rewards > img {
+    /* Positioning and margining the images section in reqards */
     width: 75px;
     height: auto;
     margin: 0 auto;
