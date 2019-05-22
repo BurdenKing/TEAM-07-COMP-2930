@@ -182,7 +182,6 @@ header {
   }
 
 
-
   
 
   .memberName {
@@ -340,9 +339,9 @@ header {
 #upid0{
     border-style: solid;
     font-family: 'Libre Baskerville', serif;
-        background-color: lightgrey;
+        background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -352,9 +351,9 @@ header {
 #upid1{
     border-style: solid;
     font-family: 'Libre Baskerville', serif;
-    background-color: lightgrey;
+    background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -364,9 +363,9 @@ header {
 #upid2{
     border-style: solid;
     font-family: 'Libre Baskerville', serif;
-    background-color: lightgrey;
+    background-color: #EBEBEB;
     text-align: center;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     border-width: 2px;
     height: 155px;
     width: 580px;
@@ -424,6 +423,43 @@ header {
 .colorIndicator {
     text-align: center; 
     font-size: 30px; 
-    margin-top: 20px;
+    font-weight: 800;
+    margin-top: 30px;
     font-weight: 700;
 }
+
+#update-btn {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+.confirm {
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.modal-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+#status1 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+
