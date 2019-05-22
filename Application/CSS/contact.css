@@ -1,4 +1,4 @@
-    @import url('https://fonts.googleapis.com/css?family=Niconne');
+@import url('https://fonts.googleapis.com/css?family=Niconne');
 @import url('https://fonts.googleapis.com/css?family=Oswald:500');
 @import url('https://fonts.googleapis.com/css?family=Courgette|Oswald:500');
 
@@ -17,8 +17,8 @@
     overflow: hidden;
     z-index: 99;
     width: 100%;
+    height: 100%;
 }
-
 
 /* ---------- Section 1 ---------*/
 
