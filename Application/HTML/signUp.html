@@ -2,9 +2,12 @@
 <html lang="en">
 
 <head>
+  <!-- Script files -->
   <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
   <script src="../Javascript/jquery-3.4.1.min.js"></script>
-  <title>SIGN UP</title>
+  <!-- Sign Up title -->
+  <title>Sign Up</title>
+  <!-- Meta values -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Adding Bootstrap CSS Stylesheet -->
@@ -46,18 +49,17 @@
     </ul>
   </div>
 
-
-
-
-
   <div class="container" id="container">
 
     <!-- SIGN UP-->
     <div class="form-container sign-up-container">
       <form id="sign_in" name="sign_in">
+        <!-- Title of the sign in section -->
         <h1 class="formText"> SIGN IN</h1>
+        <!-- Input field for the username -->
         <input class="inputFields" type="text" name="sign_in_username" id="sign_in_username" required="required"
           placeholder="USERNAME">
+        <!-- Input field for the password -->
         <input class="inputFields" type="password" name="sign_in_password" id="sign_in_password" required="required"
           placeholder="PASSWORD" />
         <button class="btn btn-primary button" id="loginsubmit" type="submit" value="Sign in">Sign In</button>
@@ -68,17 +70,24 @@
     <!-- SIGN UP-->
     <div class="form-container sign-in-container">
       <form id="create_acc_form" name="create_acc_form">
+        <!-- Title of the create an account section -->
         <h1 class="formText">Create an Account</h1>
+        <!-- Input field for the first name -->
         <input class="inputFields" type="text" name="create_acc_firstname" id="create_acc_firstname"
           placeholder="FIRST NAME" required="required">
+        <!-- Input field for the last name -->
         <input class="inputFields" type="text" name="create_acc_lastname" id="create_acc_lastname"
           placeholder="LAST NAME" required="required">
+        <!-- Input field for the username -->
         <input class="inputFields" type="text" name="create_acc_username" id="create_acc_username"
           pattern="^[a-zA-Z0-9]{6,}$" placeholder="USERNAME" required="required">
+        <!-- Input field for the email -->
         <input class="inputFields" type="email" name="create_acc_email" id="create_acc_email" placeholder="EMAIL"
           required="required">
+        <!-- Input field for the password -->
         <input class="inputFields" type="password" name="create_acc_password" id="create_acc_password"
           required="required" placeholder="PASSWORD">
+        <!-- Input field for the confirm password -->
         <input class="inputFields" type="password" name="confirmpassword" id="confirmpassword" required="required"
           placeholder="CONFIRM PASSWORD">
         <button class="btn btn-primary button" id="create_acc_submit" type="submit" value="Create Account">Sign
@@ -93,6 +102,7 @@
 
         <!-- SIGN UP -->
         <div class="overlay-panel overlay-left">
+          <!-- Heading for the sign up panel -->
           <h1>New to ParkAway?</h1>
           <hr class="underline">
           <p>Enter your details and start your journey now</p>
@@ -101,6 +111,7 @@
 
         <!-- SIGN UP-->
         <div class="overlay-panel overlay-right">
+          <!-- Heading for the sign in panel -->
           <h1>Already Have An Account?</h1>
           <hr class="underline">
           <p>Sign in to continue with your account</p>

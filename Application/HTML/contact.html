@@ -2,7 +2,9 @@
 <html lang="en">
 
 <head>
-  <title>ParkAway</title>
+  <!-- Adding title to the page -->
+  <title>Contact</title>
+  <!-- Meta tags -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Adding Bootstrap CSS Stylesheet -->
@@ -11,10 +13,9 @@
   <!-- Adding CSS Stylsheet-->
   <link rel="stylesheet" type="text/css" href="../CSS/contact.css">
   <link rel="stylesheet" type="text/css" href="../CSS/header.css">
-
   <!-- Adding jQuery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-  <!-- Adding Google Maps -->
+  
   <script>
     // Initialize and add the map
     function initMap() {
@@ -23,17 +24,17 @@
         lng: -123.0001754
       };
 
-
+      // This google maps will display as the background
       // Zoom Out
       var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
         zoomControl: false,
         center: BCIT,
         gestureHandling: 'cooperative'
-
       });
 
       // Coordinates of BCIT
+      // This will be the background icon of the page
       var BCITPos = new google.maps.Marker({
         position: {
           lat: 49.249568,
@@ -44,23 +45,24 @@
       });
     }
   </script>
+  <!-- Adding the google maps script -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDbYdIySAdQvNbv1rxf0rkD6n_SGUkm_dM&callback=initMap">
   </script>
-
-
-
 </head>
 
 
 <body>
+  <!-- This will be the background of the screen -->
   <div id="map"></div>
+  <!-- This will overlay over the image -->
   <div id="overlay">
     <!-- Adding a heading (with a navigation bar) -->
     <header>
       <div class="leftNav"><a class="logo" href="../index.html">ParkAway</a></div>
       <!-- Adding a navigation bar -->
       <nav>
+        <!-- Centered part of the navigation bar -->
         <ul>
           <li><a href='./map.html'>BCIT Map</a></li>
           <li><a href='./aboutUS.html'>About Us</a></li>
@@ -70,12 +72,17 @@
       </nav>
       <!-- Right side of the header -->
       <div class="rightNav "></div>
+      <!-- Media icons of the div on the right hand side of the div-->
       <div class="mediaIconDiv">
+        <!-- Adding the three line image to the top right of the header on media queries and mobile -->
         <img class="mediaIcon" src="../Images/menu_icon.png" width="120" height="120" alt="Menu Icon">
       </div>
     </header>
+
+    <!--Adding the slider to the navigation bar -->
     <div class='slider'>
       <ul>
+        <!-- Moving the centered items to the slider -->
         <li>
           <div id='slider_user_widget'></div>
         </li>
@@ -85,9 +92,11 @@
         <li><a href="./contact.html">Contact</a></li>
       </ul>
     </div>
-    <!-- Section 1-->
+    <!-- Section 1 includes all the heading and paragraphs -->
     <div id="section1">
+      <!-- Heading of the page-->
       <p id="heading">Contact</p>
+      <!-- Top paragraph spacing from the heading -->
       <p class="ptop">
         We are a group of students studying CST at BCIT. We are developing the
         ParkAway app for our Projects course. We were inspired to create this

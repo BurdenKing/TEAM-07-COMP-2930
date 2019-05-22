@@ -98,11 +98,11 @@ $(document).ready(function () {
             // checks status, and appeneds different html with different colors depending on value
             if (status < 1) {
               s = '<p> Status: </p> <p style="color:#00bc45"> EMPTY </p>';
-            } else if (status < 34) {
+            } else if (status < 26) {
               s = '<p> Status: </p> <p style="color:#04f7a5"> MOSTLY EMPTY </p>';
-            } else if (status < 67) {
+            } else if (status < 51) {
               s = '<p> Status: </p> <p style="color:#BBBB2B"> SOMEWHAT FULL </p>';
-            } else if (status < 100) {
+            } else if (status < 99) {
               s = '<p> Status: </p> <p style="color:#ffa500"> MOSTLY FULL </p>';
             } else {
               s = '<p> Status: </p> <p style="color:#ff2100"> FULL </p>';
@@ -289,19 +289,19 @@ $(document).ready(function () {
       switch (values[this.value]) {
         case 'EMPTY':
           $("#color").css("color", "#00bc45");
-          sta = Math.floor(Math.random() * 24);
+          sta = 0
           break;
         case 'MOSTLY EMPTY':
           $("#color").css("color", "#04f7a5");
-          sta = Math.floor(Math.random() * 24) + 25;
+          sta = 25
           break;
         case 'SOMEWHAT FULL':
           $("#color").css("color", "#BBBB2B");
-          sta = Math.floor(Math.random() * 24) + 50;
+          sta = 50
           break;
         case 'MOSTLY FULL':
           $("#color").css("color", "#ffa500");
-          sta = Math.floor(Math.random() * 24) + 75;
+          sta = 75
           break;
         case 'FULL':
           $("#color").css("color", "#ff2100");
@@ -310,6 +310,7 @@ $(document).ready(function () {
         default:
           $("#color").css("color", "#000000");
       }
+      console.log(sta);
     });
 
     /*
@@ -320,11 +321,11 @@ $(document).ready(function () {
     function extraStuff(q) {
       if (q < 1) {
         return '<p id="status-div"> Status: <b style="color:#00bc45"> EMPTY </b> </p>';
-      } else if (q < 33) {
+      } else if (q < 26) {
         return '<p id="status-div"> Status: <b style="color:#04f7a5"> MOSTLY EMPTY </b> </p>';
-      } else if (q < 66) {
+      } else if (q < 51) {
         return '<p id="status-div"> Status: <b style="color:#BBBB2B"> SOMEWHATFULL </b> </p>';
-      } else if (q < 99) {
+      } else if (q < 76) {
         return '<p id="status-div"> Status: <b style="color:#ffa500"> MOSTLY FULL </b> </p>';
       } else {
         return '<p id="status-div"> Status: <b style="color:#ff2100"> FULL </b> </p>';
