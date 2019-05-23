@@ -142,7 +142,7 @@ $(document).ready(function () {
     }
 
     //default value
-    let statusVal = 'HALF';
+    let statusVal = 'SOMEWHATFULL';
     //default value of update status
     let sta = 50;
 
